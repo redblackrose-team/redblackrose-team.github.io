@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>DevOps Roadmap</title>
+    <style>
+        body {
+            background: #f4f8fb;
+            color: #222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #22223b;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #f2e9e4;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #4a4e69;
+        }
+        h1 {
+            color: #22223b;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .roadmap-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.08);
+            padding: 30px;
+        }
+        .roadmap-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+        .roadmap-step img {
+            width: 60px;
+            height: 60px;
+            margin-right: 24px;
+            border-radius: 8px;
+            border: 2px solid #4a4e69;
+            background: #f2e9e4;
+        }
+        .roadmap-step:last-child {
+            margin-bottom: 0;
+        }
+        .step-title {
+            font-size: 1.2em;
+            color: #4a4e69;
+            font-weight: bold;
+        }
+        .step-desc {
+            color: #22223b;
+            margin-top: 4px;
+        }
+        .sublist {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+        .sublist li {
+            margin-bottom: 4px;
+            list-style: disc;
+        }
+        .sublist img {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+            margin-right: 6px;
+            border: none;
+            background: none;
+        }
+        @media (max-width: 600px) {
+            .roadmap-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .roadmap-step img {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>DevOps Roadmap</h1>
     <nav>
         <a href="index.html">Home</a> |
         <a href="frontend.html">Frontend</a> |
@@ -15,12 +102,170 @@
         <a href="team.html">Our Team</a> |
         <a href="careers.html">Careers</a>
     </nav>
-    <ul>
-        <li>CI/CD Pipelines</li>
-        <li>Cloud Providers: AWS, Azure, GCP</li>
-        <li>Containers: Docker, Kubernetes</li>
-        <li>Monitoring & Logging</li>
-        <li>Infrastructure as Code</li>
-    </ul>
+    <h1>DevOps Roadmap</h1>
+    <div class="roadmap-container">
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="Linux">
+            <div>
+                <div class="step-title">1. Learn Linux & Shell Scripting</div>
+                <div class="step-desc">Understand the basics of Linux OS, commands, and automate tasks with shell scripts.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6124/6124998.png" alt="Terminal">Basic Commands
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="Shell">Shell Scripting (Bash, Zsh)
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Permissions">File Permissions & Networking
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Version Control">
+            <div>
+                <div class="step-title">2. Version Control (Git)</div>
+                <div class="step-desc">Master Git for source code management and collaboration.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">GitHub
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968853.png" alt="GitLab">GitLab
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968703.png" alt="Bitbucket">Bitbucket
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="CI/CD">
+            <div>
+                <div class="step-title">3. CI/CD Pipelines</div>
+                <div class="step-desc">Set up Continuous Integration and Continuous Deployment pipelines.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968853.png" alt="GitLab CI">GitLab CI
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Actions">GitHub Actions
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Jenkins">Jenkins
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968703.png" alt="Bitbucket Pipelines">Bitbucket Pipelines
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="CircleCI">CircleCI
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Cloud">
+            <div>
+                <div class="step-title">4. Cloud Providers</div>
+                <div class="step-desc">Get hands-on with cloud platforms for deploying and managing infrastructure:</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/873/873120.png" alt="AWS">AWS (Amazon Web Services)
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/873/873107.png" alt="Azure">Azure
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="GCP">Google Cloud Platform (GCP)
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="DigitalOcean">DigitalOcean
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Containers">
+            <div>
+                <div class="step-title">5. Containers & Orchestration</div>
+                <div class="step-desc">Learn Docker for containerization and Kubernetes for orchestration.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Docker">Docker
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Podman">Podman
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Kubernetes">Kubernetes
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Helm">Helm
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Monitoring">
+            <div>
+                <div class="step-title">6. Monitoring & Logging</div>
+                <div class="step-desc">Implement monitoring and logging for system health and troubleshooting.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Prometheus">Prometheus
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Grafana">Grafana
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="ELK">ELK Stack (Elasticsearch, Logstash, Kibana)
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Datadog">Datadog
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="IaC">
+            <div>
+                <div class="step-title">7. Infrastructure as Code (IaC)</div>
+                <div class="step-desc">Automate infrastructure with code.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Terraform">Terraform
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Ansible">Ansible
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="CloudFormation">AWS CloudFormation
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Pulumi">Pulumi
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="roadmap-step">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Security">
+            <div>
+                <div class="step-title">8. Security Best Practices</div>
+                <div class="step-desc">Apply security principles to infrastructure, pipelines, and code.</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Secrets">Secrets Management (Vault, AWS Secrets Manager)
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Scanning">Vulnerability Scanning (Trivy, Clair)
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Policies">Policy as Code (OPA, Sentinel)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
