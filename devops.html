@@ -80,6 +80,39 @@
             border: none;
             background: none;
         }
+        .label {
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .foundation { background: #e0f7fa; color: #00796b; }
+        .must { background: #ffe082; color: #ff6f00; }
+        .optional { background: #e1bee7; color: #6a1b9a; }
+        .advanced { background: #ffcdd2; color: #b71c1c; }
+        .time {
+            display: inline-block;
+            font-size: 0.75em;
+            color: #555;
+            background: #f0f0f0;
+            border-radius: 6px;
+            padding: 1px 6px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .course {
+            display: inline-block;
+            font-size: 0.75em;
+            color: #1976d2;
+            background: #e3f2fd;
+            border-radius: 6px;
+            padding: 1px 8px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
         @media (max-width: 600px) {
             .roadmap-step {
                 flex-direction: column;
@@ -111,76 +144,91 @@
                 <div class="step-desc">Understand the basics of Linux OS, commands, and automate tasks with shell scripts.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/6124/6124998.png" alt="Terminal">Basic Commands
+                        <img src="icons/terminal.png" alt="Terminal" style="background:#fff;border-radius:50%;">Basic Commands
+                        <span class="label foundation">Foundation</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" alt="Shell">Shell Scripting (Bash, Zsh)
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" style="background:#fff;border-radius:50%;">Shell Scripting (Bash, Zsh)
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Permissions">File Permissions & Networking
+                        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Permissions">File Permissions & Networking
+                        <span class="label foundation">Foundation</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="roadmap-step">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Version Control">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
             <div>
                 <div class="step-title">2. Version Control (Git)</div>
                 <div class="step-desc">Master Git for source code management and collaboration.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">GitHub
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="background:#fff;border-radius:50%;">GitHub
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968853.png" alt="GitLab">GitLab
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" style="background:#fff;border-radius:50%;">GitLab
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968703.png" alt="Bitbucket">Bitbucket
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg" alt="Bitbucket" style="background:#fff;border-radius:50%;">Bitbucket
+                        <span class="label optional">Optional</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="roadmap-step">
-            <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="CI/CD">
+            <img src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="CI/CD">
             <div>
                 <div class="step-title">3. CI/CD Pipelines</div>
                 <div class="step-desc">Set up Continuous Integration and Continuous Deployment pipelines.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968853.png" alt="GitLab CI">GitLab CI
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab CI" style="background:#fff;border-radius:50%;">GitLab CI
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Actions">GitHub Actions
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" style="background:#fff;border-radius:50%;">GitHub Actions
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Jenkins">Jenkins
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" style="background:#fff;border-radius:50%;">Jenkins
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968703.png" alt="Bitbucket Pipelines">Bitbucket Pipelines
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg" alt="Bitbucket Pipelines" style="background:#fff;border-radius:50%;">Bitbucket Pipelines
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="CircleCI">CircleCI
+                        <img src="icons/circle-ci.png" alt="CircleCI" style="background:#fff;border-radius:50%;">CircleCI
+                        <span class="label advanced">Advanced</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="roadmap-step">
-            <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Cloud">
+            <img src="https://cdn-icons-png.flaticon.com/512/873/873120.png" alt="Cloud">
             <div>
                 <div class="step-title">4. Cloud Providers</div>
                 <div class="step-desc">Get hands-on with cloud platforms for deploying and managing infrastructure:</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/873/873120.png" alt="AWS">AWS (Amazon Web Services)
+                        <img src="icons/aws.png" alt="AWS" style="background:#fff;border-radius:50%;">AWS (Amazon Web Services)
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/873/873107.png" alt="Azure">Azure
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" style="background:#fff;border-radius:50%;">Azure
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="GCP">Google Cloud Platform (GCP)
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" style="background:#fff;border-radius:50%;">Google Cloud Platform (GCP)
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="DigitalOcean">DigitalOcean
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg" alt="DigitalOcean" style="background:#fff;border-radius:50%;">DigitalOcean
+                        <span class="label advanced">Advanced</span>
                     </li>
                 </ul>
             </div>
@@ -192,16 +240,20 @@
                 <div class="step-desc">Learn Docker for containerization and Kubernetes for orchestration.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Docker">Docker
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" style="background:#fff;border-radius:50%;">Docker
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Podman">Podman
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/podman/podman-original.svg" alt="Podman" style="background:#fff;border-radius:50%;">Podman
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Kubernetes">Kubernetes
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" style="background:#fff;border-radius:50%;">Kubernetes
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Helm">Helm
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/helm/helm-original.svg" alt="Helm" style="background:#fff;border-radius:50%;">Helm
+                        <span class="label advanced">Advanced</span>
                     </li>
                 </ul>
             </div>
@@ -213,16 +265,19 @@
                 <div class="step-desc">Implement monitoring and logging for system health and troubleshooting.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Prometheus">Prometheus
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus" style="background:#fff;border-radius:50%;">Prometheus
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Grafana">Grafana
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" style="background:#fff;border-radius:50%;">Grafana
+                        <span class="label optional">Optional</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="ELK">ELK Stack (Elasticsearch, Logstash, Kibana)
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg" alt="ELK" style="background:#fff;border-radius:50%;">ELK Stack (Elasticsearch, Logstash, Kibana)
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Datadog">Datadog
+                        <img src="icons/datadog.png" alt="Datadog" style="background:#fff;border-radius:50%;">Datadog
+                        <span class="label optional">Optional</span>
                     </li>
                 </ul>
             </div>
@@ -234,16 +289,12 @@
                 <div class="step-desc">Automate infrastructure with code.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Terraform">Terraform
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" style="background:#fff;border-radius:50%;">Terraform
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Ansible">Ansible
-                    </li>
-                    <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="CloudFormation">AWS CloudFormation
-                    </li>
-                    <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Pulumi">Pulumi
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt="Ansible" style="background:#fff;border-radius:50%;">Ansible
+                        <span class="label optional">Optional</span>
                     </li>
                 </ul>
             </div>
@@ -255,17 +306,98 @@
                 <div class="step-desc">Apply security principles to infrastructure, pipelines, and code.</div>
                 <ul class="sublist">
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Secrets">Secrets Management (Vault, AWS Secrets Manager)
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vault/vault-original.svg" alt="Vault" style="background:#fff;border-radius:50%;">Secrets Management (Vault, AWS Secrets Manager)
+                        <span class="label must">Must Have</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Scanning">Vulnerability Scanning (Trivy, Clair)
+                        <img src="icons/trivy.png" alt="Trivy" style="background:#fff;border-radius:50%;">Vulnerability Scanning (Trivy, Clair)
+                        <span class="label advanced">Advanced</span>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Policies">Policy as Code (OPA, Sentinel)
+                        <img src="icons/opa.png" alt="OPA" style="background:#fff;border-radius:50%;">Policy as Code (OPA, Sentinel)
+                        <span class="label advanced">Advanced</span>
                     </li>
                 </ul>
             </div>
         </div>
+    </div> <!-- end of .roadmap-container -->
+
+    <div class="courses-container" style="max-width:800px;margin:40px auto 0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(34,34,59,0.08);padding:30px;">
+        <h2 style="color:#22223b;text-align:center;">Recommended Courses & Certifications</h2>
+        <ul style="line-height:2;">
+            <li>
+                <b>Linux & Shell Scripting:</b>
+                <span class="course">
+                    <a href="https://training.linuxfoundation.org/certification/lfcs/" target="_blank">LFCS</a>,
+                    <a href="https://www.udemy.com/course/linux-for-beginners/" target="_blank">Linux Essentials (Udemy)</a>,
+                    <a href="https://www.udemy.com/course/bash-scripting/" target="_blank">Bash Scripting Bootcamp (Udemy)</a>,
+                    <a href="https://www.freecodecamp.org/news/search/?query=linux" target="_blank">freeCodeCamp Linux</a>
+                </span>
+            </li>
+            <li>
+                <b>Version Control (Git):</b>
+                <span class="course">
+                    <a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a>,
+                    <a href="https://lab.github.com/" target="_blank">GitHub Learning Lab</a>,
+                    <a href="https://www.freecodecamp.org/learn/" target="_blank">freeCodeCamp Git</a>
+                </span>
+            </li>
+            <li>
+                <b>CI/CD Pipelines:</b>
+                <span class="course">
+                    <a href="https://www.jenkins.io/doc/pipeline/tour/getting-started/" target="_blank">Jenkins Pipeline Docs</a>,
+                    <a href="https://www.udemy.com/course/jenkins-from-zero-to-hero/" target="_blank">Jenkins (Udemy)</a>,
+                    <a href="https://docs.gitlab.com/ee/ci/" target="_blank">GitLab CI/CD Docs</a>,
+                    <a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions Docs</a>,
+                    <a href="https://www.udemy.com/course/cicd-pipelines/" target="_blank">CI/CD Pipelines (Udemy)</a>
+                </span>
+            </li>
+            <li>
+                <b>Cloud Providers:</b>
+                <span class="course">
+                    <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank">AWS SAA-C03</a>,
+                    <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank">Azure Fundamentals</a>,
+                    <a href="https://cloud.google.com/certification/cloud-engineer" target="_blank">Google Associate Cloud Engineer</a>,
+                    <a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate/" target="_blank">AWS SAA (Udemy)</a>
+                </span>
+            </li>
+            <li>
+                <b>Containers & Orchestration:</b>
+                <span class="course">
+                    <a href="https://www.udemy.com/course/docker-mastery/" target="_blank">Docker Mastery (Udemy)</a>,
+                    <a href="https://www.cncf.io/certification/cka/" target="_blank">Certified Kubernetes Administrator (CKA)</a>,
+                    <a href="https://helm.sh/docs/" target="_blank">Helm Docs</a>,
+                    <a href="https://kubernetes.io/docs/tutorials/" target="_blank">Kubernetes Tutorials</a>
+                </span>
+            </li>
+            <li>
+                <b>Monitoring & Logging:</b>
+                <span class="course">
+                    <a href="https://prometheus.io/docs/introduction/overview/" target="_blank">Prometheus Docs</a>,
+                    <a href="https://grafana.com/tutorials/" target="_blank">Grafana Tutorials</a>,
+                    <a href="https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html" target="_blank">ELK Stack Guide</a>,
+                    <a href="https://learn.datadoghq.com/" target="_blank">Datadog Learning</a>
+                </span>
+            </li>
+            <li>
+                <b>Infrastructure as Code (IaC):</b>
+                <span class="course">
+                    <a href="https://www.hashicorp.com/certification/terraform-associate" target="_blank">Terraform Associate</a>,
+                    <a href="https://www.udemy.com/course/learn-ansible/" target="_blank">Ansible (Udemy)</a>,
+                    <a href="https://docs.aws.amazon.com/cloudformation/index.html" target="_blank">AWS CloudFormation Docs</a>,
+                    <a href="https://www.pulumi.com/docs/" target="_blank">Pulumi Docs</a>
+                </span>
+            </li>
+            <li>
+                <b>Security Best Practices:</b>
+                <span class="course">
+                    <a href="https://learn.hashicorp.com/collections/vault/certification" target="_blank">HashiCorp Vault Certification</a>,
+                    <a href="https://academy.tanzu.vmware.com/devsecops" target="_blank">DevSecOps Essentials</a>,
+                    <a href="https://aquasecurity.github.io/trivy/" target="_blank">Trivy Docs</a>,
+                    <a href="https://www.openpolicyagent.org/docs/latest/" target="_blank">OPA Docs</a>
+                </span>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
