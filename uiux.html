@@ -4,37 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI/UX Designer Roadmap</title>
-     <link rel="icon" type="image/x-icon" href="/favicon (9).ico">
+    <link rel="icon" type="image/x-icon" href="/favicon (9).ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5; /* Overall page light background color */
+            color: #333;
+        }
 
+        .header-nav {
+            background-color: #2c3e50; /* Dark background for the navigation bar */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .header-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .roadmap-title-section {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background-color: white; /* White background for the main title section */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .roadmap-title-section h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .roadmap-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .roadmap-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .roadmap-card h3 {
+            color: #1c1fad; /* Blue color for heading */
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .roadmap-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .roadmap-card ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .roadmap-card ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .roadmap-card ul li::before {
+            content: '•'; /* Custom bullet point */
+            color: #1c1fad; /* Blue color for bullet */
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Styles for the labels like 'Must Have', 'Optional' etc. */
+        .label {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: normal;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .label.must-have {
+            background-color: #ffeb3b; /* Yellow */
+            color: #333;
+        }
+
+        .label.optional {
+            background-color: #9c27b0; /* Purple */
+            color: white;
+        }
+
+        .label.foundation {
+            background-color: #00bcd4; /* Cyan */
+            color: white;
+        }
+
+        .label.advanced {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>UI/UX Designer Roadmap</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="frontend.html">Frontend</a> |
-        <a href="backend.html">Backend</a> |
-        <a href="devops.html">DevOps</a> |
-        <a href="mobile.html">Mobile</a> |
-        <a href="team.html">Our Team</a> |
+    <header class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="frontend.html">Frontend</a>
+        <a href="backend.html">Backend</a>
+        <a href="devops.html">DevOps</a>
+        <a href="mobile.html">Mobile</a>
+        <a href="uiux.html">UI/UX</a> <a href="team.html">Our Team</a>
         <a href="careers.html">Careers</a>
-    </nav>
     </header>
-<h2>Your Path to Becoming a UI/UX Designer</h2>
-<p>Explore the essential skills and tools required to excel in the world of UI/UX design. This roadmap will guide you through the key areas of expertise.</p>
 
-<h2>Roadmap Key Areas</h2>
-    <ul style="list-style-type: square;">
-       <li><h3 style="color:rgb(28, 31, 173)">User Research</h3></li>
-        <p>Understanding user needs, behaviors, and motivations through various research methods like interviews, surveys, and usability studies.</p></ul>
-    <ul style="list-style-type: square;">
-        <li><h3 style="color:rgb(28, 31, 173)">Wireframing & Prototyping</h3></li>
-        <p>Creating low-fidelity wireframes and interactive prototypes to visualize and test design concepts quickly.</p>
-        <li><h3 style="color:rgb(28, 31, 173)">Design Tools: Figma, Sketch, Adobe XD</li></h3> 
-        <p>Proficiency in industry-standard design software for creating interfaces, user flows, and interactive mockups.</p>
-        <li><h3 style="color:rgb(28, 31, 173)">Usability Testing</li></h3> 
-        <p>Evaluating the ease of use and user satisfaction of a product or system to identify areas for improvement.</p>
-        <li><h3 style="color:rgb(28, 31, 173)"> Design Systems</li></h3>
-        <p>Developing and maintaining consistent sets of design principles, components, and guidelines for scalable and cohesive designs.</p>
-    </ul>
-    </body>
-    </html>
+    <div class="roadmap-title-section">
+        <h1>UI/UX Designer Roadmap</h1>
+        <p>Explore the essential skills and tools required to excel in the world of UI/UX design. This roadmap will guide you through the key areas of expertise.</p>
+    </div>
+
+    <div class="roadmap-container">
+        <div class="roadmap-card">
+            <h3>User Research</h3>
+            <p>Understanding user needs, behaviors, and motivations through various research methods like interviews, surveys, and usability studies.</p>
+            <ul>
+                <li>Interviews <span class="label must-have">Must Have</span></li>
+                <li>Surveys <span class="label optional">Optional</span></li>
+                <li>Usability Studies <span class="label foundation">Foundation</span></li>
+            </ul>
+        </div>
+
+        <div class="roadmap-card">
+            <h3>Wireframing & Prototyping</h3>
+            <p>Creating low-fidelity wireframes and interactive prototypes to visualize and test design concepts quickly.</p>
+            <ul>
+                <li>Wireframing Tools (e.g., Figma, Sketch) <span class="label must-have">Must Have</span></li>
+                <li>Prototyping Tools (e.g., Adobe XD) <span class="label optional">Optional</span></li>
+            </ul>
+        </div>
+
+        <div class="roadmap-card">
+            <h3>Design Tools: Figma, Sketch, Adobe XD</h3>
+            <p>Proficiency in industry-standard design software for creating interfaces, user flows, and interactive mockups.</p>
+            <ul>
+                <li>Figma <span class="label must-have">Must Have</span></li>
+                <li>Sketch <span class="label optional">Optional</span></li>
+                <li>Adobe XD <span class="label optional">Optional</span></li>
+            </ul>
+        </div>
+
+        <div class="roadmap-card">
+            <h3>Usability Testing</h3>
+            <p>Evaluating the ease of use and user satisfaction of a product or system to identify areas for improvement.</p>
+            <ul>
+                <li>Planning & Conducting Tests <span class="label foundation">Foundation</span></li>
+                <li>Analyzing Results <span class="label must-have">Must Have</span></li>
+            </ul>
+        </div>
+
+        <div class="roadmap-card">
+            <h3>Design Systems</h3>
+            <p>Developing and maintaining consistent sets of design principles, components, and guidelines for scalable and cohesive designs.</p>
+            <ul>
+                <li>Component Libraries <span class="label must-have">Must Have</span></li>
+                <li>Style Guides <span class="label optional">Optional</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
