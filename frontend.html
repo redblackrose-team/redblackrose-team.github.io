@@ -2,25 +2,384 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Developer Roadmap</title>
+    <!-- CSS start-->
+     <style>
+         body {
+            background: #f4f8fb;
+            color: #222;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #22223b;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #f2e9e4;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #4a4e69;
+        }
+        h1 {
+            color: #22223b;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .frontend-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.08);
+            padding: 30px;      
+        }
+        .roadmap-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+        .roadmap-step img{
+            width: 60px;
+            height: 60px;
+            margin-right: 24px;
+            border-radius: 8px;
+            border: 2px solid #4a4e69;
+            background: #f2e9e4;
+        }
+        .roadmap-step:last-child {
+            margin-bottom: 0;
+        }
+        .step-title {
+            font-size: 1.2em;
+            color: #4a4e69;
+            font-weight: bold;
+        }
+        .sublist {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+        .sublist li {
+            margin-bottom: 5px;
+            list-style: none;
+        }
+        .sublist-bullet li{
+            list-style: disc;
+        }
+        .sublist img {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+            margin-right: 6px;
+            border: none;
+            background: none;
+        }
+        .label {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .must-have {
+            background: #ffe082; 
+            color: #ff6f00;
+        }
+        .optional {
+            background: #e1bee7; 
+            color: #6a1b9a;
+        }
+        .foundation {
+            background: #e0f7fa; 
+            color: #00796b;
+        }
+        .courses-container {
+            max-width: 700px;
+            margin: 28px auto 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+            padding: 18px;
+        }
+        .courses-container h2 {
+            color: #22223b;
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        .courses-container ul {
+            line-height: 1.7;
+            font-size: 0.98em;
+        }
+        .course a {
+            font-size: 0.97em;
+        }
+        /* responsive */
+        @media (max-width: 600px) {
+            .roadmap-container, .courses-container {
+                max-width: 98vw;
+                padding: 7vw 2vw;
+            }
+            .roadmap-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .roadmap-step img {
+                margin-bottom: 8px;
+                margin-right: 0;
+            }
+        }
+    </style>
+    <!-- CSS close -->
 </head>
 <body>
-    <h1>Frontend Developer Roadmap</h1>
-    <nav>
+     <nav>
         <a href="index.html">Home</a> |
+        <a href="frontend.html">Frontend</a> |
         <a href="backend.html">Backend</a> |
-        <a href="devops.html">DevOps</a> |
         <a href="mobile.html">Mobile</a> |
         <a href="uiux.html">UI/UX</a> |
         <a href="team.html">Our Team</a> |
         <a href="careers.html">Careers</a>
     </nav>
-    <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Frameworks: React, Angular, Vue</li>
-        <li>Version Control: Git</li>
-        <li>Responsive Design</li>
-        <li>Testing & Debugging</li>
-    </ul>
+    <h1>Frontend Developer Roadmap</h1>
+    <!-- Roadmap Start -->
+    <div class="frontend-container">
+        <!-- One -->
+        <div class="roadmap-step">
+            <img src="./icons/Code.png" alt="Code">
+            <div>
+                <div class="step-title">1. HTML & CSS</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/HTML.png" alt="HTML" style="background:#fff;border-radius:50%;">HTML Basics
+                        <span class="label foundation">Foundation</span>
+                    </li>
+                    <li>
+                        <img src="./icons/CSS.png" alt="CSS" style="background:#fff;border-radius:50%;">CSS Fundamentals
+                        <span class="label must-have">Must Have</span>
+                    </li>
+                    <li>
+                        <img src="./icons/Responsive.png" alt="Responsive" width="500px">Responsive Design
+                        <span class="label must-have">Must Have</span>
+                    </li>
+                    <li>
+                        <img src="./icons/Flexbox.png" alt="Flexbox" width="500px">Flexbox & Grid
+                        <span class="label must-have">Must Have</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           <!-- Two -->
+         <div class="roadmap-step">
+            <img src="./icons/JS.png" alt="JS">
+            <div>
+                <div class="step-title">2. JavaScript</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/JavaScript.png" alt="JavaScript" style="background:#fff;border-radius:50%;">JavaScript Basics
+                        <span class="label must-have">Must Have</span>
+                    </li>
+                    <ul class="sublist-bullet">
+                        <li>
+                            DOM Manipulation <span class="label must-have">Must Have</span>
+                        </li>
+                        <li>
+                            ES6+ Features <span class="label must-have">Must Have</span>
+                        </li>
+                        <li>
+                            Async JS (Promises, Async/Await) <span class="label optional">Optional</span>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <!-- Three -->
+         <div class="roadmap-step">
+            <img src="./icons/Git.png" alt="Git">
+            <div>
+                <div class="step-title">3. Version Control (Git)</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/GitHub.png" alt="GitHub" style="background:#fff;border-radius:50%;">GitHub
+                        <span class="label must-have">Must Have</span>
+                    </li>
+                    <li>
+                        <img src="./icons/GitLab.png" alt="GitLab" style="background:#fff;border-radius:50%;">GitLab
+                        <span class="label optional">Optional</span>
+                    </li>
+                    <li>
+                        <img src="./icons/BitBucket.png" alt="Bitbucket" style="background:#fff;border-radius:50%;">Bitbucket
+                        <span class="label optional">Optional</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Four -->
+          <div class="roadmap-step">
+            <img src="./icons/open-box.png" alt="">
+            <div>
+                <div class="step-title">4. Package Managers</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/NPM.png" alt="NPM" style="background:#fff;border-radius:50%;">NPM
+                        <span class="label optional">Optional</span>
+                    </li>
+                    <li>
+                        <img src="./icons/Yarn.png" alt="bootstrap" style="background:#fff;border-radius:50%;">Yarn
+                        <span class="label optional">Optional</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <!-- Five -->
+         <div class="roadmap-step">
+            <img src="./icons/JS-frameworks.png" alt="JS-frameworks">
+            <div>
+                <div class="step-title">5. JavaScript Frameworks</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/react.png" alt="react" style="background:#fff;border-radius:50%;">React
+                        <span class="label must-have">Must Have</span>
+                    </li>
+                    <li>
+                        <img src="./icons/vue.png" alt="vue" width="500px">Vue.js
+                        <span class="label optional">Optional</span>
+                    </li>
+                    <li>
+                        <img src="./icons/angular.png" alt="angular" width="500px">Angular
+                        <span class="label optional">Optional</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- six -->
+         <div class="roadmap-step">
+            <img src="./icons/CSS-frameworks.png" alt="CSS-frameworks">
+            <div>
+                <div class="step-title">6. CSS Frameworks & Libraries</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/Tailwind-CSS.png" alt="Tailwind-CSS" style="background:#fff;border-radius:50%;">Tailwind CSS
+                        <span class="label optional">Optional</span>
+                    </li>
+                    <li>
+                        <img src="./icons/Bootstrap.png" alt="Bootstrap" style="background:#fff;border-radius:50%;">Bootstrap
+                        <span class="label optional">Optional</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- seven -->
+         <div class="roadmap-step">
+            <img src="./icons/build.png" alt="build">
+            <div>
+                <div class="step-title">7. Build Tools</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/Webpack.png" alt="Webpack" style="background:#fff;border-radius:50%;">Webpack
+                        <span class="label optional">Optional</span>
+                    </li>
+                    <li>
+                        <img src="./icons/Vite.png" alt="Vite" style="background:#fff;border-radius:50%;">Vite
+                        <span class="label optional">Optional</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- eight -->
+         <div class="roadmap-step">
+            <img src="./icons/Testing.png" alt="Testing">
+            <div>
+                <div class="step-title">8. Testing</div>
+                <ul class="sublist">
+                    <li>
+                        <img src="./icons/Vitest.svg" alt="Vitest" style="background:#fff;border-radius:50%;">Vitest
+                        <span class="label optional">Optional</span>
+                    </li>
+                    <li>
+                        <img src="./icons/Jest.png" alt="Jest" style="background:#fff;border-radius:50%;">Jest
+                        <span class="label optional">Optional</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Roadmap Close -->
+    <!-- Recommedation Start -->
+       <div class="courses-container" style="max-width:800px;margin:40px auto 0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(34,34,59,0.08);padding:30px;">
+        <h2 style="color:#22223b;text-align:center;">Recommended Courses</h2>
+        <ul style="line-height:2;">
+            <li>
+                <b>HTML & CSS:</b>
+                <span class="course">
+                    <a href="https://www.w3schools.com/html/" target="_blank">HTML (w3schools)</a>,
+                    <a href="https://www.w3schools.com/css/" target="_blank">CSS (w3schools)</a>,
+                    <a href="https://www.tutorialspoint.com/html/index.htm" target="_blank">HTML (Tutorialspoint)</a>,
+                    <a href="https://www.tutorialspoint.com/css/index.htm" target="_blank">CSS (Tutorialspoint)</a>,
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox & Grid (CSS-Tricks)</a>,
+                    <a href="https://flexboxfroggy.com/" target="_blank">Flexbox Game (Flexbox Froggy)</a>
+                </span>
+            </li>
+             <li>
+                <b>JavaScript:</b>
+                <span class="course">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript (MDN)</a>,
+                    <a href="https://www.w3schools.com/js/DEFAULT.asp" target="_blank">JavaScript (w3schools)</a>,
+                    <a href="https://www.tutorialspoint.com/javascript/index.htm" target="_blank">JavaScript (Tutorialspoint)</a>
+                </span>
+            </li>
+            <li>
+                <b>Version Control (Git):</b>
+                <span class="course">
+                    <a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a>,
+                    <a href="https://lab.github.com/" target="_blank">GitHub Learning Lab</a>,
+                    <a href="https://www.freecodecamp.org/learn/" target="_blank">freeCodeCamp Git</a>
+                </span>
+            </li>
+            <li>
+                <b>JavaScript Frameworks:</b>
+                <span class="course">
+                    <a href="https://react.dev/" target="_blank">React</a>,
+                    <a href="https://vuejs.org/guide/introduction.html" target="_blank">Vue.js</a>,
+                    <a href="https://angular.dev/overview" target="_blank">Angular</a>
+                </span>
+            </li>
+            <li>
+                <b>CSS Frameworks & Libraries:</b>
+                <span class="course">
+                    <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>,
+                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">Bootstrap</a>
+                </span>
+            </li>
+            <li>
+                <b>Build Tools:</b>
+                <span class="course">
+                    <a href="https://webpack.js.org/guides/getting-started/" target="_blank">Webpack</a>,
+                    <a href="https://vite.dev/guide/" target="_blank">Vite</a>,
+                    <a href="https://www.youtube.com/watch?v=LQQ3CR2JTX8" target="_blank">Vite Crash Course</a>,
+                    <a href="https://www.youtube.com/watch?v=VAeRhmpcWEQ" target="_blank">Vite Tutorial Video</a>
+                </span>
+            </li>
+            <li>
+                <b>Testing:</b>
+                <span class="course">
+                    <a href="https://vitest.dev/guide/" target="_blank">Vitest</a>,
+                    <a href="https://jestjs.io/docs/getting-started" target="_blank">Jest</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <!-- Recommedation Close -->
+
 </body>
 </html>
