@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <title>RedBlackRose IT Roadmap</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
   <style>
     body {
       min-height: 100vh;
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #23243a 0%, #f4f8fb 100%);
-      color: #23243a;
+      background: url('icons/background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #f2e9e4;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10, 10, 20, 0.85); /* black overlay for contrast */
+      z-index: 0;
+      pointer-events: none;
     }
 
     nav {
-      background: #23243a;
+      background: #111015;
       padding: 12px 0;
       text-align: center;
       box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+      position: relative;
+      z-index: 1;
     }
 
     nav a {
-      color: #f2e9e4;
+      color: #ff1744;
       text-decoration: none;
       margin: 0 4px;
       font-weight: bold;
@@ -32,7 +48,9 @@
     }
 
     nav a:hover {
-      color: #ff1744;
+      color: #fff;
+      background: #ff1744;
+      border-radius: 4px;
     }
 
     .team-name {
@@ -42,7 +60,9 @@
       margin-top: 32px;
       letter-spacing: 2px;
       color: #ff1744;
-      text-shadow: 1px 2px 8px #23243a33;
+      text-shadow: 1px 2px 8px #000;
+      position: relative;
+      z-index: 1;
     }
 
     .welcome-title {
@@ -50,9 +70,11 @@
       font-size: 2.8em;
       font-weight: bold;
       margin: 18px 0 10px 0;
-      color: #23243a;
+      color: #fff;
       letter-spacing: 1px;
-      text-shadow: 0 2px 8px #f2e9e4cc;
+      text-shadow: 0 2px 8px #ff1744cc;
+      position: relative;
+      z-index: 1;
     }
 
     .intro {
@@ -60,20 +82,24 @@
       font-size: 1.25em;
       margin: 0 auto 32px auto;
       max-width: 700px;
-      color: #333;
-      background: rgba(255,255,255,0.7);
+      color: #f2e9e4;
+      background: rgba(34, 0, 20, 0.85); /* dark red-black */
       border-radius: 12px;
       padding: 18px 24px;
       box-shadow: 0 2px 12px rgba(34,34,59,0.07);
+      position: relative;
+      z-index: 1;
     }
 
     .roadmap-container {
       max-width: 800px;
       margin: 0 auto 40px auto;
-      background: rgba(255,255,255,0.93);
+      background: rgba(10, 10, 20, 0.93); /* almost black */
       border-radius: 14px;
       box-shadow: 0 2px 12px rgba(34,34,59,0.10);
       padding: 32px 36px 28px 36px;
+      position: relative;
+      z-index: 1;
     }
 
     .section-title {
@@ -91,6 +117,7 @@
       line-height: 1.7;
       max-width: 600px;
       padding-left: 18px;
+      color: #f2e9e4;
     }
 
     ul.areas li {
@@ -101,7 +128,7 @@
     .quote {
       text-align: center;
       font-style: italic;
-      color: #444;
+      color: #ff1744;
       margin: 32px 0 0 0;
       font-size: 1.1em;
     }
@@ -109,13 +136,15 @@
     .footer {
       text-align: center;
       color: #fff;
-      background: #23243a;
+      background: #111015;
       padding: 14px 0 10px 0;
       font-size: 1em;
       letter-spacing: 1px;
       margin-top: 40px;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
+      position: relative;
+      z-index: 1;
     }
 
     @media (max-width: 700px) {
@@ -133,14 +162,9 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="frontend.html">Frontend</a>
-    <a href="backend.html">Backend</a>
-    <a href="devops.html">DevOps</a>
-    <a href="mobile.html">Mobile</a>
-    <a href="uiux.html">UI/UX</a>
-    <a href="team.html">Our Team</a>
     <a href="careers.html">Careers</a>
+    <a href="team.html">Our Team</a>
+    
   </nav>
 
   <div class="team-name">RedBlackRose</div>

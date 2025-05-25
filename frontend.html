@@ -4,42 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Developer Roadmap</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <!-- CSS start-->
-     <style>
-         body {
-            background: #f4f8fb;
-            color: #222;
-            font-family: Arial, sans-serif;
+    <style>
+        body {
+            min-height: 100vh;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: url('icons/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f2e9e4;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 20, 0.85); /* black overlay for contrast */
+            z-index: 0;
+            pointer-events: none;
         }
         nav {
-            background: #22223b;
-            padding: 10px 0;
+            background: #111015;
+            padding: 12px 0;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+            position: relative;
+            z-index: 1;
         }
         nav a {
-            color: #f2e9e4;
+            color: #ff1744;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 0 4px;
             font-weight: bold;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
             transition: color 0.2s;
+            padding: 0 8px;
         }
         nav a:hover {
-            color: #4a4e69;
+            color: #fff;
+            background: #ff1744;
+            border-radius: 4px;
         }
         h1 {
-            color: #22223b;
+            color: #ff1744;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 32px;
+            font-size: 2.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #000;
+            position: relative;
+            z-index: 1;
         }
         .frontend-container {
             max-width: 800px;
             margin: 30px auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(34,34,59,0.08);
-            padding: 30px;      
+            background: rgba(10, 10, 20, 0.93);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.10);
+            padding: 32px 36px 28px 36px;
+            position: relative;
+            z-index: 1;
         }
         .roadmap-step {
             display: flex;
@@ -51,15 +82,15 @@
             height: 60px;
             margin-right: 24px;
             border-radius: 8px;
-            border: 2px solid #4a4e69;
-            background: #f2e9e4;
+            border: 2px solid #ff1744;
+            background: #fff;
         }
         .roadmap-step:last-child {
             margin-bottom: 0;
         }
         .step-title {
             font-size: 1.2em;
-            color: #4a4e69;
+            color: #ff1744;
             font-weight: bold;
         }
         .sublist {
@@ -105,13 +136,15 @@
         .courses-container {
             max-width: 700px;
             margin: 28px auto 0 auto;
-            background: #fff;
+            background: rgba(10, 10, 20, 0.93);
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(34,34,59,0.07);
             padding: 18px;
+            position: relative;
+            z-index: 1;
         }
         .courses-container h2 {
-            color: #22223b;
+            color: #ff1744;
             text-align: center;
             font-size: 1.3em;
             margin-bottom: 12px;
@@ -119,16 +152,29 @@
         .courses-container ul {
             line-height: 1.7;
             font-size: 0.98em;
+            color: #f2e9e4;
         }
         .course a {
             font-size: 0.97em;
+            color: #ff1744;
+        }
+        .course a:hover {
+            color: #fff;
+            background: #ff1744;
+            border-radius: 4px;
+            padding: 0 4px;
         }
         /* responsive */
-        @media (max-width: 600px) {
-            .roadmap-container, .courses-container {
+        @media (max-width: 700px) {
+            .frontend-container, .courses-container {
                 max-width: 98vw;
                 padding: 7vw 2vw;
             }
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+        @media (max-width: 600px) {
             .roadmap-step {
                 flex-direction: column;
                 align-items: flex-start;
@@ -143,12 +189,6 @@
 </head>
 <body>
      <nav>
-        <a href="index.html">Home</a> |
-        <a href="frontend.html">Frontend</a> |
-        <a href="backend.html">Backend</a> |
-        <a href="mobile.html">Mobile</a> |
-        <a href="uiux.html">UI/UX</a> |
-        <a href="team.html">Our Team</a> |
         <a href="careers.html">Careers</a>
     </nav>
     <h1>Frontend Developer Roadmap</h1>
@@ -316,9 +356,9 @@
     </div>
     <!-- Roadmap Close -->
     <!-- Recommedation Start -->
-       <div class="courses-container" style="max-width:800px;margin:40px auto 0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(34,34,59,0.08);padding:30px;">
-        <h2 style="color:#22223b;text-align:center;">Recommended Courses</h2>
-        <ul style="line-height:2;">
+       <div class="courses-container">
+        <h2>Recommended Courses</h2>
+        <ul>
             <li>
                 <b>HTML & CSS:</b>
                 <span class="course">

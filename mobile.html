@@ -2,150 +2,277 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mobile Developer Roadmap</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: url('icons/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f2e9e4;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 20, 0.85);
+            z-index: 0;
+            pointer-events: none;
+        }
+        nav {
+            background: #111015;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+            position: relative;
+            z-index: 1;
+        }
+        nav a {
+            color: #ff1744;
+            text-decoration: none;
+            margin: 0 4px;
+            font-weight: bold;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+            padding: 0 8px;
+        }
+        nav a:hover {
+            color: #fff;
+            background: #ff1744;
+            border-radius: 4px;
+        }
+        h1 {
+            color: #ff1744;
+            text-align: center;
+            margin-top: 32px;
+            font-size: 2.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #000;
+            position: relative;
+            z-index: 1;
+        }
+        .container {
+            max-width: 850px;
+            margin: 40px auto 0 auto;
+            background: rgba(10, 10, 20, 0.93);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.10);
+            padding: 32px 36px 28px 36px;
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            color: #a385ff;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        ul {
+            padding-left: 22px;
+            font-size: 1.08em;
+        }
+        li {
+            margin: 7px 0;
+            line-height: 1.7;
+        }
+        .desc {
+            color: #f2e9e4;
+            font-size: 1.08em;
+            margin-bottom: 18px;
+            margin-top: 8px;
+        }
+        .highlight {
+            color: #ff1744;
+            font-weight: bold;
+        }
+        .images-row {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin: 18px 0;
+        }
+        .images-row img {
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #222;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            background: #fff;
+        }
+        .form-container {
+            margin-top: 32px;
+            background: rgba(34,34,59,0.13);
+            border-radius: 8px;
+            padding: 18px 20px;
+        }
+        label {
+            color: #f2e9e4;
+            font-weight: 500;
+        }
+        input, select, textarea, button {
+            margin-bottom: 12px;
+            padding: 7px 10px;
+            border-radius: 4px;
+            border: none;
+            width: 100%;
+            font-size: 1em;
+        }
+        button {
+            background: #ff1744;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #a3152c;
+        }
+        iframe {
+            display: block;
+            margin: 24px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #222;
+        }
+        @media (max-width: 900px) {
+            .container {
+                max-width: 98vw;
+                padding: 7vw 2vw;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            .images-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
- 
-
-
-
-<body style="background-color: aqua;">
-    <h1>Mobile Developer Roadmap</h1>
+<body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="frontend.html">Frontend</a> |
-        <a href="backend.html">Backend</a> |
-        <a href="devops.html">DevOps</a> |
-        <a href="uiux.html">UI/UX</a> |
-        <a href="team.html">Our Team</a> |
         <a href="careers.html">Careers</a>
     </nav>
-    <h1 style="color: red;">What is Mobile App Development</h1>
-    <pre style="background-color: pink;" >
-        Mobile app development is making applications that work on mobiles and can be pre-installed or downloadedable. They use the device’s network features to work with computing resources from afar. So, making a mobile application involves:
+    <h1>Mobile Developer Roadmap</h1>
+    <div class="container">
+        <div class="desc">
+            <span class="highlight">Mobile app development</span> is the process of creating software applications that run on mobile devices. Mobile developers build apps for platforms like <span class="highlight">Android</span> and <span class="highlight">iOS</span>, using languages and frameworks such as <span class="highlight">Kotlin</span>, <span class="highlight">Java</span>, <span class="highlight">Swift</span>, <span class="highlight">Flutter</span>, and <span class="highlight">React Native</span>. They focus on user experience, performance, and integrating device features like cameras, sensors, and notifications.
+        </div>
+        <h2>What Does a Mobile Developer Do?</h2>
+        <ul>
+            <li>Designs and builds mobile applications for Android and/or iOS.</li>
+            <li>Integrates apps with backend services and APIs.</li>
+            <li>Ensures apps are responsive, secure, and user-friendly.</li>
+            <li>Tests and debugs apps on various devices and OS versions.</li>
+            <li>Publishes and maintains apps in app stores.</li>
+        </ul>
+        <h2>Key Skills & Roadmap</h2>
+        <h3 style="color:#ff1744;">1. Programming Languages</h3>
+        <ul>
+            <li><span class="highlight">Android:</span> Kotlin, Java</li>
+            <li><span class="highlight">iOS:</span> Swift, Objective-C</li>
+            <li><span class="highlight">Cross-platform:</span> Dart (Flutter), JavaScript/TypeScript (React Native)</li>
+        </ul>
+        <h3 style="color:#ff1744;">2. Development Tools</h3>
+        <ul>
+            <li>Android Studio (Android)</li>
+            <li>Xcode (iOS)</li>
+            <li>Emulators & Simulators</li>
+            <li>Gradle, CocoaPods</li>
+        </ul>
+        <h3 style="color:#ff1744;">3. Core Concepts</h3>
+        <ul>
+            <li>Activities, Fragments, Intents (Android)</li>
+            <li>ViewControllers, Storyboards (iOS)</li>
+            <li>UI Layouts (XML, SwiftUI, Jetpack Compose)</li>
+            <li>Material Design, Human Interface Guidelines</li>
+        </ul>
+        <h3 style="color:#ff1744;">4. Data Storage</h3>
+        <ul>
+            <li>SharedPreferences / UserDefaults</li>
+            <li>Room Database / Core Data</li>
+            <li>SQLite</li>
+            <li>Cloud Storage (Firebase, AWS, etc.)</li>
+        </ul>
+        <h3 style="color:#ff1744;">5. Networking</h3>
+        <ul>
+            <li>REST APIs, GraphQL</li>
+            <li>Retrofit, Volley (Android)</li>
+            <li>Alamofire (iOS)</li>
+            <li>JSON/XML Parsing</li>
+        </ul>
+        <h3 style="color:#ff1744;">6. Version Control</h3>
+        <ul>
+            <li>Git & GitHub</li>
+        </ul>
+        <h3 style="color:#ff1744;">7. Testing</h3>
+        <ul>
+            <li>JUnit, Espresso (Android)</li>
+            <li>XCTest (iOS)</li>
+        </ul>
+        <h3 style="color:#ff1744;">8. App Deployment</h3>
+        <ul>
+            <li>App Signing</li>
+            <li>Publishing to Google Play Store / Apple App Store</li>
+        </ul>
+        <h3 style="color:#ff1744;">9. Learning Resources</h3>
+        <ul>
+            <li><a href="https://developer.android.com" target="_blank" style="color:#a385ff;">Official Android Developer Site</a></li>
+            <li><a href="https://developer.apple.com" target="_blank" style="color:#a385ff;">Official Apple Developer Site</a></li>
+            <li>Udemy, Coursera, YouTube, GitHub</li>
+        </ul>
+        <div class="images-row">
+            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201223215047/Roadmap-to-become-Android-Developer.png" alt="Android Roadmap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zou-jannSEpLY0fBYUG1YleGKrDsy6yDfg&s" alt="Mobile Dev">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ062lNDwQkCL6NeDYi1aWCTofa3udzoBbHg&s" alt="Mobile Dev 2">
+        </div>
+        <iframe width="100%" height="305" src="https://www.youtube.com/embed/Og287zzOTEM" title="The Beginner to Industry-Ready Roadmap For Android &amp; KMP Development In 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="desc" style="margin-top:24px;">
+            <span class="highlight">Tip:</span> Start with one platform (Android or iOS), master its basics, then explore cross-platform frameworks if you want to build for both.
+        </div>
+        <div class="form-container">
+            <h2>Android Developer Roadmap Form</h2>
+            <form action="#" method="POST">
+                <label for="name">Your Name</label><br>
+                <input type="text" id="name" name="name" required><br>
 
-Installing software on the device
-Setting up back-end services for the APIs to access data
-Testing the application on the devices it will use
-    </pre>
-    h1>What You Need to Learn to Become an Android Developer</h1>
+                <label for="email">Email Address</label><br>
+                <input type="email" id="email" name="email" required><br>
 
-  <p>To be able to create an Android app, you need to study the following topics in a structured way.</p>
+                <label for="stage">Your Current Stage</label><br>
+                <select id="stage" name="stage" required>
+                    <option value="">-- Select Stage --</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select><br>
 
-  <h2 style="color: blueviolet;">1. Programming Languages</h2>
-  <ul>
-    <li>Java</li>
-    <li>Kotlin</li>
-  </ul>
+                <label for="language">Preferred Language</label>
+                <select id="language" name="language">
+                    <option value="kotlin">Kotlin</option>
+                    <option value="java">Java</option>
+                    <option value="swift">Swift</option>
+                    <option value="dart">Dart</option>
+                    <option value="both">Both</option>
+                </select><br>
 
-  <h2 style="color: blueviolet;">2. Development Tools</h2>
-  <ul>
-    <li style="color: brown;" >Android Studio (Main IDE)</li>
-    <li style="color: brown;">Using Emulator for testing</li>
-    <li style="color: brown;">Gradle (Build System)</li>
-  </ul>
+                <label for="interests">Interested Topics</label>
+                <textarea id="interests" name="interests" placeholder="e.g. Jetpack Compose, Firebase, CI/CD etc."></textarea><br>
 
-  <h2 style="color: blueviolet;">3. Android Components</h2>
-  <ul>
-    <li style="color: blue;">Activity</li>
-    <li style="color: blue;">Fragment</li>
-    <li style="color: blue;">Intent</li>
-    <li style="color: blue;">Service</li>
-    <li style="color: blue;">Broadcast Receiver</li>
-  </ul>
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="experience" name="experience" min="0" max="50">
 
-  <h2 style="color: blueviolet;">4. User Interface (UI)</h2>
-  <ul>
-    <li style="color: black;">XML Layout Design</li>
-    <li style="color: black;">ConstraintLayout</li>
-    <li style="color: black;">RecyclerView</li>
-    <li style="color: black;">Material Design</li>
-  </ul>
-
-  <h2 style="color: blueviolet;">5. Data Storage</h2>
-  <ul style="color: brown;">
-    <li>SharedPreferences</li>
-    <li>Room Database</li>
-    <li>SQLite</li>
-  </ul>
-
-  <h2 style="color: blueviolet;">6. Networking</h2>
-  <ul style="color: rgba(127, 144, 255, 0.811);">
-    <li>REST API</li>
-    <li>Retrofit</li>
-    <li>JSON Parsing</li>
-  </ul>
-
-  <h2 style="color: blueviolet;">7. Version Control</h2>
-  <ul style="color: rgb(255, 240, 248);">
-    <li>Git</li>
-    <li>GitHub</li>
-  </ul>
-
-  <h2 style="color: blueviolet;" >8. Testing</h2>
-  <ul style="color: rgb(255, 176, 127);">
-    <li>JUnit (Unit Testing)</li>
-    <li>Espresso (UI Testing)</li>
-  </ul>
-
-  <h2 style="color:blueviolet;" >9. App Deployment</h2>
-  <ul style="background-color: rgb(255, 240, 246);">
-    <li>App Signing</li>
-    <li>Publishing to Google Play Store</li>
-  </ul>
-  <h2 style="color: blueviolet;">10. Learning Resources</h2>
-  <ul style="color: brown;">
-    <li><a href="https://developer.android.com" target="_blank">Official Android Developer Site</a></li>
-    <li>Udemy</li>
-    <li>YouTube</li>
-    <li>GitHub</li>
-  </ul> 
-  <image src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201223215047/Roadmap-to-become-Android-Developer.png" width="200px" height="300px"></image>
-  <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zou-jannSEpLY0fBYUG1YleGKrDsy6yDfg&s" width="200px" height="200px"></image>
-  <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ062lNDwQkCL6NeDYi1aWCTofa3udzoBbHg&s" width="200px" height="200px"></image>
-    <ul style=" background-color: aqua;">
-        <li>Platforms: iOS, Android</li>
-        <li>Languages: Swift, Kotlin, Dart</li>
-        <li>Frameworks: React Native, Flutter</li>
-        <li>App Deployment</li>
-        <li>Testing & Debugging</li>
-    </ul>
-      <iframe width="533" height="305" src="https://www.youtube.com/embed/Og287zzOTEM" title="The Beginner to Industry-Ready Roadmap For Android &amp; KMP Development In 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="200px" height="200px"></iframe>"
-      <br>
-      <div class="form-container">
-    <h2>Android Developer Roadmap Form</h2>
-    <form action="#" method="POST">
-      <label for="name">Your Name</label><br>
-      <input type="text" id="name" name="name" required><br>
-
-      <label for="email">Email Address</label><br>
-      <input type="email" id="email" name="email" required><br>
-
-      <label for="stage">Your Current Stage</label><br>
-      <select id="stage" name="stage" required>
-        <option value="">-- Select Stage --</option>
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select><br>
-
-      <label for="language">Preferred Language</label>
-      <select id="language" name="language">
-        <option value="kotlin">Kotlin</option>
-        <option value="java">Java</option>
-        <option value="both">Both</option>
-      </select><br>
-
-      <label for="interests">Interested Topics</label>
-      <textarea id="interests" name="interests" placeholder="e.g. Jetpack Compose, Firebase, CI/CD etc."></textarea><br>
-
-      <label for="experience">Years of Experience</label>
-      <input type="number" id="experience" name="experience" min="0" max="50">
-
-      <button type="submit">Submit Roadmap Info</button>
-    </form>
-</div>
-</body>
-</html>
+                <button type="submit">Submit Roadmap Info</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

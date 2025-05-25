@@ -3,87 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <title>Backend Developer Roadmap</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      padding: 20px;
-    }
-
-    .container1 {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .container2 {
-      background-color: #b4b3b3;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      margin: auto;
-      max-width: 800px;
-      margin-top: -30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h1{text-align: center;
-        margin-bottom: 40px;
-    }
-    h2 {
-      text-align: left;
-      
-    }
-
-    ul {
-      padding-left: 55px;
-    }
-
-    li {
-      margin: 5px 0;
-    }
-    nav{text-align: center;
-    margin-top: -20px;
-    }
-   </style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: url('icons/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f2e9e4;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 20, 0.85);
+            z-index: 0;
+            pointer-events: none;
+        }
+        nav {
+            background: #111015;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+            position: relative;
+            z-index: 1;
+        }
+        nav a {
+            color: #ff1744;
+            text-decoration: none;
+            margin: 0 4px;
+            font-weight: bold;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+            padding: 0 8px;
+        }
+        nav a:hover {
+            color: #fff;
+            background: #ff1744;
+            border-radius: 4px;
+        }
+        h1 {
+            color: #ff1744;
+            text-align: center;
+            margin-top: 32px;
+            font-size: 2.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #000;
+            position: relative;
+            z-index: 1;
+        }
+        .container1 {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            background: rgba(10, 10, 20, 0.93);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.10);
+            padding: 32px 36px 28px 36px;
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            color: #ff1744;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        ul {
+            padding-left: 22px;
+            font-size: 1.08em;
+        }
+        li {
+            margin: 7px 0;
+            line-height: 1.7;
+        }
+        .desc {
+            color: #f2e9e4;
+            font-size: 1.08em;
+            margin-bottom: 18px;
+            margin-top: 8px;
+        }
+        .highlight {
+            color: #ff1744;
+            font-weight: bold;
+        }
+        @media (max-width: 700px) {
+            .container1 {
+                max-width: 98vw;
+                padding: 7vw 2vw;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container2">
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="frontend.html">Frontend</a> |
-        <a href="devops.html">DevOps</a> |
-        <a href="mobile.html">Mobile</a> |
-        <a href="uiux.html">UI/UX</a> |
-        <a href="team.html">Our Team</a> |
         <a href="careers.html">Careers</a>
     </nav>
-    </div>
-     <h1>Backend Developer Roadmap</h1>
-
+    <h1>Backend Developer Roadmap</h1>
     <div class="container1">
-    <h2>1. Programming Languages</h2>
+        <div class="desc">
+            Backend developers build and maintain the server-side logic, databases, and APIs that power web and mobile applications. They ensure data flows securely and efficiently between the frontend and backend, and are responsible for performance, scalability, and security.
+        </div>
+        <h2>1. Programming Languages</h2>
         <ul>
-            <li>Java</li>
-            <li>Python</li>
-            <li>javascript(Node.js)</li>
-            <li>PHP</li>
+            <li><span class="highlight">Java</span> – Enterprise applications, Spring Boot</li>
+            <li><span class="highlight">Python</span> – Django, Flask, FastAPI</li>
+            <li><span class="highlight">JavaScript (Node.js)</span> – Express, NestJS</li>
+            <li><span class="highlight">PHP</span> – Laravel, Symfony</li>
+            <li><span class="highlight">C#</span> – .NET Core</li>
+            <li><span class="highlight">Go</span> – High performance, concurrency</li>
         </ul>
         <h2>2. Databases</h2>
         <ul>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-            <li>MariaDB</li>
+            <li><span class="highlight">Relational:</span> MySQL, PostgreSQL, MariaDB, SQL Server</li>
+            <li><span class="highlight">NoSQL:</span> MongoDB, Redis, Cassandra</li>
         </ul>
-        <h2>3. SEcurity & Authentication</h2>
+        <h2>3. Security & Authentication</h2>
         <ul>
-            <li>JWT</li>
-            <li>OAuth</li>
-            <li>SSL Certificates</li>
+            <li>JWT (JSON Web Tokens)</li>
+            <li>OAuth 2.0</li>
+            <li>SSL/TLS Certificates</li>
+            <li>Input validation & sanitization</li>
+            <li>Password hashing (bcrypt, Argon2)</li>
         </ul>
+        <h2>4. APIs & Web Services</h2>
+        <ul>
+            <li>RESTful API design</li>
+            <li>GraphQL</li>
+            <li>gRPC</li>
+            <li>API documentation (Swagger/OpenAPI)</li>
+        </ul>
+        <h2>5. Frameworks & Tools</h2>
+        <ul>
+            <li>Spring Boot (Java)</li>
+            <li>Django, Flask, FastAPI (Python)</li>
+            <li>Express, NestJS (Node.js)</li>
+            <li>Laravel (PHP)</li>
+            <li>.NET Core (C#)</li>
+        </ul>
+        <h2>6. Other Key Skills</h2>
+        <ul>
+            <li>Version control (Git, GitHub/GitLab)</li>
+            <li>Testing (unit, integration, Postman)</li>
+            <li>CI/CD basics (GitHub Actions, Jenkins)</li>
+            <li>Containerization (Docker)</li>
+            <li>Cloud basics (AWS, Azure, GCP)</li>
+            <li>Monitoring & logging (Prometheus, Grafana, ELK stack)</li>
+        </ul>
+        <div class="desc">
+            <span class="highlight">Tip:</span> Focus on mastering one language and its ecosystem first, then expand your skills as needed for your projects or job requirements.
+        </div>
     </div>
 </body>
 </html>

@@ -3,95 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <title>DevOps Roadmap</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <style>
         body {
-            background: #f4f8fb;
-            color: #222;
-            font-family: Arial, sans-serif;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: url('icons/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f2e9e4;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 20, 0.85);
+            z-index: 0;
+            pointer-events: none;
         }
         nav {
-            background: #22223b;
-            padding: 7px 0;
+            background: #111015;
+            padding: 12px 0;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+            position: relative;
+            z-index: 1;
         }
         nav a {
-            color: #f2e9e4;
+            color: #ff1744;
             text-decoration: none;
-            margin: 0 8px;
+            margin: 0 4px;
             font-weight: bold;
-            font-size: 1.05em;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
             transition: color 0.2s;
+            padding: 0 8px;
         }
         nav a:hover {
-            color: #4a4e69;
+            color: #fff;
+            background: #ff1744;
+            border-radius: 4px;
         }
         h1 {
-            color: #22223b;
+            color: #ff1744;
             text-align: center;
-            margin-top: 18px;
-            font-size: 2em;
+            margin-top: 32px;
+            font-size: 2.2em;
             font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #000;
+            position: relative;
+            z-index: 1;
         }
         .roadmap-container {
-            max-width: 700px;
-            margin: 18px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(34,34,59,0.07);
-            padding: 18px;
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(10, 10, 20, 0.93);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(34,34,59,0.10);
+            padding: 32px 36px 28px 36px;
+            position: relative;
+            z-index: 1;
         }
         .roadmap-step {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 18px;
+            margin-bottom: 28px;
         }
-        .roadmap-step img {
-            width: 38px;
-            height: 38px;
-            margin-right: 14px;
-            border-radius: 6px;
-            border: 1.5px solid #4a4e69;
-            background: #f2e9e4;
+        .roadmap-step img{
+            width: 60px;
+            height: 60px;
+            margin-right: 24px;
+            border-radius: 8px;
+            border: 2px solid #ff1744;
+            background: #fff;
         }
         .roadmap-step:last-child {
             margin-bottom: 0;
         }
         .step-title {
-            font-size: 1em;
-            color: #4a4e69;
+            font-size: 1.2em;
+            color: #ff1744;
             font-weight: bold;
         }
         .step-desc {
-            color: #22223b;
+            color: #f2e9e4;
             margin-top: 2px;
             font-size: 0.97em;
         }
         .sublist {
-            margin: 6px 0 0 0;
-            padding-left: 18px;
+            margin: 8px 0 0 0;
+            padding-left: 20px;
         }
         .sublist li {
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             list-style: disc;
             font-size: 0.97em;
         }
         .sublist img {
-            width: 17px;
-            height: 17px;
+            width: 22px;
+            height: 22px;
             vertical-align: middle;
-            margin-right: 4px;
+            margin-right: 6px;
             border: none;
             background: none;
         }
         .label {
             display: inline-block;
-            font-size: 0.7em;
+            font-size: 0.75em;
             font-weight: bold;
-            padding: 1.5px 6px;
-            border-radius: 7px;
-            margin-left: 6px;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-left: 8px;
             vertical-align: middle;
         }
         .foundation { background: #e0f7fa; color: #00796b; }
@@ -101,13 +129,15 @@
         .courses-container {
             max-width: 700px;
             margin: 28px auto 0 auto;
-            background: #fff;
+            background: rgba(10, 10, 20, 0.93);
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(34,34,59,0.07);
             padding: 18px;
+            position: relative;
+            z-index: 1;
         }
         .courses-container h2 {
-            color: #22223b;
+            color: #ff1744;
             text-align: center;
             font-size: 1.3em;
             margin-bottom: 12px;
@@ -115,15 +145,28 @@
         .courses-container ul {
             line-height: 1.7;
             font-size: 0.98em;
+            color: #f2e9e4;
         }
         .course a {
             font-size: 0.97em;
+            color: #ff1744;
         }
-        @media (max-width: 600px) {
+        .course a:hover {
+            color: #fff;
+            background: #ff1744;
+            border-radius: 4px;
+            padding: 0 4px;
+        }
+        @media (max-width: 700px) {
             .roadmap-container, .courses-container {
                 max-width: 98vw;
                 padding: 7vw 2vw;
             }
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+        @media (max-width: 600px) {
             .roadmap-step {
                 flex-direction: column;
                 align-items: flex-start;
@@ -137,12 +180,6 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="frontend.html">Frontend</a> |
-        <a href="backend.html">Backend</a> |
-        <a href="mobile.html">Mobile</a> |
-        <a href="uiux.html">UI/UX</a> |
-        <a href="team.html">Our Team</a> |
         <a href="careers.html">Careers</a>
     </nav>
     <h1>DevOps Roadmap</h1>
@@ -332,9 +369,9 @@
         </div>
     </div> <!-- end of .roadmap-container -->
 
-    <div class="courses-container" style="max-width:700px;margin:28px auto 0 auto;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(34,34,59,0.07);padding:18px;">
-        <h2 style="color:#22223b;text-align:center;font-size:1.3em;margin-bottom:12px;">Recommended Courses & Certifications</h2>
-        <ul style="line-height:1.7;font-size:0.98em;">
+    <div class="courses-container">
+      <h2>Recommended Courses & Certifications</h2>
+      <ul>
             <li>
                 <b>Linux & Shell Scripting:</b>
                 <span class="course">
