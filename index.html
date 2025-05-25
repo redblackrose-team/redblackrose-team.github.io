@@ -1,96 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <style>
-        body{
-            background-color: rgb(163, 168, 166);
-            color: rgb(12, 79, 134);
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0%;
-            padding: 0%;
-        }
-        nav{
-           background-color: rgb(209, 147, 183);
-           padding: 10px 0;
-           text-align: center;
-        }
-        nav a{
-            color: rgb(118, 118, 236); 
-            text-decoration: none ;
-            margin: 0 12px;
-            font-weight: bold;
-            font-size: 1.3em;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: blueviolet;
-        }
-        nav a:not(:last-child){
-              border-right: 1px rgb(66, 243, 66) ;
-              padding-right: 16px; 
-        }
-        h1{
-            color: rgb(212, 11, 11);
-            text-align: center;
-            margin-top: 48px;
-            font-size: 3em;
-            font-weight: bold;
-           }
-        </style>
-        </head>
-        <body>
-            <nav>
-               <a href="indexM02.html">Home</a> 
-               <a href="fonted.html">Fontend</a>
-               <a href="backend.html">Backend</a>
-               <a href="mobile.html">Mobile</a>
-               <a href="uiux.html"> UI/UX</a>
-               <a href="team.html">Our Team</a>
-               <a href="careers.html">Careers</a>
-            </nav>
-    </style>
-    <meta charset="UTF-8">
-    <title>Developer Roadmap - Home</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+  <meta charset="UTF-8" />
+  <title>RedBlackRose IT Roadmap</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #23243a 0%, #f4f8fb 100%);
+      color: #23243a;
+    }
+
+    nav {
+      background: #23243a;
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(34,34,59,0.07);
+    }
+
+    nav a {
+      color: #f2e9e4;
+      text-decoration: none;
+      margin: 0 4px;
+      font-weight: bold;
+      font-size: 1.15em;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+      padding: 0 8px;
+    }
+
+    nav a:hover {
+      color: #ff1744;
+    }
+
+    .team-name {
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: bold;
+      margin-top: 32px;
+      letter-spacing: 2px;
+      color: #ff1744;
+      text-shadow: 1px 2px 8px #23243a33;
+    }
+
+    .welcome-title {
+      text-align: center;
+      font-size: 2.8em;
+      font-weight: bold;
+      margin: 18px 0 10px 0;
+      color: #23243a;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #f2e9e4cc;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.25em;
+      margin: 0 auto 32px auto;
+      max-width: 700px;
+      color: #333;
+      background: rgba(255,255,255,0.7);
+      border-radius: 12px;
+      padding: 18px 24px;
+      box-shadow: 0 2px 12px rgba(34,34,59,0.07);
+    }
+
+    .roadmap-container {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      background: rgba(255,255,255,0.93);
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(34,34,59,0.10);
+      padding: 32px 36px 28px 36px;
+    }
+
+    .section-title {
+      color: #ff1744;
+      font-size: 1.5em;
+      margin-bottom: 12px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    ul.areas {
+      margin: 0 auto 18px auto;
+      font-size: 1.13em;
+      line-height: 1.7;
+      max-width: 600px;
+      padding-left: 18px;
+    }
+
+    ul.areas li {
+      margin-bottom: 8px;
+      list-style: disc;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+      color: #444;
+      margin: 32px 0 0 0;
+      font-size: 1.1em;
+    }
+
+    .footer {
+      text-align: center;
+      color: #fff;
+      background: #23243a;
+      padding: 14px 0 10px 0;
+      font-size: 1em;
+      letter-spacing: 1px;
+      margin-top: 40px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .roadmap-container {
+        padding: 7vw 2vw;
+      }
+      .welcome-title {
+        font-size: 2em;
+      }
+      .team-name {
+        font-size: 1.3em;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <h1>Welcome to the Developer Roadmap</h1>
-    <nav>
-        <a href="frontend.html">Frontend</a> |
-        <a href="backend.html">Backend</a> |
-        <a href="devops.html">DevOps</a> |
-        <a href="mobile.html">Mobile</a> |
-        <a href="uiux.html">UI/UX</a> |
-        <a href="team.html">Our Team</a> |
-        <a href="careers.html">Careers</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="frontend.html">Frontend</a>
+    <a href="backend.html">Backend</a>
+    <a href="devops.html">DevOps</a>
+    <a href="mobile.html">Mobile</a>
+    <a href="uiux.html">UI/UX</a>
+    <a href="team.html">Our Team</a>
+    <a href="careers.html">Careers</a>
+  </nav>
 
-     <p>   Explore different paths in software development!</p>
-    <p>    Advantages include A strong job outlook,Creative opportunities,and the potential to work remotely.</p>
-    <p>    Disadvantages include Demanding schedules,Constant learning,Time-intensive projects,Needs for specialized
-          skills,complexity of the field.</p>
-    <p>   Topic include programming languages,web development,mobile app development and software engineering fundamentals.
-     </p>
-     <p>   Software development can be learned online platforms,universities and colleges,bootcamps,Techanical training
-          providers,choosing the right courses.</p>
-       <h2>  Key Areas in Software development</h2>
-    <ul>
+  <div class="team-name">RedBlackRose</div>
+  <div class="welcome-title">Welcome to the IT Roadmap</div>
+  <div class="intro">
+    <b>RedBlackRose</b> presents a clear and practical roadmap for anyone interested in building a career in Information Technology.<br>
+    Whether you're a beginner or looking to specialize, our guide will help you discover the skills, tools, and paths that matter most in today's tech world.
+  </div>
 
-        <li> Programming languages(Python,JavaScript,Java,C++)</li>
-        <li> Web Development(Frontend and Backend)</li>
-        <li> Mobile App Development(Android,IOS,Flutter,Reactnative)</li>
-        <li> Game Development</li>
-        <li> Data Science and AI</li>
-        <li> Cloud Computing and DevOPs(AWS,Docker,CI/CD)</li>
-        <li> UI/UX Design</li>
-        <li> Software Testing and QA</li>
-        <li> Databases(SQL,MongoDB)</li>
+  <div class="roadmap-container">
+    <div class="section-title">Explore Your Path</div>
+    <ul class="areas">
+      <li><b>Frontend Development</b> — Create beautiful, interactive websites and web apps.</li>
+      <li><b>Backend Development</b> — Build powerful servers, APIs, and databases.</li>
+      <li><b>DevOps & Cloud</b> — Automate, deploy, and scale with modern tools and platforms.</li>
+      <li><b>Mobile App Development</b> — Design and code apps for Android and iOS.</li>
+      <li><b>UI/UX Design</b> — Craft user experiences that delight and engage.</li>
+      <li><b>Software Testing & QA</b> — Ensure quality and reliability in every release.</li>
+      <li><b>Data Science & AI</b> — Analyze data, build models, and unlock insights.</li>
+      <li><b>Game Development</b> — Turn ideas into interactive entertainment.</li>
+      <li><b>Career Guidance</b> — Get tips on jobs, interviews, and building your future.</li>
     </ul>
-</body>
+    <div class="section-title">Why Follow a Roadmap?</div>
+    <ul class="areas">
+      <li>Understand what to learn and in what order.</li>
+      <li>Focus on skills that are in demand.</li>
+      <li>Save time and avoid confusion.</li>
+      <li>Build confidence as you progress.</li>
+    </ul>
+    <div class="quote">
+      "The future belongs to those who prepare for it today. Start your IT journey with RedBlackRose!"
+    </div>
+  </div>
 
+  <div class="footer">
+    &copy; 2025 RedBlackRose Team &mdash; Empowering Your IT Journey
+  </div>
+</body>
 </html>
