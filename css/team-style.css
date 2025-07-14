@@ -32,9 +32,14 @@
     padding: 15px;
 }
 
-.id, .name, .role {
+.id, .name {
     margin: 5px 0;
     color: #fff;
+}
+
+.role {
+    margin: 5px 0;
+    color: #eb6448; /* Orange accent color */
 }
 
 .name {
