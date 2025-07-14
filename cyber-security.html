@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Roadmap for University Students</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter (matching the CSS comment) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        /* Custom styles to complement Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #37083c 0%, #2d0637 100%);
+            color: #fff;
+        }
+
+        /* Styling the central timeline bar with a new gradient */
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            z-index: 1;
+        }
+
+        /* Base styles for a timeline item */
+        .timeline-item {
+            position: relative;
+            width: 100%;
+            padding-left: 70px;
+            /* Default padding for mobile */
+            padding-right: 25px;
+            margin-bottom: 30px;
+            /* Optimized vertical space */
+        }
+
+        /* Styling the circles on the timeline */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #0D1117;
+            /* Match body background */
+            border: 4px solid #3b82f6;
+            /* New blue accent */
+            top: 20px;
+            border-radius: 50%;
+            z-index: 2;
+            left: 19px;
+            /* Default position for mobile */
+        }
+
+        /* Adjust timeline circle for mobile to be on the gradient line */
+        @media screen and (max-width: 767px) {
+            .timeline-item::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .timeline-item {
+                padding-left: 15px; /* Adjust padding for content to not overlap circle */
+                padding-right: 15px;
+            }
+            .timeline-card {
+                margin-left: 10px; /* Offset cards slightly for mobile to make space for circle */
+                margin-right: 10px;
+            }
+        }
+
+
+        /* Desktop layout adjustments */
+        @media screen and (min-width: 768px) {
+            .timeline-item {
+                width: 50%;
+                padding: 0;
+                /* Reset padding for desktop */
+            }
+
+            .timeline-item.left {
+                float: left;
+                clear: left;
+                padding-right: 3rem;
+
+            }
+
+            .timeline-item.right {
+                float: right;
+                clear: right;
+                padding-left: 3rem;
+            }
+
+            .timeline-item.left::after {
+                right: -12px;
+                left: auto;
+            }
+
+            .timeline-item.right::after {
+                left: -12px;
+            }
+        }
+
+        /* Animation for items on scroll and hover */
+        .animated-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+        }
+
+        .animated-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scale effect on hover for cards */
+        .card-hover:hover {
+            transform: scale(1.03);
+            z-index: 10;
+            position: relative;
+        }
+
+        /* New card style */
+        .content-card {
+            background: #37083c;
+            /* deep purple background */
+            border: 2px solid #eb6448;
+            /* orange accent border */
+        }
+
+        /* Navbar styling from the user's provided snippet */
+        .nav-bar {
+            background: #37083c;
+            padding: 32px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-bar .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            text-decoration: none; /* Ensure logo text is not underlined */
+        }
+
+        .nav-bar .logo span {
+            color: #eb6448;
+        }
+
+        .nav-bar .menu ul {
+            display: flex;
+            gap: 48px;
+            list-style: none; /* Remove bullet points */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .nav-bar .menu ul li a {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .nav-bar .menu ul li a:hover,
+        .nav-bar .menu ul li a.active {
+            color: #eb6448; /* Highlight active/hovered link */
+        }
+
+        .nav-bar .nav-btn .btn {
+            background-color: #eb6448; /* Orange button background */
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none; /* Remove default button border */
+        }
+
+        .nav-bar .nav-btn .btn:hover {
+            background-color: #e0563c; /* Slightly darker orange on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Ensure responsive menu for smaller screens */
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .nav-bar .menu ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            .nav-bar .nav-btn {
+                margin-top: 20px;
+                width: 100%; /* Make button full width */
+                text-align: center;
+            }
+            .nav-bar .nav-btn .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-slate-300 antialiased">
+
+    <!-- Nav bar start -->
+  <header>
+    <div class="nav-bar">
+      <a href="#"><img src="home-images/logo.png" alt="logo" style="width: 80px;"></a>
+      <div class="menu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#roadmaps">Roadmaps</a></li>
+          <li><a href="#overview">Overviews</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- Nav bar end -->
+
+    <main class="container mx-auto px-4 md:px-8 py-16">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white">Cybersecurity Roadmap</h2>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">Your comprehensive guide to building a strong foundation and advancing in cybersecurity.</p>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="roadmap" class="relative timeline-container pb-12 overflow-auto">
+
+            <!-- Phase 1: Fundamentals of IT & Networking -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">1. Fundamentals of IT & Networking</h3>
+                            <p class="text-slate-400 text-sm">Build a strong base in computing and network principles.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-computer-tower text-lg mr-2"></i>
+                                Operating Systems (Linux, Windows)
+                            </span>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Foundation</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-globe-hemisphere-east text-lg mr-2"></i>
+                                Networking Basics (TCP/IP, OSI Model)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-code-simple text-lg mr-2"></i>
+                                Basic Scripting (Python/Bash)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 2: Core Cybersecurity Concepts -->
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">2. Core Cybersecurity Concepts</h3>
+                            <p class="text-slate-400 text-sm">Understand fundamental security principles and threats.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-shield-check text-lg mr-2"></i>
+                                CIA Triad (Confidentiality, Integrity, Availability)
+                            </span>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Foundation</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-lock-key text-lg mr-2"></i>
+                                Cryptography Basics
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-virus text-lg mr-2"></i>
+                                Common Attack Vectors & Malware
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 3: Network Security -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">3. Network Security</h3>
+                            <p class="text-slate-400 text-sm">Secure network infrastructure and data in transit.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-firewall text-lg mr-2"></i>
+                                Firewalls & IDS/IPS
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-vpn text-lg mr-2"></i>
+                                VPNs & Secure Remote Access
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-router text-lg mr-2"></i>
+                                Network Segmentation & VLANs
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Phase 4: Application Security -->
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">4. Application Security</h3>
+                            <p class="text-slate-400 text-sm">Identify and mitigate vulnerabilities in software.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-bug text-lg mr-2"></i>
+                                OWASP Top 10
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-code-block text-lg mr-2"></i>
+                                Secure Coding Practices
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-magnifying-glass text-lg mr-2"></i>
+                                Web Application Firewalls (WAF)
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 5: Cloud Security -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">5. Cloud Security</h3>
+                            <p class="text-slate-400 text-sm">Secure cloud environments and services.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-cloud-arrow-up text-lg mr-2"></i>
+                                Shared Responsibility Model
+                            </span>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Foundation</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-amazon-logo text-lg mr-2"></i>
+                                AWS/Azure/GCP Security Features
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-lock-open text-lg mr-2"></i>
+                                Identity and Access Management (IAM)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 6: Incident Response & Forensics -->
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">6. Incident Response & Forensics</h3>
+                            <p class="text-slate-400 text-sm">Prepare for, detect, and respond to security incidents.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-warning-octagon text-lg mr-2"></i>
+                                Incident Response Lifecycle
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-magnifying-glass-plus text-lg mr-2"></i>
+                                Digital Forensics Basics
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-file-magnifying-glass text-lg mr-2"></i>
+                                Log Analysis (SIEM tools)
+                            </span>
+                            <span class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 7: Governance, Risk, & Compliance (GRC) -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">7. Governance, Risk, & Compliance (GRC)</h3>
+                            <p class="text-slate-400 text-sm">Understand the regulatory and policy landscape.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-scroll text-lg mr-2"></i>
+                                Security Policies & Frameworks (NIST, ISO 27001)
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-chart-line-up text-lg mr-2"></i>
+                                Risk Management
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-gavel text-lg mr-2"></i>
+                                Compliance (GDPR, HIPAA, PCI DSS)
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 8: Advanced Topics & Specializations -->
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">8. Advanced Topics & Specializations</h3>
+                            <p class="text-slate-400 text-sm">Explore specialized areas and cutting-edge trends.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-brain text-lg mr-2"></i>
+                                AI/ML in Cybersecurity
+                            </span>
+                            <span class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-lock-laminated text-lg mr-2"></i>
+                                Blockchain Security
+                            </span>
+                            <span class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                <i class="ph-factory text-lg mr-2"></i>
+                                OT/ICS Security
+                            </span>
+                            <span class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Learning Resources Section -->
+        <section id="resources" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Recommended Courses & Certifications</h2>
+                <p class="text-lg text-slate-400 mt-2">Curated resources to master each skill on the roadmap.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- IT & Networking Fundamentals Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-purple-800 border border-purple-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-terminal-window text-3xl text-purple-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">IT & Networking Fundamentals</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.comptia.org/certifications/a" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-certificate"></i><span>CompTIA A+ Certification</span></a>
+                        <a href="https://www.comptia.org/certifications/network" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-network"></i><span>CompTIA Network+ Certification</span></a>
+                        <a href="https://www.coursera.org/professional-certificates/google-it-support" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-google-logo"></i><span>Google IT Support Professional Certificate</span></a>
+                        <a href="https://www.udemy.com/course/linux-mastery/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-linux-logo"></i><span>Linux Mastery (Udemy)</span></a>
+                    </div>
+                </div>
+                <!-- Core Cybersecurity Concepts Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-blue-900 border border-blue-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-shield-star text-3xl text-blue-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Core Cybersecurity Concepts</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.comptia.org/certifications/security" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-lock-key"></i><span>CompTIA Security+ Certification</span></a>
+                        <a href="https://www.sans.org/cyber-security-courses/security-essentials-network-endpoint-cloud/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-book-open"></i><span>SANS SEC401: Security Essentials</span></a>
+                        <a href="https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-ibm-logo"></i><span>IBM Cybersecurity Analyst Professional Certificate</span></a>
+                    </div>
+                </div>
+                <!-- Network Security Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-green-900 border border-green-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-arrows-clockwise text-3xl text-green-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Network Security</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-router"></i><span>Cisco CCNA (Security Focus)</span></a>
+                        <a href="https://www.udemy.com/course/network-security-from-scratch/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-video"></i><span>Network Security from Scratch (Udemy)</span></a>
+                        <a href="https://www.sans.org/cyber-security-courses/network-security-monitoring-operations/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-monitor"></i><span>SANS SEC503: Network Security Monitoring</span></a>
+                    </div>
+                </div>
+                <!-- Application Security Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-yellow-900 border border-yellow-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-cloud text-3xl text-yellow-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Application Security</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-bug"></i><span>OWASP Top 10 Guide</span></a>
+                        <a href="https://portswigger.net/web-security" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-globe"></i><span>PortSwigger Web Security Academy</span></a>
+                        <a href="https://www.udemy.com/course/complete-web-security-and-bug-bounty-course/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-code-block"></i><span>Web Security & Bug Bounty (Udemy)</span></a>
+                    </div>
+                </div>
+                <!-- Cloud Security Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-pink-900 border border-pink-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-cube text-3xl text-pink-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Cloud Security</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://aws.amazon.com/certification/security-specialty/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-amazon-logo"></i><span>AWS Certified Security - Specialty</span></a>
+                        <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-microsoft-azure-logo"></i><span>Azure Security Engineer Associate</span></a>
+                        <a href="https://cloud.google.com/certification/cloud-security-engineer" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-google-logo"></i><span>Google Cloud Security Engineer</span></a>
+                    </div>
+                </div>
+                <!-- Incident Response & Forensics Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-cyan-900 border border-cyan-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-chart-line text-3xl text-cyan-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Incident Response & Forensics</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.comptia.org/certifications/cysa" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-detective"></i><span>CompTIA CySA+ Certification</span></a>
+                        <a href="https://www.sans.org/cyber-security-courses/digital-forensics-incident-response/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-file-magnifying-glass"></i><span>SANS FOR500: Windows Forensic Analysis</span></a>
+                        <a href="https://www.udemy.com/course/cyber-security-incident-response/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-warning-octagon"></i><span>Cyber Security Incident Response (Udemy)</span></a>
+                    </div>
+                </div>
+                <!-- Governance, Risk, & Compliance (GRC) Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-indigo-900 border border-indigo-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-code-block text-3xl text-indigo-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Governance, Risk, & Compliance (GRC)</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.isaca.org/credentialing/cism" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-gavel"></i><span>ISACA CISM Certification</span></a>
+                        <a href="https://www.isc2.org/Certifications/CISSP" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-scroll"></i><span>(ISC)² CISSP Certification (GRC domain)</span></a>
+                        <a href="https://www.udemy.com/course/grc-fundamentals/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-book-open"></i><span>GRC Fundamentals (Udemy)</span></a>
+                    </div>
+                </div>
+                <!-- Advanced Topics & Specializations Resources -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-red-900 border border-red-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-shield-check text-3xl text-red-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Advanced Topics & Specializations</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.offensive-security.com/courses/osce3/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-skull"></i><span>Offensive Security Certifications</span></a>
+                        <a href="https://www.sans.org/cyber-security-courses/industrial-control-system-security/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-factory"></i><span>SANS ICS Security Courses</span></a>
+                        <a href="https://www.udemy.com/course/ai-in-cybersecurity/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-brain"></i><span>AI in Cybersecurity (Udemy)</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-12">
+        <p class="text-slate-400">&copy; 2024 Your Name/Brand. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // JavaScript for animated cards on scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatedCards = document.querySelectorAll('.animated-card');
+
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // 10% of the item visible to trigger
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            animatedCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
