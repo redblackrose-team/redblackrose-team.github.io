@@ -1,0 +1,49 @@
+/* General styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Team section styles */
+.final-class {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.member_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    padding: 15px;
+}
+
+.id, .name, .role {
+    margin: 5px 0;
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
