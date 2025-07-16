@@ -290,7 +290,7 @@ form {
 }
 
 /* Footer */
-footer p {
+.footer p {
     background-color: #eb6448;
     color: #fff;
     font-size: 0.9rem;
