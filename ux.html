@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Design Roadmap for University Students</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="./css/home-style.css">
+     <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="text-slate-300 antialiased">
+
+    <!-- Nav bar start -->
+    <header>
+        <div class="nav-bar">
+            <a href="index.html"><img src="home-images/logo.png" alt="logo" style="width: 80px" /></a>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#roadmaps" class="active">Roadmaps</a></li>
+                    <li><a href="index.html#overview">Overviews</a></li>
+                    <li><a href="team.html">Our team</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Nav bar end -->
+
+
+    <main class="container mx-auto px-4 md:px-8 py-16">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white">UX Design Roadmap for Students</h2>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">Your step-by-step guide to becoming a UX design developmer. Start with the fundamentals and build your way up.</p>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="roadmap" class="relative timeline-container pb-12 overflow-auto">
+
+            <!-- Phase 1: UX Designer -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">1. UX Designer</h3>
+                            <p class="text-slate-400 text-sm">User experience planning, wireframing, usability testing.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                          <li class="flex justify-between items-center">
+                              <span class="flex items-center text-slate-200">
+                                  Research
+                              </span>
+                              <span class="text-xs font-bold bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Foundation</span>
+                          </li>
+                          <li class="flex justify-between items-center">
+                              <span class="flex items-center text-slate-200">
+                                  Wireframing
+                              </span>
+                              <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                          </li>
+                          <li class="flex justify-between items-center">
+                              <span class="flex items-center text-slate-200">
+                                  Prototyping
+                              </span>
+                              <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                          </li>
+                      </ul>
+                </div>
+            </div>
+
+            <!-- Phase 2: UX Researcher -->
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">2. UX Researcher</h3>
+                            <p class="text-slate-400 text-sm">Conducts user research, interviews, surveys.</p>
+                        </div>
+                    </div>
+                     <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Interviewing
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Data Analysis
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 3:Information Architecture  -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                    <div class="flex items-center mb-3">
+                         <div>
+                            <h3 class="text-xl font-semibold text-white">3. Information Architecture</h3>
+                            <p class="text-slate-400 text-sm">Organizes content and structure.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                 Sitemaps
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                 Content Hierarchy
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Phase 4: UX Writer  -->
+            <div class="timeline-item right">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                     <div class="flex items-center mb-3">
+                         <div>
+                            <h3 class="text-xl font-semibold text-white">4. UX Writer</h3>
+                            <p class="text-slate-400 text-sm">Writes microcopy, button texts, error messages.</p>
+                        </div>
+                    </div>
+                     <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                               UX Writing
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Content Design
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 5:Usability Analyst  -->
+            <div class="timeline-item left">
+                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                     <div class="flex items-center mb-3">
+                         <div>
+                            <h3 class="text-xl font-semibold text-white">5. Usability Analyst</h3>
+                            <p class="text-slate-400 text-sm">Evaluates user-friendliness, runs usability test.</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Usability Testing
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Reporting
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 6: Product Designer -->
+            <div class="timeline-item right">
+                 <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                     <div class="flex items-center mb-3">
+                         <div>
+                            <h3 class="text-xl font-semibold text-white">6. Product Designer</h3>
+                            <p class="text-slate-400 text-sm">End-to-end product experience, often includes both UX & UI.</p>
+                        </div>
+                    </div>
+                     <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                               Cross-functional
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Strategy
+                            </span>
+                            <span class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- Phase 7: Visual Designer -->
+            <div class="timeline-item left">
+                 <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                     <div class="flex items-center mb-3">
+                         <div>
+                            <h3 class="text-xl font-semibold text-white">7.  Visual Designer</h3>
+                            <p class="text-slate-400 text-sm">Focuses on branding, visuals and aesthetics.</p>
+                        </div>
+                    </div>
+                     <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Graphic Design
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Color Theory
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 8: Accessibility Specialist -->
+            <div class="timeline-item right">
+                 <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
+                     <div class="flex items-center mb-3">
+                         <div>
+                            <h3 class="text-xl font-semibold text-white">8. Accessibility Specialist </h3>
+                            <p class="text-slate-400 text-sm">Ensures design is inclusive for all users.</p>
+                        </div>
+                    </div>
+                     <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                WCAG Guidelines
+                            </span>
+                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must Have</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="flex items-center text-slate-200">
+                                Screen readers
+                            </span>
+                            <span class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Learning Resources Section -->
+        <section id="resources" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Recommended Courses & Certifications</h2>
+                <p class="text-lg text-slate-400 mt-2">Curated resources to master each skill on the roadmap.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- UX Designer -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-purple-800 border border-purple-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-terminal-window text-3xl text-purple-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">UX Designer</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-linux-logo"></i><span>UX Research By Google-Coursera(Part of UX Certiticate)</span></a>
+                        <a href="https://www.interaction-design.org/courses/user-research-methods-and-best-practices" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-video"></i><span>UX Research-Interaction Design Foundation</span></a>
+                        <a href="https://www.interaction-design.org/courses/user-research-methods-and-best-practices" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-code"></i><span>Nielsen Norman Group-UX Research Articles</span></a>
+                         <a href="https://www.udemy.com/course/ux-prototyping-course/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-code"></i><span>Rapid Prototyping for UX-Udemy</span></a>
+                    </div>
+                </div>
+                <!-- UX Researcher -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-blue-900 border border-blue-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-git-branch text-3xl text-blue-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">UX Researcher</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.coursera.org/learn/ux-research-surveys-analytics-interviews" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-book-open"></i><span>UX Research at Scale:Surveys, Analytic & Interviews-Coursera (University of Michigan)</span></a>
+                        <a href="https://www.interaction-design.org/courses/analytics-for-user-experience" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-github-logo"></i><span>UX Research Analytics-Interaction Design Foundation</span></a>
+                    </div>
+                </div>
+                <!-- Information Architecture -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-green-900 border border-green-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-arrows-clockwise text-3xl text-green-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white"> Information Architecture</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.interaction-design.org/courses/information-architecture" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-user-circle-gear"></i><span>Information Architecture-Interaction DesignFoundation (IDF)</span></a>
+                    </div>
+                </div>
+                <!-- UX Writer -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-yellow-900 border border-yellow-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-cloud text-3xl text-yellow-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">UX Writer</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://uxwritinghub.com/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-amazon-logo"></i><span>UX Writing Academy-UX Eriting Hub</span></a>
+                        <a href="https://uxcontent.com/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-microsoft-azure-logo"></i><span>UX writing Fundamentals-UX Content Collective</span></a>
+                    </div>
+                </div>
+                <!-- Usability Analyst -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-pink-900 border border-pink-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-cube text-3xl text-pink-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Usability Analyst</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.humanfactors.com/training/certification.asp" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-docker-logo"></i><span>Certified Usability Analyst (CUA)</span></a>
+                        <a href="https://www.interaction-design.org/courses/usability-testing" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-kubernetes-logo"></i><span>Usability Testing-Interaction Design Foundation</span></a>
+                    </div>
+                </div>
+                <!-- Product Designer -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-cyan-900 border border-cyan-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-chart-line text-3xl text-cyan-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Product Designer</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.nngroup.com/courses/ux-strategy/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-fire"></i><span>UX Strategy</span></a>
+                        <a href="https://www.coursera.org/learn/ux-strategy-fundamentals" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-chart-pie-slice"></i><span>UX Strategy-Couresra</span></a>
+                        <a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-stack"></i><span>Google UX Design Certitication</span></a>
+                    </div>
+                </div>
+                <!-- Visual Designer -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-indigo-900 border border-indigo-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-code-block text-3xl text-indigo-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Visual Designer</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.coursera.org/specializations/graphic-design" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-terraform-logo"></i><span>Google Graphic Design Certification</span></a>
+                        <a href="https://www.udemy.com/course/graphic-design-masterclass-everything-you-need-to-know/" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-user-circle-gear"></i><span>Graphic Design Masterclass-Udemy(By Lindsay Marsh)</span></a>
+                        <a href="https://color.adobe.com/create/color-wheel" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-cloud-arrow-up"></i><span></span>Adobe Color Theory Guide</a>
+                    </div>
+                </div>
+                <!-- Accessibility Specialist -->
+                <div class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-red-900 border border-red-400">
+                    <div class="flex items-center mb-4">
+                        <i class="ph-shield-check text-3xl text-red-200 mr-3"></i>
+                        <h3 class="text-xl font-semibold text-white">Accessibility Specialist</h3>
+                    </div>
+                    <div class="space-y-3 text-slate-200">
+                        <a href="https://www.edx.org/course/web-accessibility-introduction" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-lock-key"></i><span>Best Courses & Certitications for WCAG & Screen Reader Accessibility</span></a>
+                        <a href="https://developers.google.com/web/fundamentals/accessibility" target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i class="ph-shield"></i><span>Google Accessibility Guidelines & Codelabs</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-12">
+        <p class="text-slate-400">&copy; 2024 Jennifer/Brand. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
