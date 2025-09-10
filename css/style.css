@@ -1,105 +1,285 @@
-/* Google font: Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
-/* Custom styles to complement Tailwind */
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    background-color: #37083c;
-    color: #fff;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #A0D2D2, #CEE8D3);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Styling the central timeline bar with a new gradient */
-.timeline-container::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-    z-index: 1;
-}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-/* Base styles for a timeline item */
-.timeline-item {
+        .header h1 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: black;
+            margin: 0;
+        }
+
+        .header nav a {
+            color: black;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .header nav a:hover {
+            color: #555;
+        }
+
+        .main-nav {
+            margin-right: 50px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #333;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .scroll-container {
     position: relative;
     width: 100%;
-    padding-left: 70px; /* Default padding for mobile */
-    padding-right: 25px;
-    margin-bottom: 30px; /* Optimized vertical space */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Styling the circles on the timeline */
-.timeline-item::after {
-    content: '';
+.content-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px; /* Add some space for the hidden scrollbar */
+    scroll-behavior: smooth;
+}
+
+.content-grid::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+        
+        /* New styling for the roadmap section */
+        .roadmap-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            border-left: 4px solid #00A6FF;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: left;
+            position: relative;
+            color: black;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-color: #00A6FF;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px #00A6FF;
+            position: absolute;
+            left: -54.5px; /* Adjust this value to be on the new border */
+            top: 30px;
+        }
+
+        .step-header {
+            flex-grow: 1;
+        }
+        
+        .step-header h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .step-header p {
+            font-size: 1rem;
+            margin: 0;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: black;
+            white-space: nowrap;
+        }
+        
+        /* General content card styling */
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto; /* This will prevent the cards from shrinking */
+    width: 300px; /* You can adjust this to your preferred card width */
+        }
+
+        .content-card:hover {
+            transform: scale(1.05);
+        }
+
+        .content-card a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s ease;
+        }
+        
+        .content-card a:hover {
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.2rem;
+            }
+
+            .header nav a {
+                margin-left: 10px;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+.scroll-arrow {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    background-color: #0D1117; /* Match body background */
-    border: 4px solid #3b82f6; /* New blue accent */
-    top: 20px;
-    border-radius: 50%;
-    z-index: 2;
-    left: 19px; /* Default position for mobile */
-}
-
-/* Desktop layout adjustments */
-@media screen and (min-width: 768px) {
-    .timeline-item {
-        width: 50%;
-        padding: 0; /* Reset padding for desktop */
-    }
-
-    .timeline-item.left {
-        float: left;
-        clear: left; 
-        padding-right: 3rem;
-    }
-
-    .timeline-item.right {
-        float: right;
-        clear: right;
-        padding-left: 3rem;
-    }
-
-    .timeline-item.left::after {
-        right: -12px;
-        left: auto; 
-    }
-
-    .timeline-item.right::after {
-        left: -12px;
-    }
-}
-
-/* Animation for items on scroll and hover */
-.animated-card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
-}
-
-.animated-card.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Scale effect on hover for cards */
-.card-hover:hover {
-    transform: scale(1.03);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     z-index: 10;
-    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
 }
 
-/* New card style */
-.content-card {
-    background: #37083c;           /* deep purple background */
-    border: 2px solid #eb6448;     /* orange accent border */
-    max-width: 85%; /* Slightly increase card size */
-    display: block; /* Ensure margin auto works */
-    margin: 0 auto; /* Center the card */
-    margin-top: 20px; /* Move card up a little */
+.scroll-arrow.left {
+    left: -20px;
+}
+
+.scroll-arrow.right {
+    right: -20px;
+}
+
+.roadmap-phase {
+    margin-bottom: 40px;
+}
+
+.roadmap-phase h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 4px solid #00A6FF;
+}
+
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
 }

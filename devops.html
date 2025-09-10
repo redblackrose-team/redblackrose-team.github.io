@@ -1,606 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevOps Roadmap for University Students</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/home-style.css">
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Roadmap</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body class="text-slate-300 antialiased">
-    <!-- Nav bar start -->
-    <header>
-        <div class="nav-bar">
-            <a href="index.html"><img src="home-images/logo.png" alt="logo" style="width: 80px" /></a>
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#roadmaps" class="active">Roadmaps</a></li>
-                    <li><a href="index.html#overview">Overviews</a></li>
-                    <li><a href="team.html">Our team</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li>
-                </ul>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <h1>DevOps Roadmap</h1>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="team.html">Team</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#roadmaps">Roadmaps</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Your Step-by-Step DevOps Journey</h2>
+        <p>A comprehensive guide to help you become a successful DevOps engineer from scratch.</p>
+        <a href="#roadmap" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Roadmap Section -->
+    <div id="roadmap" class="section">
+        <h3>Step-by-Step Roadmap</h3>
+        <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
+        
+        <div class="roadmap-phase">
+            <h4>Phase 1: The Fundamentals</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 1: Programming & Scripting</h5>
+                        <p>Learn a language for automation.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python</span>
+                            <span class="skill-tag"><img src="icons/go.png" alt="Go" class="skill-icon"> Go</span>
+                            <span class="skill-tag"><img src="icons/terminal.png" alt="Bash" class="skill-icon"> Bash</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 2: Operating Systems & Linux</h5>
+                        <p>Master the command line and OS concepts.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
+                            <span class="skill-tag">Shell Scripting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 3: Version Control</h5>
+                        <p>Learn how to manage code.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/Git.png" alt="Git" class="skill-icon"> Git</span>
+                            <span class="skill-tag"><img src="icons/GitHub.png" alt="GitHub" class="skill-icon"> GitHub</span>
+                            <span class="skill-tag"><img src="icons/GitLab.png" alt="GitLab" class="skill-icon"> GitLab</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-    <!-- Nav bar end -->
 
-    <main class="container mx-auto px-4 md:px-8 py-16">
-        <!-- Hero Section -->
-        <section class="text-center mb-24">
-            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white">
-                DevOps Roadmap for Students
-            </h2>
-            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
-                Your step-by-step guide to becoming a DevOps Engineer. Start with the
-                fundamentals and build your way up.
-            </p>
-        </section>
-
-        <!-- Timeline Section -->
-        <section id="roadmap" class="relative timeline-container pb-12 overflow-auto">
-            <!-- Phase 1: Linux & Shell Scripting -->
-            <div class="timeline-item left">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                1. Linux & Shell Scripting
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Understand the OS and automate tasks with scripts.
-                            </p>
+        <div class="roadmap-phase">
+            <h4>Phase 2: Infrastructure & Automation</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 4: Infrastructure as Code (IaC)</h5>
+                        <p>Automate your infrastructure.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/terraform.png" alt="Terraform" class="skill-icon"> Terraform</span>
+                            <span class="skill-tag"><img src="icons/ansible.png" alt="Ansible" class="skill-icon"> Ansible</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/linux.png" alt="Linux Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Basic Commands & File Permissions
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-green-500/20 text-green-300 px-2 py-1 rounded-full">Foundation</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/terminal.png" alt="Bash Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Shell Scripting (Bash)
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-
-            <!-- Phase 2: Version Control (Git) -->
-            <div class="timeline-item right">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                2. Version Control (Git)
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Master source code management and collaboration.
-                            </p>
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 5: Cloud Providers</h5>
+                        <p>Choose a cloud platform to host your infrastructure.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/aws.png" alt="AWS" class="skill-icon"> AWS</span>
+                            <span class="skill-tag"><img src="icons/azure.png" alt="Azure" class="skill-icon"> Azure</span>
+                            <span class="skill-tag"><img src="icons/gcp.png" alt="GCP" class="skill-icon"> GCP</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/GitHub.png" alt="GitHub Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                GitHub
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/GitLab.png" alt="GitLab Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                GitLab
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/bitbucket.jpg" alt="Bitbucket Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Bitbucket
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
+        </div>
 
-
-            <!-- Phase 3: Cloud Providers -->
-            <div class="timeline-item left">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                3. Cloud Providers
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Get hands-on with cloud platforms.
-                            </p>
+        <div class="roadmap-phase">
+            <h4>Phase 3: Application Delivery</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 6: Containerization</h5>
+                        <p>Package your applications.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/docker.png" alt="Docker" class="skill-icon"> Docker</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/aws.png" alt="aws Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                AWS (Amazon Web Services)
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/azure.png" alt="Azure Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Azure
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/gcp.png" alt="GCP Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                GCP
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-
-            <!-- Phase 4: Containers & Orchestration -->
-            <div class="timeline-item right">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                4. Containers & Orchestration
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Learn to package and manage applications.
-                            </p>
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 7: CI/CD</h5>
+                        <p>Automate the build and deployment process.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/jenkins.png" alt="Jenkins" class="skill-icon"> Jenkins</span>
+                            <span class="skill-tag"><img src="icons/GitLab.png" alt="GitLab CI" class="skill-icon"> GitLab CI</span>
+                            <span class="skill-tag"><img src="icons/github actions.jpg" alt="GitHub Actions" class="skill-icon"> GitHub Actions</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/docker.png" alt="Docker Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Docker
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/Code.png" alt="Kubernetes Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Kubernetes
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/helm.png" alt="Helm Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Helm
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-
-            <!-- Phase 5: CI/CD Pipelines -->
-            <div class="timeline-item left">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                5. CI/CD Pipelines
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Automate your build and deployment process.
-                            </p>
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 8: Container Orchestration</h5>
+                        <p>Manage containers at scale.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/Kube.jpg" alt="Kubernetes" class="skill-icon"> Kubernetes</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/GitHub.png" alt="GitHub Actions Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                GitHub Actions
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/jenkins.png" alt="Jenkins Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Jenkins
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/GitLab.png" alt="GitLab CI Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                GitLab CI
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
+        </div>
 
-            <!-- Phase 6: Infrastructure as Code (IaC) -->
-            <div class="timeline-item right">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                6. Infrastructure as Code (IaC)
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Automate infrastructure provisioning with code.
-                            </p>
+        <div class="roadmap-phase">
+            <h4>Phase 4: Observability & Reliability</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 9: Monitoring & Logging</h5>
+                        <p>Understand how your applications are performing.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag"><img src="icons/prometheus.png" alt="Prometheus" class="skill-icon"> Prometheus</span>
+                            <span class="skill-tag"><img src="icons/grafana.png" alt="Grafana" class="skill-icon"> Grafana</span>
+                            <span class="skill-tag"><img src="icons/eklstack.png" alt="ELK Stack" class="skill-icon"> ELK Stack</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/terraform.png" alt="Terraform Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Terraform
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/ansible.png" alt="Ansible Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Ansible
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-
-            <!-- Phase 7: Monitoring & Logging -->
-            <div class="timeline-item left">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                7. Monitoring & Logging
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Implement monitoring for system health.
-                            </p>
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 10: Security (DevSecOps)</h5>
+                        <p>Integrate security into your pipeline.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag">SAST</span>
+                            <span class="skill-tag">DAST</span>
+                            <span class="skill-tag">Secrets Management</span>
                         </div>
                     </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/prometheus.png" alt="Prometheus Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Prometheus
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/grafana.png" alt="Grafana Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Grafana
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/datadog.png" alt="Datadog Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Datadog
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/eklstack.png" alt="ELK Stack Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                ELK Stack
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">Optional</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Phase 8: Security Best Practices -->
-            <div class="timeline-item right">
-                <div class="timeline-card animated-card content-card card-hover rounded-lg p-6 shadow-lg">
-                    <div class="flex items-center mb-3">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">
-                                8. Security Best Practices
-                            </h3>
-                            <p class="text-slate-400 text-sm">
-                                Apply security principles to infrastructure and code.
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/vault.png" alt="Vault Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Secrets Management (Vault)
-                            </span>
-                            <span class="text-xs font-bold bg-orange-500/20 text-orange-300 px-2 py-1 rounded-full">Must
-                                Have</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="flex items-center text-slate-200">
-                                <img src="icons/trivy.png" alt="Trivy Icon"
-                                    style="width: 24px; height: 24px; margin-right: 8px" />
-                                Vulnerability Scanning (Trivy)
-                            </span>
-                            <span
-                                class="text-xs font-bold bg-red-500/20 text-red-300 px-2 py-1 rounded-full">Advanced</span>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Courses Section -->
+    <div id="courses" class="section">
+        <h3>Famous Courses</h3>
+        <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-grid">
+                <div class="content-card"><h4>KodeKloud DevOps Engineer</h4><p>Comprehensive and hands-on courses covering a wide range of DevOps tools and technologies.</p></div>
+                <div class="content-card"><h4>A Cloud Guru</h4><p>Platform with a focus on cloud certifications and practical, hands-on labs for various cloud providers.</p></div>
+                <div class="content-card"><h4>Udacity - Cloud DevOps Engineer Nanodegree</h4><p>Project-based nanodegree program covering a wide range of DevOps topics.</p></div>
+                <div class="content-card"><h4>LinkedIn Learning - DevOps Foundations</h4><p>Introductory course on the principles and practices of DevOps.</p></div>
             </div>
-        </section>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
 
-        <!-- Learning Resources Section -->
-        <section id="resources" class="py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">
-                    Recommended Courses & Certifications
-                </h2>
-                <p class="text-lg text-slate-400 mt-2">
-                    Curated resources to master each skill on the roadmap.
-                </p>
+    <!-- Documentation Section -->
+    <div id="docs" class="section">
+        <h3>Documentation Links</h3>
+        <p>Essential documentation and official guides for key tools and technologies.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-grid">
+                <div class="content-card"><h4>Git Docs</h4><p><a href="https://git-scm.com/doc" target="_blank">The official Git documentation.</a></p></div>
+                <div class="content-card"><h4>Docker Docs</h4><p><a href="https://docs.docker.com/" target="_blank">Official documentation for Docker.</a></p></div>
+                <div class="content-card"><h4>Kubernetes Docs</h4><p><a href="https://kubernetes.io/docs/home/" target="_blank">The official Kubernetes documentation.</a></p></div>
+                <div class="content-card"><h4>Terraform Docs</h4><p><a href="https://www.terraform.io/docs" target="_blank">Official guides for Terraform.</a></p></div>
+                <div class="content-card"><h4>GitLab CI/CD</h4><p><a href="https://docs.gitlab.com/ee/ci/" target="_blank">Official documentation for GitLab CI/CD.</a></p></div>
+                <div class="content-card"><h4>GitHub Actions</h4><p><a href="https://docs.github.com/en/actions" target="_blank">Official documentation for GitHub Actions.</a></p></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Linux & Shell Scripting Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-purple-800 border border-purple-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-terminal-window text-3xl text-purple-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">
-                            Linux & Shell Scripting
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/"
-                            target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-linux-logo"></i><span>LFCS Certification</span></a>
-                        <a href="https://www.udemy.com/course/bash-scripting-and-shell-programming/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-video"></i><span>Bash Scripting Bootcamp (Udemy)</span></a>
-                        <a href="https://www.freecodecamp.org/news/the-linux-commands-handbook/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-code"></i><span>freeCodeCamp Linux Commands</span></a>
-                        <a href="https://www.coursera.org/learn/linux-command-line" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-graduation-cap"></i><span>Linux Command Line Basics (Coursera)</span></a>
-                        <a href="https://ryanstutorials.net/bash-scripting-tutorial/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-book-open"></i><span>Ryan's Bash Scripting Tutorial</span></a>
-                    </div>
-                </div>
-                <!-- Version Control (Git) Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-blue-900 border border-blue-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-git-branch text-3xl text-blue-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">
-                            Version Control (Git)
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://git-scm.com/book/en/v2" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-book-open"></i><span>Pro Git Book (Free)</span></a>
-                        <a href="https://lab.github.com/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-github-logo"></i><span>GitHub Learning Lab</span></a>
-                        <a href="https://www.freecodecamp.org/news/learn-git-and-github/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-code"></i><span>freeCodeCamp Git & GitHub</span></a>
-                        <a href="https://www.atlassian.com/git/tutorials" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-git-fork"></i><span>Atlassian Git Tutorials</span></a>
-                        <a href="https://learngitbranching.js.org/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-tree-structure"></i><span>Learn Git Branching (Interactive)</span></a>
-                    </div>
-                </div>
-                <!-- CI/CD Pipelines Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-green-900 border border-green-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-arrows-clockwise text-3xl text-green-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">CI/CD Pipelines</h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://www.jenkins.io/doc/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-user-circle-gear"></i><span>Jenkins Docs</span></a>
-                        <a href="https://docs.gitlab.com/ee/ci/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-gitlab-logo-simple"></i><span>GitLab CI Docs</span></a>
-                        <a href="https://docs.github.com/en/actions" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-github-logo"></i><span>GitHub Actions Docs</span></a>
-                        <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-info"></i><span>What is CI/CD? (Red Hat)</span></a>
-                        <a href="https://www.udemy.com/course/jenkins-from-zero-to-hero/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-video"></i><span>Jenkins from Zero to Hero (Udemy)</span></a>
-                    </div>
-                </div>
-                <!-- Cloud Providers Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-yellow-900 border border-yellow-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-cloud text-3xl text-yellow-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">Cloud Providers</h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"
-                            target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-amazon-logo"></i><span>AWS SAA-C03 Certification</span></a>
-                        <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/"
-                            target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-microsoft-azure-logo"></i><span>Azure Fundamentals</span></a>
-                        <a href="https://cloud.google.com/certification/cloud-engineer" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-google-logo"></i><span>Google Associate Cloud Engineer</span></a>
-                    </div>
-                </div>
-                <!-- Containers & Orchestration Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-pink-900 border border-pink-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-cube text-3xl text-pink-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">
-                            Containers & Orchestration
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://www.udemy.com/course/docker-mastery/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-docker-logo"></i><span>Docker Mastery (Udemy)</span></a>
-                        <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"
-                            target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-kubernetes-logo"></i><span>Certified Kubernetes Admin (CKA)</span></a>
-                        <a href="https://helm.sh/docs/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-anchor-simple"></i><span>Helm Docs</span></a>
-                    </div>
-                </div>
-                <!-- Monitoring & Logging Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-cyan-900 border border-cyan-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-chart-line text-3xl text-cyan-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">
-                            Monitoring & Logging
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://prometheus.io/docs/introduction/overview/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-fire"></i><span>Prometheus Docs</span></a>
-                        <a href="https://grafana.com/tutorials/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-chart-pie-slice"></i><span>Grafana Tutorials</span></a>
-                        <a href="https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html"
-                            target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-stack"></i><span>ELK Stack Guide</span></a>
-                    </div>
-                </div>
-                <!-- Infrastructure as Code (IaC) Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-indigo-900 border border-indigo-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-code-block text-3xl text-indigo-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">
-                            Infrastructure as Code (IaC)
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://www.hashicorp.com/certification/terraform-associate" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-terraform-logo"></i><span>Terraform Associate Certification</span></a>
-                        <a href="https://www.udemy.com/course/ansible-for-the-absolute-beginner/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-user-circle-gear"></i><span>Ansible (Udemy)</span></a>
-                        <a href="https://www.pulumi.com/docs/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-cloud-arrow-up"></i><span>Pulumi Docs</span></a>
-                    </div>
-                </div>
-                <!-- Security Best Practices Resources -->
-                <div
-                    class="resource-card animated-card card-hover p-6 rounded-lg shadow-lg bg-red-900 border border-red-400">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-shield-check text-3xl text-red-200 mr-3"></i>
-                        <h3 class="text-xl font-semibold text-white">
-                            Security Best Practices
-                        </h3>
-                    </div>
-                    <div class="space-y-3 text-slate-200">
-                        <a href="https://www.hashicorp.com/certification/vault-associate" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-lock-key"></i><span>HashiCorp Vault Certification</span></a>
-                        <a href="https://www.redhat.com/en/services/training/do400-red-hat-devops-pipelines-and-processes-git-and-test-automation"
-                            target="_blank" class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-shield"></i><span>DevSecOps Essentials</span></a>
-                        <a href="https://aquasecurity.github.io/trivy/latest/" target="_blank"
-                            class="flex items-center space-x-2 hover:text-white transition-colors"><i
-                                class="ph-magnifying-glass"></i><span>Trivy & OPA Docs</span></a>
-                    </div>
-                </div>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
+
+    <!-- YouTube Section -->
+    <div id="youtube" class="section">
+        <h3>YouTube Channels</h3>
+        <p>Popular YouTube channels that provide tutorials and insights into the world of DevOps.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-grid">
+                <div class="content-card"><h4>TechWorld with Nana</h4><p>Great channel for beginner-friendly tutorials on Docker, Kubernetes, and other DevOps tools.</p></div>
+                <div class="content-card"><h4>Saiyam Pathak</h4><p>Known for deep dives and advanced topics related to Kubernetes and cloud-native technologies.</p></div>
+                <div class="content-card"><h4>DevOps'ish</h4><p>Weekly newsletter and YouTube channel covering DevOps news and trends.</p></div>
+                <div class="content-card"><h4>Bret Fisher Docker and DevOps</h4><p>In-depth tutorials on Docker, Kubernetes, and Swarm.</p></div>
             </div>
-        </section>
-    </main>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
+
+    <!-- Ebooks Section -->
+    <div id="ebooks" class="section">
+        <h3>Ebooks</h3>
+        <p>Recommended e-books and reading materials for a deeper understanding.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-grid">
+                <div class="content-card"><h4>The Phoenix Project</h4><p>A novel that introduces DevOps principles through a fictional IT company story.</p></div>
+                <div class="content-card"><h4>The DevOps Handbook</h4><p>A comprehensive guide to the principles and practices of DevOps.</p></div>
+                <div class="content-card"><h4>Accelerate</h4><p>The Science of Lean Software and DevOps.</p></div>
+                <div class="content-card"><h4>Continuous Delivery</h4><p>Reliable Software Releases through Build, Test, and Deployment Automation.</p></div>
+            </div>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="text-center py-12">
-        <p class="text-slate-400">
-            &copy; 2025 Kube/Brand. All rights reserved.
-        </p>
+    <footer class="footer">
+        <p>&copy; 2024 Your Team Name. All Rights Reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
-</body>
+    <script>
+        document.querySelectorAll('.scroll-arrow').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.parentElement;
+                const contentGrid = container.querySelector('.content-grid');
+                const scrollAmount = 330; // Adjust this value to control the scroll distance
 
+                if (button.classList.contains('left')) {
+                    contentGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else {
+                    contentGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
 </html>

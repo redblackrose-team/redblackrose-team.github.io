@@ -10,9 +10,9 @@
 }
 
 body {
-    background-color: #37083c;
+    background-color: #bdfcc9;
     font-family: "Roboto", sans-serif;
-    color: #fff;
+    color: #000;
 }
 
 /*team members*/
@@ -80,7 +80,7 @@ body {
     border-radius: 15px;
     transform: scale(1.07);
     box-shadow: 10px;
-    background-color: rgb(55, 8, 60);
+    background-color: #a8e6cf;
 }
 
 .container:hover img {

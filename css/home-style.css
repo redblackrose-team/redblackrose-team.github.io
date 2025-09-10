@@ -11,9 +11,9 @@
 
 /* Nav bar */
 body {
-    background-color: #37083c;
+    background-color: #bdfcc9;
     font-family: "Roboto", sans-serif;
-    color: #fff;
+    color: #000;
 }
 
 header {
@@ -27,7 +27,7 @@ header .nav-bar {
     justify-content: space-between;
     align-items: center;
     padding: 10px 150px;
-    background-color: #37083c;
+    background-color: #bdfcc9;
 }
 
 a {
