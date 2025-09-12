@@ -9,17 +9,23 @@
     scroll-behavior: smooth;
 }
 
+/* For Gradient Background */
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#A0D2D2, #CEE8D3);
+}
+
 /* Nav bar */
 body {
-    background-color: #bdfcc9;
     font-family: "Roboto", sans-serif;
-    color: #000;
 }
 
 header {
     position: sticky;
     top: 0;
     z-index: 10;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 header .nav-bar {
@@ -27,12 +33,11 @@ header .nav-bar {
     justify-content: space-between;
     align-items: center;
     padding: 10px 150px;
-    background-color: #bdfcc9;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -57,7 +62,7 @@ ul li {
     content: "";
     width: 100%;
     height: 3.5px;
-    background-color: #eb6448;
+    background-color:#555;
     border-radius: 10px;
     position: absolute;
     bottom: -5px;
@@ -68,7 +73,7 @@ ul li {
     content: "";
     width: 0%;
     height: 3.5px;
-    background-color: #eb6448;
+    background-color: #555;
     border-radius: 10px;
     position: absolute;
     bottom: -5px;
@@ -86,10 +91,14 @@ ul li {
     padding: 13px 25px;
     border-radius: 10px;
     border: none;
-    background-color: #eb6448;
-    color: #fff;
+    background-color: black;
+    color: white;
     align-items: center;
     transition: 0.5s;
+}
+
+.btn:hover{
+    background-color: #333;
 }
 
 /* Home */
@@ -108,6 +117,7 @@ ul li {
     font-size: 3.8rem;
     line-height: 85px;
     margin-bottom: 12px;
+    color:black;
 }
 
 .home-contents p {
@@ -117,6 +127,7 @@ ul li {
     font-size: 0.95rem;
     opacity: 0.7;
     margin-bottom: 35px;
+    color:#181E1B;
 }
 
 /* Roadmaps */
@@ -128,7 +139,7 @@ ul li {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 35px;
-
+    color:black;
 }
 
 .roadmaps-container {
@@ -142,7 +153,7 @@ ul li {
     width: 200px;
     height: 150px;
     text-align: center;
-    background-color: #4e0a61;
+    background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 3px 3px 10px #00000050;
     border-radius: 10px;
     transform: 0.8s;
@@ -159,15 +170,14 @@ ul li {
 }
 
 .roadmaps-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Overviews */
 .overview {
     padding: 90px 150px 0 150px;
     align-items: center;
-    margin: auto;
-    max-width: 1000px;
+    background-color: c9e6d7;
 }
 
 .why-roadmap h1,
@@ -175,6 +185,7 @@ ul li {
     font-size: 3.8rem;
     text-align: center;
     margin-bottom: 50px;
+    color:#010000;
 }
 
 .overview ul {
@@ -182,10 +193,10 @@ ul li {
 }
 
 .overview ul li {
-    background-color: rgba(79, 47, 87, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 15px 20px;
     border-radius: 10px;
-    border-left: 1px solid #eb6448;
+    border-left: 1px solid #729db4;
     box-shadow: 3px 3px 10px #00000050;
     margin-bottom: 13px;
     line-height: 1.5em;
@@ -193,7 +204,7 @@ ul li {
 }
 
 .overview b {
-    color: #eb6448;
+    color: #365566;
 }
 
 .overview ul li:hover {
@@ -219,11 +230,11 @@ ul li {
 }
 
 .why-card h4 {
-    background-color: #164e63;
+    background-color: rgba(0, 0, 0, 0.1);
     max-width: 230px;
     padding: 20px 20px;
     border-radius: 10px;
-    border: 1px solid #22d3ee;
+    border: 1px solid #729db4;
     font-size: 1.1rem;
     font-weight: 500;
     margin: auto;
@@ -254,14 +265,14 @@ ul li {
 
 .icon i {
     margin-right: 3px;
-    border: 2px solid #eb6448;
+    border: 2px solid #729db4;
     padding: 3px;
     border-radius: 50%;
     transition: 0.5s;
 }
 
 .icon i:hover {
-    background-color: #eb6448;
+    background-color:  #365566;
     color: #fff;
     cursor: pointer;
 }
@@ -274,9 +285,9 @@ form {
     width: 100%;
     padding: 18px;
     margin-bottom: 22px;
-    background-color: rgba(79, 47, 87, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 3px 3px 10px #00000050;
-    border-left: 1px solid #eb6448;
+    border-left: 1px solid #729db4;
     border-radius: 10px;
     border: none;
     font-size: 1.05rem;
@@ -291,8 +302,8 @@ form {
 
 /* Footer */
 .footer p {
-    background-color: #eb6448;
-    color: #fff;
+    background-color:#90a293;
+    color: black;
     font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
