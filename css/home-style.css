@@ -22,7 +22,6 @@ body {
 }
 
 header {
-    position: sticky;
     top: 0;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.1);
@@ -364,4 +363,37 @@ form {
     .contact input {
         width: 100%;
     }
+}
+
+/* Navigation styles from style.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+}
+
+.header nav a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #555;
+}
+
+.main-nav {
+    margin-right: 50px;
 }
