@@ -31,7 +31,8 @@ header .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 150px;
+    padding: 2px 150px 1px 150px;
+    
 }
 
 a {
