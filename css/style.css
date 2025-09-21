@@ -96,8 +96,17 @@
         .scroll-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px; /* User's instruction: 960px */
     margin: 0 auto;
+    display: flex; /* Use flexbox to align arrows and content-wrapper */
+    align-items: center;
+    justify-content: space-between; /* Pushes arrows to the ends */
+}
+
+.content-wrapper { /* New element for precise clipping */
+    width: 960px; /* Explicitly set width to fit 3 cards (3*300px) + 2 gaps (2*30px) = 960px */
+    overflow: hidden; /* This is where the clipping happens */
+    position: relative;
 }
 
 .content-grid {
@@ -108,7 +117,7 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     gap: 30px;
-    max-width: 1200px;
+    width: 100%; /* Fills the content-wrapper */
     margin: 0 auto;
     padding-bottom: 20px; /* Add some space for the hidden scrollbar */
     scroll-behavior: smooth;
@@ -191,16 +200,17 @@
         
         /* General content card styling */
         .content-card {
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-    flex: 0 0 auto; /* This will prevent the cards from shrinking */
-    width: 300px; /* You can adjust this to your preferred card width */
-            position: relative;
-        }
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 30px; /* Original padding */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto; /* Prevents cards from shrinking or growing */
+    width: 300px; /* Card width including padding and border due to box-sizing: border-box */
+    position: relative;
+    box-sizing: border-box; /* CRITICAL: Ensures padding is included in the width calculation */
+}
 
         .content-card:hover {
             transform: scale(1.05);
@@ -247,9 +257,9 @@
         }
 
 .scroll-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative; /* Changed from absolute to be part of flex layout */
+    top: auto; /* Removed top positioning */
+    transform: none; /* Removed transform */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -263,11 +273,11 @@
 }
 
 .scroll-arrow.left {
-    left: -20px;
+    left: auto; /* Removed absolute positioning */
 }
 
 .scroll-arrow.right {
-    right: -20px;
+    right: auto; /* Removed absolute positioning */
 }
 
 .roadmap-phase {
