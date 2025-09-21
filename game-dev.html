@@ -4,34 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Development Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
-       <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step Game Development Journey</h2>
         <p>A comprehensive guide to help you become a successful Game Developer from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Game Development</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Game Development?</h4>
+                <p>Game development is the art of creating games and describes the design, development and release of a game. It may involve concept generation, design, build, test and release.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone who has a passion for games and wants to learn how to create their own interactive experiences.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: Foundations</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,8 +66,8 @@
                         <h5>Step 1: Programming</h5>
                         <p>Learn a programming language used in game development.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag" data-skill="C++">C++</span>
+                            <span class="skill-tag" data-skill="C#">C#</span>
                         </div>
                     </div>
                 </div>
@@ -49,16 +76,17 @@
                         <h5>Step 2: Math & Physics</h5>
                         <p>Understand the math and physics concepts used in games.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Linear Algebra</span>
-                            <span class="skill-tag">Trigonometry</span>
-                            <span class="skill-tag">Physics Concepts</span>
+                            <span class="skill-tag" data-skill="Linear Algebra">Linear Algebra</span>
+                            <span class="skill-tag" data-skill="Trigonometry">Trigonometry</span>
+                            <span class="skill-tag" data-skill="Physics Concepts">Physics Concepts</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Game Engines</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -66,16 +94,17 @@
                         <h5>Step 3: Choose a Game Engine</h5>
                         <p>Learn a game engine to build your games.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Unity</span>
-                            <span class="skill-tag">Unreal Engine</span>
-                            <span class="skill-tag">Godot</span>
+                            <span class="skill-tag" data-skill="Unity">Unity</span>
+                            <span class="skill-tag" data-skill="Unreal Engine">Unreal Engine</span>
+                            <span class="skill-tag" data-skill="Godot">Godot</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: Game Design & Art</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -83,9 +112,9 @@
                         <h5>Step 4: Game Design</h5>
                         <p>Learn the principles of game design.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Game Mechanics</span>
-                            <span class="skill-tag">Level Design</span>
-                            <span class="skill-tag">Storytelling</span>
+                            <span class="skill-tag" data-skill="Game Mechanics">Game Mechanics</span>
+                            <span class="skill-tag" data-skill="Level Design">Level Design</span>
+                            <span class="skill-tag" data-skill="Storytelling">Storytelling</span>
                         </div>
                     </div>
                 </div>
@@ -94,15 +123,43 @@
                         <h5>Step 5: 2D & 3D Art</h5>
                         <p>Learn how to create art for your games.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Blender</span>
-                            <span class="skill-tag">Photoshop</span>
-                            <span class="skill-tag">Aseprite</span>
+                            <span class="skill-tag" data-skill="Blender">Blender</span>
+                            <span class="skill-tag" data-skill="Photoshop">Photoshop</span>
+                            <span class="skill-tag" data-skill="Aseprite">Aseprite</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
 
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Create a simple 2D platformer game.</li>
+                    <li>Build a clone of a classic arcade game like Pong or Breakout.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Develop a role-playing game (RPG) with a simple quest system.</li>
+                    <li>Create a multiplayer game with basic networking.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Build a 3D open-world game with a large environment.</li>
+                    <li>Create a game with complex AI for enemies and NPCs.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Courses Section -->
@@ -111,21 +168,23 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.udemy.com/course/unitycourse/" target="_blank" class="card-link-cover"></a>
-                    <h4>Complete C# Unity Game Developer 2D</h4>
-                    <p>Udemy</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.udemy.com/course/unrealcourse/" target="_blank" class="card-link-cover"></a>
-                    <h4>Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games</h4>
-                    <p>Udemy</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.coursera.org/learn/game-design" target="_blank" class="card-link-cover"></a>
-                    <h4>Introduction to Game Design</h4>
-                    <p>Coursera</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.udemy.com/course/unitycourse/" target="_blank" class="card-link-cover"></a>
+                        <h4>Complete C# Unity Game Developer 2D</h4>
+                        <p>Udemy</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.udemy.com/course/unrealcourse/" target="_blank" class="card-link-cover"></a>
+                        <h4>Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games</h4>
+                        <p>Udemy</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/learn/game-design" target="_blank" class="card-link-cover"></a>
+                        <h4>Introduction to Game Design</h4>
+                        <p>Coursera</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -138,21 +197,23 @@
         <p>Essential documentation and official guides for key tools and technologies.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://docs.unity3d.com/Manual/index.html" target="_blank" class="card-link-cover"></a>
-                    <h4>Unity Documentation</h4>
-                    <p>Official documentation for Unity.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://docs.unrealengine.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>Unreal Engine Documentation</h4>
-                    <p>Official documentation for Unreal Engine.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://docs.godotengine.org/en/stable/" target="_blank" class="card-link-cover"></a>
-                    <h4>Godot Documentation</h4>
-                    <p>Official documentation for Godot.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://docs.unity3d.com/Manual/index.html" target="_blank" class="card-link-cover"></a>
+                        <h4>Unity Documentation</h4>
+                        <p>Official documentation for Unity.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://docs.unrealengine.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Unreal Engine Documentation</h4>
+                        <p>Official documentation for Unreal Engine.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://docs.godotengine.org/en/stable/" target="_blank" class="card-link-cover"></a>
+                        <h4>Godot Documentation</h4>
+                        <p>Official documentation for Godot.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -165,21 +226,23 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of Game Development.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/Brackeys" target="_blank" class="card-link-cover"></a>
-                    <h4>Brackeys</h4>
-                    <p>High-quality tutorials on Unity and C#.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/GameMakersToolkit" target="_blank" class="card-link-cover"></a>
-                    <h4>Game Maker's Toolkit</h4>
-                    <p>In-depth analysis of game design.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/GDC" target="_blank" class="card-link-cover"></a>
-                    <h4>GDC</h4>
-                    <p>Talks and tutorials from the Game Developers Conference.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/Brackeys" target="_blank" class="card-link-cover"></a>
+                        <h4>Brackeys</h4>
+                        <p>High-quality tutorials on Unity and C#.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/GameMakersToolkit" target="_blank" class="card-link-cover"></a>
+                        <h4>Game Maker's Toolkit</h4>
+                        <p>In-depth analysis of game design.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/GDC" target="_blank" class="card-link-cover"></a>
+                        <h4>GDC</h4>
+                        <p>Talks and tutorials from the Game Developers Conference.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -192,16 +255,18 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.amazon.com/Art-Game-Design-Book-Lenses/dp/0123694965" target="_blank" class="card-link-cover"></a>
-                    <h4>The Art of Game Design: A Book of Lenses</h4>
-                    <p>A book on game design theory.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://gameprogrammingpatterns.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>Game Programming Patterns</h4>
-                    <p>A book on common programming patterns in game development.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.amazon.com/Art-Game-Design-Book-Lenses/dp/0123694965" target="_blank" class="card-link-cover"></a>
+                        <h4>The Art of Game Design: A Book of Lenses</h4>
+                        <p>A book on game design theory.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://gameprogrammingpatterns.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Game Programming Patterns</h4>
+                        <p>A book on common programming patterns in game development.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -210,10 +275,142 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy;2025 Maple&mdash; RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "C++": {
+                description: "A general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language.",
+                link: "https://isocpp.org/"
+            },
+            "C#": {
+                description: "A general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.",
+                link: "https://docs.microsoft.com/en-us/dotnet/csharp/"
+            },
+            "Linear Algebra": {
+                description: "A branch of mathematics concerning linear equations, linear functions and their representations through matrices and vector spaces.",
+                link: "https://www.khanacademy.org/math/linear-algebra"
+            },
+            "Trigonometry": {
+                description: "A branch of mathematics that studies relationships between side lengths and angles of triangles.",
+                link: "https://www.khanacademy.org/math/trigonometry"
+            },
+            "Physics Concepts": {
+                description: "The study of matter, energy, and the fundamental forces of nature.",
+                link: "https://www.khanacademy.org/science/physics"
+            },
+            "Unity": {
+                description: "A cross-platform game engine developed by Unity Technologies.",
+                link: "https://unity.com/"
+            },
+            "Unreal Engine": {
+                description: "A game engine developed by Epic Games.",
+                link: "https://www.unrealengine.com/"
+            },
+            "Godot": {
+                description: "A 2D and 3D, cross-platform, free and open-source game engine released under the MIT license.",
+                link: "https://godotengine.org/"
+            },
+            "Game Mechanics": {
+                description: "The rules and systems that define how a game is played.",
+                link: "https://en.wikipedia.org/wiki/Game_mechanics"
+            },
+            "Level Design": {
+                description: "The process of creating the levels, stages, or missions for a video game.",
+                link: "https://en.wikipedia.org/wiki/Level_design"
+            },
+            "Storytelling": {
+                description: "The art of conveying events in words, images, and sounds.",
+                link: "https://en.wikipedia.org/wiki/Storytelling"
+            },
+            "Blender": {
+                description: "A free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, and virtual reality.",
+                link: "https://www.blender.org/"
+            },
+            "Photoshop": {
+                description: "A raster graphics editor developed and published by Adobe Inc. for Windows and macOS.",
+                link: "https://www.adobe.com/products/photoshop.html"
+            },
+            "Aseprite": {
+                description: "A proprietary, source-available image editor designed primarily for pixel art and animated sprites.",
+                link: "https://www.aseprite.org/"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;

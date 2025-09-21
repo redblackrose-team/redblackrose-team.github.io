@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
-
+        <img src="home-images/rbr logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step Backend Journey</h2>
         <p>A comprehensive guide to help you become a successful Backend developer from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Backend Development</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Backend Development?</h4>
+                <p>Backend development refers to the server-side of an application. It is the part of the application that users do not see. It is responsible for storing and organizing data, and ensuring everything on the client-side works.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone who wants to learn how to build the server-side of web applications, from beginners to experienced developers looking to switch to backend.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
-        <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational
-            knowledge to advanced topics.</p>
+        <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: Language & Framework</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -43,14 +66,12 @@
                         <h5>Step 1: Choose a Language</h5>
                         <p>Learn a backend language.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/python.jpg" alt="Python" class="skill-icon">
-                                Python</span>
-                            <span class="skill-tag"><img src="icons/node.js.jpg" alt="Node.js" class="skill-icon">
-                                Node.js</span>
-                            <span class="skill-tag"><img src="icons/java.jpg" alt="Java" class="skill-icon"> Java</span>
-                            <span class="skill-tag"><img src="icons/go.png" alt="Go" class="skill-icon"> Go</span>
-                            <span class="skill-tag"><img src="icons/ruby.jpg" alt="Ruby" class="skill-icon"> Ruby</span>
-                            <span class="skill-tag"><img src="icons/php.jpg" alt="PHP" class="skill-icon"> PHP</span>
+                            <span class="skill-tag" data-skill="Python"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python</span>
+                            <span class="skill-tag" data-skill="Node.js"><img src="icons/node.js.jpg" alt="Node.js" class="skill-icon"> Node.js</span>
+                            <span class="skill-tag" data-skill="Java"><img src="icons/java.jpg" alt="Java" class="skill-icon"> Java</span>
+                            <span class="skill-tag" data-skill="Go"><img src="icons/go.png" alt="Go" class="skill-icon"> Go</span>
+                            <span class="skill-tag" data-skill="Ruby"><img src="icons/ruby.jpg" alt="Ruby" class="skill-icon"> Ruby</span>
+                            <span class="skill-tag" data-skill="PHP"><img src="icons/php.jpg" alt="PHP" class="skill-icon"> PHP</span>
                         </div>
                     </div>
                 </div>
@@ -59,21 +80,18 @@
                         <h5>Step 2: Choose a Framework</h5>
                         <p>Learn a framework for your chosen language.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/django.jpg" alt="Django" class="skill-icon">
-                                Django</span>
-                            <span class="skill-tag"><img src="icons/Express.js.jpg" alt="Express.js" class="skill-icon">
-                                Express.js</span>
-                            <span class="skill-tag"><img src="icons/spring boot.jpg" alt="Spring Boot"
-                                    class="skill-icon"> Spring Boot</span>
-                            <span class="skill-tag"><img src="icons/laravel.jpg" alt="Laravel" class="skill-icon">
-                                Laravel</span>
+                            <span class="skill-tag" data-skill="Django"><img src="icons/django.jpg" alt="Django" class="skill-icon"> Django</span>
+                            <span class="skill-tag" data-skill="Express.js"><img src="icons/Express.js.jpg" alt="Express.js" class="skill-icon"> Express.js</span>
+                            <span class="skill-tag" data-skill="Spring Boot"><img src="icons/spring boot.jpg" alt="Spring Boot" class="skill-icon"> Spring Boot</span>
+                            <span class="skill-tag" data-skill="Laravel"><img src="icons/laravel.jpg" alt="Laravel" class="skill-icon"> Laravel</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Databases</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -81,10 +99,8 @@
                         <h5>Step 3: Relational Databases</h5>
                         <p>Learn how to store data in tables.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/postgresql.jpg" alt="PostgreSQL" class="skill-icon">
-                                PostgreSQL</span>
-                            <span class="skill-tag"><img src="icons/mysql.jpg" alt="MySQL" class="skill-icon">
-                                MySQL</span>
+                            <span class="skill-tag" data-skill="PostgreSQL"><img src="icons/postgresql.jpg" alt="PostgreSQL" class="skill-icon"> PostgreSQL</span>
+                            <span class="skill-tag" data-skill="MySQL"><img src="icons/mysql.jpg" alt="MySQL" class="skill-icon"> MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -93,17 +109,16 @@
                         <h5>Step 4: NoSQL Databases</h5>
                         <p>Learn about non-relational databases.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/mongodb.jpg" alt="MongoDB" class="skill-icon">
-                                MongoDB</span>
-                            <span class="skill-tag"><img src="icons/redis.jpg" alt="Redis" class="skill-icon">
-                                Redis</span>
+                            <span class="skill-tag" data-skill="MongoDB"><img src="icons/mongodb.jpg" alt="MongoDB" class="skill-icon"> MongoDB</span>
+                            <span class="skill-tag" data-skill="Redis"><img src="icons/redis.jpg" alt="Redis" class="skill-icon"> Redis</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: APIs</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -111,17 +126,16 @@
                         <h5>Step 5: Learn about APIs</h5>
                         <p>Learn how to build and consume APIs.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/restfulapi.png" alt="REST" class="skill-icon">
-                                REST</span>
-                            <span class="skill-tag"><img src="icons/graphql.png" alt="GraphQL" class="skill-icon">
-                                GraphQL</span>
+                            <span class="skill-tag" data-skill="REST"><img src="icons/restfulapi.png" alt="REST" class="skill-icon"> REST</span>
+                            <span class="skill-tag" data-skill="GraphQL"><img src="icons/graphql.png" alt="GraphQL" class="skill-icon"> GraphQL</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase4">
             <h4>Phase 4: Authentication & Security</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -129,14 +143,42 @@
                         <h5>Step 6: Authentication</h5>
                         <p>Learn how to authenticate users.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">OAuth</span>
-                            <span class="skill-tag">JWT</span>
+                            <span class="skill-tag" data-skill="OAuth">OAuth</span>
+                            <span class="skill-tag" data-skill="JWT">JWT</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
 
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Create a simple REST API for a to-do list application.</li>
+                    <li>Build a basic user authentication system.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Build a blogging platform with a database and user authentication.</li>
+                    <li>Create a web scraper to collect data from a website.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Build a real-time chat application using WebSockets.</li>
+                    <li>Create a microservices-based application.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Courses Section -->
@@ -145,31 +187,29 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/" target="_blank"
-                        class="card-link-cover"></a>
-                    <h4>The Complete Node.js Developer Course</h4>
-                    <p>Udemy</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.coursera.org/specializations/python" target="_blank"
-                        class="card-link-cover"></a>
-                    <h4>Python for Everybody</h4>
-                    <p>Coursera</p>
-                </div>
-                <div class="content-card">
-                    <a href=" https://www.freecodecamp.org/news/tag/spring-boot/  " target="_blank"
-                            class="card-link-cover"></a>
-                            <h4>Spring Framework 6 | Full Course</h4>
-                    <p>freeCodeCamp</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.coursera.org/professional-certificates/meta-back-end-developer" target="_blank"
-                            class="card-link-cover"></a>
-                    <h4>Meta Back-End Developer Professional Certificate</h4>
-                            <p>Meta Staff</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/" target="_blank" class="card-link-cover"></a>
+                        <h4>The Complete Node.js Developer Course</h4>
+                        <p>Udemy</p>
                     </div>
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/specializations/python" target="_blank" class="card-link-cover"></a>
+                        <h4>Python for Everybody</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.freecodecamp.org/news/tag/spring-boot/" target="_blank" class="card-link-cover"></a>
+                        <h4>Spring Framework 6 | Full Course</h4>
+                        <p>freeCodeCamp</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/meta-back-end-developer" target="_blank" class="card-link-cover"></a>
+                        <h4>Meta Back-End Developer Professional Certificate</h4>
+                        <p>Meta Staff</p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -181,29 +221,29 @@
         <p>Essential documentation and official guides for key tools and technologies.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://expressjs.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>Express.js Docs</h4>
-                    <p>Official documentation for Express.js.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://expressjs.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Express.js Docs</h4>
+                        <p>Official documentation for Express.js.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.djangoproject.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Django Docs</h4>
+                        <p>Official documentation for Django.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://spring.io/" target="_blank" class="card-link-cover"></a>
+                        <h4>Spring Docs</h4>
+                        <p>Official documentation for Spring.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://overcast.blog/documenting-backend-code-a-guide-for-2025-843cb25d9895" target="_blank" class="card-link-cover"></a>
+                        <h4>Documenting Backend Code</h4>
+                        <p>Official documentation for Backend Code</p>
+                    </div>
                 </div>
-                <div class="content-card">
-                    <a href="https://www.djangoproject.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>Django Docs</h4>
-                    <p>Official documentation for Django.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://spring.io/" target="_blank" class="card-link-cover"></a>
-                    <h4>Spring Docs</h4>
-                    <p>Official documentation for Spring.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://overcast.blog/documenting-backend-code-a-guide-for-2025-843cb25d9895"
-                        target="_blank" class="card-link-cover"></a>
-                    <h4>Documenting Backend Code</h4>
-                    <p>Official documentation for Backend Code</p>
-                </div>
-
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -215,42 +255,30 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of Backend Development.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <iframe width="300" height="200" src="https://www.youtube.com/embed/QARI-7_J9bI"
-                        title="Welcome to Programming with Mosh" frameborder="30"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                    <h4>Programming with Mosh</h4>
-                    <p>High-quality tutorials on a wide range of backend technologies.</p>
-                </div>
-                <div class="content-card">
-                    <iframe width="300" height="200" src="https://www.youtube.com/embed/pCtkD5AMbDo"
-                        title="freeCodeCamp.org Channel Trailer" frameborder="30"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>freeCodeCamp.org</h4>
-                    <p>A huge variety of tutorials on all things web development.</p>
-                </div>
-                <div class="content-card">
-                    <iframe width="300" height="200" src="https://www.youtube.com/embed/tmL2IniRgCo"
-                        title="The Ultimate Spring Boot Roadmap for Java Developers (2025 Update)" frameborder="30"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>Amigoscode</h4>
-                    <p>In-depth tutorials on Java, Spring, and other backend technologies.</p>
-                </div>
-                <div class="content-card">
-                    <iframe width="300" height="200" src="https://www.youtube.com/embed/rOpEN1JDaD0"
-                        title="Complete Backend Course | Build and Deploy Your First Production-Ready API"
-                        frameborder="30"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>
-                        JavaScript Mastery
-                    </h4>
-                    <p> Build and Deploy Your First Production-Ready API.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/QARI-7_J9bI" title="Welcome to Programming with Mosh" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Programming with Mosh</h4>
+                        <p>High-quality tutorials on a wide range of backend technologies.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/pCtkD5AMbDo" title="freeCodeCamp.org Channel Trailer" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>freeCodeCamp.org</h4>
+                        <p>A huge variety of tutorials on all things web development.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/tmL2IniRgCo" title="The Ultimate Spring Boot Roadmap for Java Developers (2025 Update)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Amigoscode</h4>
+                        <p>In-depth tutorials on Java, Spring, and other backend technologies.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/rOpEN1JDaD0" title="Complete Backend Course | Build and Deploy Your First Production-Ready API" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>
+                            JavaScript Mastery
+                        </h4>
+                        <p> Build and Deploy Your First Production-Ready API.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -263,41 +291,38 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491920969/"
-                        target="_blank" class="card-link-cover"></a>
-                    <h4>Designing Data-Intensive Applications</h4>
-                    <p>A deep dive into the architecture of data systems.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.oreilly.com/library/view/nodejs-design-patterns/9781785887912/" target="_blank"
-                        class="card-link-cover"></a>
-                    <h4>Node.js Design Patterns</h4>
-                    <p>Best practices for building Node.js applications.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.freecodecamp.org/learn/back-end-development-and-apis/" target="_blank"
-                        class="card-link-cover"></a>
-                    <h4>Back End Development and APIs
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491920969/" target="_blank" class="card-link-cover"></a>
+                        <h4>Designing Data-Intensive Applications</h4>
+                        <p>A deep dive into the architecture of data systems.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/nodejs-design-patterns/9781785887912/" target="_blank" class="card-link-cover"></a>
+                        <h4>Node.js Design Patterns</h4>
+                        <p>Best practices for building Node.js applications.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.freecodecamp.org/learn/back-end-development-and-apis/" target="_blank" class="card-link-cover"></a>
+                        <h4>Back End Development and APIs
 
-                    </h4>
-                    <p> How to build web applications with the Express framework, and build a People Finder microservice
-                        with MongoDB and the Mongoose library.
+                        </h4>
+                        <p> How to build web applications with the Express framework, and build a People Finder microservice
+                            with MongoDB and the Mongoose library.
 
-                    </p>
+                        </p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://dokumen.pub/java-17-backend-development-design-backend.html" target="_blank" class="card-link-cover"></a>
+                        <h4>Java 17 Backend Development: Design backend
+
+                        </h4>
+                        <p> Java 17 Backend Development Design backend systems using Spring Boot, Docker, Kafka, Eureka,
+                            Redis, and Tomcat Elara Drevyn.
+                        </p>
+                    </div>
                 </div>
-                <div class="content-card">
-                    <a href="https://dokumen.pub/java-17-backend-development-design-backend.html" target="_blank"
-                        class="card-link-cover"></a>
-                    <h4>Java 17 Backend Development: Design backend
-
-                    </h4>
-                    <p> Java 17 Backend Development Design backend systems using Spring Boot, Docker, Kafka, Eureka,
-                        Redis, and Tomcat Elara Drevyn.
-                    </p>
-                </div>
-
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -305,10 +330,158 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy;2025 Lwan Wai&mdash; RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "Python": {
+                description: "A popular high-level programming language for general-purpose programming.",
+                link: "https://www.python.org/"
+            },
+            "Node.js": {
+                description: "An open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+                link: "https://nodejs.org/"
+            },
+            "Java": {
+                description: "A high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+                link: "https://www.java.com/"
+            },
+            "Go": {
+                description: "A statically typed, compiled programming language designed at Google.",
+                link: "https://golang.org/"
+            },
+            "Ruby": {
+                description: "An interpreted, high-level, general-purpose programming language.",
+                link: "https://www.ruby-lang.org/"
+            },
+            "PHP": {
+                description: "A general-purpose scripting language especially suited to web development.",
+                link: "https://www.php.net/"
+            },
+            "Django": {
+                description: "A high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
+                link: "https://www.djangoproject.com/"
+            },
+            "Express.js": {
+                description: "A back end web application framework for Node.js, released as free and open-source software under the MIT License.",
+                link: "https://expressjs.com/"
+            },
+            "Spring Boot": {
+                description: "An open source Java-based framework used to create a micro Service.",
+                link: "https://spring.io/projects/spring-boot"
+            },
+            "Laravel": {
+                description: "A free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern.",
+                link: "https://laravel.com/"
+            },
+            "PostgreSQL": {
+                description: "A free and open-source relational database management system emphasizing extensibility and SQL compliance.",
+                link: "https://www.postgresql.org/"
+            },
+            "MySQL": {
+                description: "An open-source relational database management system.",
+                link: "https://www.mysql.com/"
+            },
+            "MongoDB": {
+                description: "A source-available cross-platform document-oriented database program.",
+                link: "https://www.mongodb.com/"
+            },
+            "Redis": {
+                description: "An in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability.",
+                link: "https://redis.io/"
+            },
+            "REST": {
+                description: "An architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other.",
+                link: "https://restfulapi.net/"
+            },
+            "GraphQL": {
+                description: "An open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.",
+                link: "https://graphql.org/"
+            },
+            "OAuth": {
+                description: "An open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords.",
+                link: "https://oauth.net/"
+            },
+            "JWT": {
+                description: "JSON Web Token is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.",
+                link: "https://jwt.io/"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;
@@ -324,5 +497,4 @@
         });
     </script>
 </body>
-
 </html>

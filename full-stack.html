@@ -4,34 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full-Stack Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
-      <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step Full-Stack Journey</h2>
         <p>A comprehensive guide to help you become a successful Full-Stack developer from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Full-Stack Development</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Full-Stack Development?</h4>
+                <p>Full-stack development refers to the development of both front end (client side) and back end (server side) portions of web application. Full-stack web developers have the ability to design complete web applications and websites.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for those who want to become a jack-of-all-trades in the web development world, capable of building a complete web application from the ground up.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: Frontend</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,9 +66,9 @@
                         <h5>Step 1: The Basics</h5>
                         <p>Learn the fundamentals of web development.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/HTML.png" alt="HTML" class="skill-icon"> HTML</span>
-                            <span class="skill-tag"><img src="icons/CSS.png" alt="CSS" class="skill-icon"> CSS</span>
-                            <span class="skill-tag"><img src="icons/JavaScript.png" alt="JavaScript" class="skill-icon"> JavaScript</span>
+                            <span class="skill-tag" data-skill="HTML"><img src="icons/HTML.png" alt="HTML" class="skill-icon"> HTML</span>
+                            <span class="skill-tag" data-skill="CSS"><img src="icons/CSS.png" alt="CSS" class="skill-icon"> CSS</span>
+                            <span class="skill-tag" data-skill="JavaScript"><img src="icons/JavaScript.png" alt="JavaScript" class="skill-icon"> JavaScript</span>
                         </div>
                     </div>
                 </div>
@@ -50,17 +77,17 @@
                         <h5>Step 2: Frontend Framework</h5>
                         <p>Learn a modern frontend framework.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/React.png" alt="React" class="skill-icon"> React</span>
-                            <span class="skill-tag"><img src="icons/Angular.png" alt="Angular" class="skill-icon"> Angular</span>
-                            <span class="skill-tag"><img src="icons/vue.png" alt="Vue" class="skill-icon"> Vue</span> 
-                            
+                            <span class="skill-tag" data-skill="React"><img src="icons/React.png" alt="React" class="skill-icon"> React</span>
+                            <span class="skill-tag" data-skill="Angular"><img src="icons/Angular.png" alt="Angular" class="skill-icon"> Angular</span>
+                            <span class="skill-tag" data-skill="Vue"><img src="icons/vue.png" alt="Vue" class="skill-icon"> Vue</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Backend</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -68,8 +95,8 @@
                         <h5>Step 3: Backend Language & Framework</h5>
                         <p>Choose a backend language and framework.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/node.js.jpg" alt="Node.js" class="skill-icon"> Node.js & Express</span>
-                            <span class="skill-tag"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python & Django</span>
+                            <span class="skill-tag" data-skill="Node.js & Express"><img src="icons/node.js.jpg" alt="Node.js" class="skill-icon"> Node.js & Express</span>
+                            <span class="skill-tag" data-skill="Python & Django"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python & Django</span>
                         </div>
                     </div>
                 </div>
@@ -78,15 +105,16 @@
                         <h5>Step 4: Databases</h5>
                         <p>Learn how to store and retrieve data.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/postgresql.jpg" alt="PostgreSQL" class="skill-icon"> PostgreSQL</span>
-                            <span class="skill-tag"><img src="icons/mongodb.jpg" alt="MongoDB" class="skill-icon"> MongoDB</span>
+                            <span class="skill-tag" data-skill="PostgreSQL"><img src="icons/postgresql.jpg" alt="PostgreSQL" class="skill-icon"> PostgreSQL</span>
+                            <span class="skill-tag" data-skill="MongoDB"><img src="icons/mongodb.jpg" alt="MongoDB" class="skill-icon"> MongoDB</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: DevOps</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -94,15 +122,43 @@
                         <h5>Step 5: Basic DevOps</h5>
                         <p>Learn how to deploy and maintain your applications.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/Git.png" alt="Git" class="skill-icon"> Git</span>
-                            <span class="skill-tag"><img src="icons/docker.png" alt="Docker" class="skill-icon"> Docker</span>
-                            <span class="skill-tag"><img src="icons/nginx.jpg" alt="Nginx" class="skill-icon"> Nginx</span>
+                            <span class="skill-tag" data-skill="Git"><img src="icons/Git.png" alt="Git" class="skill-icon"> Git</span>
+                            <span class="skill-tag" data-skill="Docker"><img src="icons/docker.png" alt="Docker" class="skill-icon"> Docker</span>
+                            <span class="skill-tag" data-skill="Nginx"><img src="icons/nginx.jpg" alt="Nginx" class="skill-icon"> Nginx</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
 
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>A personal blog with a frontend and a backend.</li>
+                    <li>A simple to-do list application with user authentication.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>A social media dashboard that aggregates posts from different platforms.</li>
+                    <li>An e-commerce website with a shopping cart and payment integration.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>A real-time chat application with private messaging.</li>
+                    <li>A clone of a popular web application like Airbnb or Uber.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Courses Section -->
@@ -111,26 +167,28 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.theodinproject.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>The Odin Project</h4>
-                    <p>A free, open-source curriculum for learning full-stack web development.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.coursera.org/specializations/full-stack-react" target="_blank" class="card-link-cover"></a>
-                    <h4>Full-Stack Web Development with React</h4>
-                    <p>Coursera</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank" class="card-link-cover"></a>
-                    <h4>The Complete 2024 Web Development Bootcamp</h4>
-                    <p>Udemy</p>
-                </div>
-                 <div class="content-card">
-                    <a href="https://www.guvi.in/zen-class/full-stack-development-course/" target="_blank" class="card-link-cover"></a>
-                    <h4>MERN Full Stack Developer Program with AI Integration</h4>
-                    <p>Powerful Perks</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.theodinproject.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>The Odin Project</h4>
+                        <p>A free, open-source curriculum for learning full-stack web development.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/specializations/full-stack-react" target="_blank" class="card-link-cover"></a>
+                        <h4>Full-Stack Web Development with React</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank" class="card-link-cover"></a>
+                        <h4>The Complete 2024 Web Development Bootcamp</h4>
+                        <p>Udemy</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.guvi.in/zen-class/full-stack-development-course/" target="_blank" class="card-link-cover"></a>
+                        <h4>MERN Full Stack Developer Program with AI Integration</h4>
+                        <p>Powerful Perks</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -143,11 +201,25 @@
         <p>Essential documentation and official guides for key tools and technologies.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card"><h4>MDN Web Docs</h4><p><a href="https://developer.mozilla.org/" target="_blank">The go-to resource for web developers.</a></p></div>
-                <div class="content-card"><h4>Node.js Docs</h4><p><a href="https://nodejs.org/en/docs/" target="_blank">Official documentation for Node.js.</a></p></div>
-                <div class="content-card"><h4>React Docs</h4><p><a href="https://reactjs.org/docs/getting-started.html" target="_blank">Official documentation for React.</a></p></div>
-                <div class="content-card"><h4>Full Stack Developer</h4><p><a href="https://roadmap.sh/full-stack" target="_blank">Roadpap for web-development</a></p></div>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>MDN Web Docs</h4>
+                        <p><a href="https://developer.mozilla.org/" target="_blank">The go-to resource for web developers.</a></p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Node.js Docs</h4>
+                        <p><a href="https://nodejs.org/en/docs/" target="_blank">Official documentation for Node.js.</a></p>
+                    </div>
+                    <div class="content-card">
+                        <h4>React Docs</h4>
+                        <p><a href="https://reactjs.org/docs/getting-started.html" target="_blank">Official documentation for React.</a></p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Full Stack Developer</h4>
+                        <p><a href="https://roadmap.sh/full-stack" target="_blank">Roadpap for web-development</a></p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -159,11 +231,29 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of Full-Stack Development.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card"><h4>freeCodeCamp.org</h4><iframe width="300" height="200" src="https://www.youtube.com/embed/nu_pCVPKzTk" title="Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>A huge variety of tutorials on all things web development.</p></div>
-                <div class="content-card"><h4>Traversy Media</h4><iframe width="300" height="200" src="https://www.youtube.com/embed/MusIvEKjqsc" title="3 Alternatives for Heroku&#39;s Free Tier - Full Stack &amp; API Hosting" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In-depth tutorials and project builds.</p></div>
-                <div class="content-card"><h4>The Net Ninja</h4><iframe width="300" height="200" src="https://www.youtube.com/embed/d0GkjcBGVbc" title="Full Stack Web Development Course 2025 | Complete Full Stack Developer Course | Intellipaat" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>High-quality tutorials on a wide range of web development technologies.</p></div>
-                <div class="content-card"><h4>Full Stack Developer Roadmap</h4><iframe width="300" height="200" src="https://www.youtube.com/embed/ZDRZvFNK-ek" title="Full Stack JavaScript Developer Roadmap 2025" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>Master the skills land your dream job. </p></div>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>freeCodeCamp.org</h4>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/nu_pCVPKzTk" title="Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>A huge variety of tutorials on all things web development.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Traversy Media</h4>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/MusIvEKjqsc" title="3 Alternatives for Heroku&#39;s Free Tier - Full Stack &amp; API Hosting" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>In-depth tutorials and project builds.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>The Net Ninja</h4>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/d0GkjcBGVbc" title="Full Stack Web Development Course 2025 | Complete Full Stack Developer Course | Intellipaat" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>High-quality tutorials on a wide range of web development technologies.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Full Stack Developer Roadmap</h4>
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/ZDRZvFNK-ek" title="Full Stack JavaScript Developer Roadmap 2025" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>Master the skills land your dream job. </p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -175,22 +265,168 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">        
-                <div class="content-card"><h4>Eloquent JavaScript</h4><a href="https://eloquentjavascript.net/" target="_blank" class="card-link-cover"></a><p>A modern introduction to programming.</p></div>
-                <div class="content-card"><h4>Designing Data-Intensive Applications</h4><a href="https://share.google/tFwbmJWLMmc7w4BWo" target="_blank" class="card-link-cover"></a><p>A deep dive into the architecture of data systems.</p></div>
-                <div class="content-card"><h4>The full Stack Developer</h4><a href="https://thepearlie.com/wp-content/uploads/2023/11/The-Full-Stack-Developer.pdf" target="_blank" class="card-link-cover"></a><p>Your Essential Guides to the everyday skills Expected of a Modern.</p></div>
-                <div class="content-card"><h4>Modern full-stack React</h4><a href="https://itbooks.ir/assets/files/books/programming/web-development/modern-full-stack-react-projects.pdf" target="_blank" class="card-link-cover"></a><p> Build, maintain, and deploy modern web</p></div>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>Eloquent JavaScript</h4>
+                        <a href="https://eloquentjavascript.net/" target="_blank" class="card-link-cover"></a>
+                        <p>A modern introduction to programming.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Designing Data-Intensive Applications</h4>
+                        <a href="https://share.google/tFwbmJWLMmc7w4BWo" target="_blank" class="card-link-cover"></a>
+                        <p>A deep dive into the architecture of data systems.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>The full Stack Developer</h4>
+                        <a href="https://thepearlie.com/wp-content/uploads/2023/11/The-Full-Stack-Developer.pdf" target="_blank" class="card-link-cover"></a>
+                        <p>Your Essential Guides to the everyday skills Expected of a Modern.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Modern full-stack React</h4>
+                        <a href="https://itbooks.ir/assets/files/books/programming/web-development/modern-full-stack-react-projects.pdf" target="_blank" class="card-link-cover"></a>
+                        <p> Build, maintain, and deploy modern web</p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
-        
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Kay&mdash; RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "HTML": {
+                description: "The standard markup language for documents designed to be displayed in a web browser.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            "CSS": {
+                description: "A style sheet language used for describing the presentation of a document written in a markup language like HTML.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            "JavaScript": {
+                description: "A programming language that conforms to the ECMAScript specification.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            "React": {
+                description: "A free and open-source front-end JavaScript library for building user interfaces or UI components.",
+                link: "https://reactjs.org/"
+            },
+            "Angular": {
+                description: "A TypeScript-based open-source web application framework led by the Angular Team at Google.",
+                link: "https://angular.io/"
+            },
+            "Vue": {
+                description: "An open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
+                link: "https://vuejs.org/"
+            },
+            "Node.js & Express": {
+                description: "Node.js is a back-end JavaScript runtime environment, and Express is a web application framework for Node.js.",
+                link: "https://expressjs.com/"
+            },
+            "Python & Django": {
+                description: "Python is a high-level programming language, and Django is a high-level Python Web framework.",
+                link: "https://www.djangoproject.com/"
+            },
+            "PostgreSQL": {
+                description: "A free and open-source relational database management system emphasizing extensibility and SQL compliance.",
+                link: "https://www.postgresql.org/"
+            },
+            "MongoDB": {
+                description: "A source-available cross-platform document-oriented database program.",
+                link: "https://www.mongodb.com/"
+            },
+            "Git": {
+                description: "A distributed version-control system for tracking changes in source code during software development.",
+                link: "https://git-scm.com/"
+            },
+            "Docker": {
+                description: "A set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
+                link: "https://www.docker.com/"
+            },
+            "Nginx": {
+                description: "A web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.",
+                link: "https://www.nginx.com/"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;

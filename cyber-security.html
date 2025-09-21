@@ -4,34 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Security Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step Cyber Security Journey</h2>
         <p>A comprehensive guide to help you become a successful Cyber Security professional from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Cyber Security</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Cyber Security?</h4>
+                <p>Cyber security is the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks. It's also known as information technology security or electronic information security.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone interested in protecting computer systems and networks from cyber attacks.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: Fundamentals</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,9 +66,9 @@
                         <h5>Step 1: Networking</h5>
                         <p>Understand how networks work.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">TCP/IP</span>
-                            <span class="skill-tag">DNS</span>
-                            <span class="skill-tag">HTTP/S</span>
+                            <span class="skill-tag" data-skill="TCP/IP">TCP/IP</span>
+                            <span class="skill-tag" data-skill="DNS">DNS</span>
+                            <span class="skill-tag" data-skill="HTTP/S">HTTP/S</span>
                         </div>
                     </div>
                 </div>
@@ -50,15 +77,16 @@
                         <h5>Step 2: Operating Systems</h5>
                         <p>Learn the fundamentals of Windows and Linux.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
-                            <span class="skill-tag">Windows</span>
+                            <span class="skill-tag" data-skill="Linux"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
+                            <span class="skill-tag" data-skill="Windows">Windows</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Offensive Security</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -66,15 +94,16 @@
                         <h5>Step 3: Ethical Hacking</h5>
                         <p>Learn how to find and exploit vulnerabilities.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Penetration Testing</span>
-                            <span class="skill-tag">Web Application Security</span>
+                            <span class="skill-tag" data-skill="Penetration Testing">Penetration Testing</span>
+                            <span class="skill-tag" data-skill="Web Application Security">Web Application Security</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: Defensive Security</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -82,14 +111,42 @@
                         <h5>Step 4: Security Operations (SOC)</h5>
                         <p>Learn how to monitor and defend systems.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Incident Response</span>
-                            <span class="skill-tag">Digital Forensics</span>
+                            <span class="skill-tag" data-skill="Incident Response">Incident Response</span>
+                            <span class="skill-tag" data-skill="Digital Forensics">Digital Forensics</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
 
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Set up a home network and secure it with a firewall.</li>
+                    <li>Learn to use basic security tools like Nmap and Wireshark.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Perform a penetration test on a test environment like Metasploitable.</li>
+                    <li>Analyze malware samples in a safe environment.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Participate in bug bounty programs.</li>
+                    <li>Develop your own security tools.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Courses Section -->
@@ -98,28 +155,29 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h4><a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Google Cybersecurity Professional Certificate</h4>
-                    <p>Coursera</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" class="card-link-cover"></a>
+                        <h4>Google Cybersecurity Professional Certificate</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://tryhackme.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>TryHackMe</h4>
+                        <p>An online platform for learning cyber security, through gamified labs.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.hackthebox.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Hack The Box</h4>
+                        <p>A platform to test and advance your skills in penetration testing and cybersecurity.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.cybrary.it/" target="_blank" class="card-link-cover"></a>
+                        <h4>Cybrary</h4>
+                        <p>Cybersecurity Training that Tangibly Reduces Business Risk</p>
+                    </div>
                 </div>
-                <div class="content-card">
-                    <h4><a href="https://tryhackme.com/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>TryHackMe</h4>
-                    <p>An online platform for learning cyber security, through gamified labs.</p>
-                </div>
-                <div class="content-card">
-                    <h4><a href="https://www.hackthebox.com/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Hack The Box</h4>
-                    <p>A platform to test and advance your skills in penetration testing and cybersecurity.</p>
-                </div>
-<div class="content-card">
-                    <h4><a href="https://www.cybrary.it/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Cybrary</h4>
-                    <p>Cybersecurity Training that Tangibly Reduces Business Risk</p>
-                </div>
-
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -131,26 +189,28 @@
         <p>Essential documentation and official guides for key tools and technologies.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="card-link-cover"></a>
-                    <h4>OWASP Top 10</h4>
-                    <p>A standard awareness document for developers and web application security.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.nist.gov/cyberframework" target="_blank" class="card-link-cover"></a>
-                    <h4>NIST Cybersecurity Framework</h4>
-                    <p>A set of standards, guidelines, and best practices to manage cybersecurity-related risk.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://attack.mitre.org/" target="_blank" class="card-link-cover"></a>
-                    <h4>MITRE ATT&CK Framework</h4>
-                    <p>A globally-accessible knowledge base of adversary tactics and techniques.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.sedarasecurity.com/a-guide-to-cybersecurity-documentation/" target="_blank" class="card-link-cover"></a>
-                    <h4>A Guide to Cybersecurity</h4>
-                    <p> A guide on how organizations can create their own cybersecurity policies, standards, and procedures.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="card-link-cover"></a>
+                        <h4>OWASP Top 10</h4>
+                        <p>A standard awareness document for developers and web application security.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.nist.gov/cyberframework" target="_blank" class="card-link-cover"></a>
+                        <h4>NIST Cybersecurity Framework</h4>
+                        <p>A set of standards, guidelines, and best practices to manage cybersecurity-related risk.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://attack.mitre.org/" target="_blank" class="card-link-cover"></a>
+                        <h4>MITRE ATT&CK Framework</h4>
+                        <p>A globally-accessible knowledge base of adversary tactics and techniques.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.sedarasecurity.com/a-guide-to-cybersecurity-documentation/" target="_blank" class="card-link-cover"></a>
+                        <h4>A Guide to Cybersecurity</h4>
+                        <p> A guide on how organizations can create their own cybersecurity policies, standards, and procedures.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -163,25 +223,28 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of Cyber Security.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                     <iframe width="300" height="200" src="https://www.youtube.com/embed/inWWhr5tnEA" title="What Is Cyber Security | How It Works? | Cyber Security In 7 Minutes | Cyber Security | Simplilearn" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-                    <h4>Simplilearn </h4><p>How Cybersecurity works</p>
-                </div>
-                <div class="content-card">
-                    <iframe width="300" height="200" src="https://www.youtube.com/embed/U_P23SqJaDc" title="Cyber Security Full Course for Beginner" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>MY CS    </h4>
-                    <p>Cyber Security Full Course for Beginner  </p>
-                </div>
-                <div class="content-card">
-                   <iframe width="300" height="200" src="https://www.youtube.com/embed/fNzpcB7ODxQ" title="Ethical Hacking in 12 Hours - Full Course - Learn to Hack!" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>The Cyber Mentor</h4>
-                   <p>Ethical Hacking  </p>
-                </div>
-                <div class="content-card">
-                   <iframe width="300" height="200" src="https://www.youtube.com/embed/3Kq1MIfTWCE" title="Full Ethical Hacking Course - Network Penetration Testing for Beginners (2019)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>Free Code Camp.org</h4>
-                    <p> Network Penetration Testing for Beginners    </p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/inWWhr5tnEA" title="What Is Cyber Security | How It Works? | Cyber Security In 7 Minutes | Cyber Security | Simplilearn" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Simplilearn </h4>
+                        <p>How Cybersecurity works</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/U_P23SqJaDc" title="Cyber Security Full Course for Beginner" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>MY CS </h4>
+                        <p>Cyber Security Full Course for Beginner </p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/fNzpcB7ODxQ" title="Ethical Hacking in 12 Hours - Full Course - Learn to Hack!" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>The Cyber Mentor</h4>
+                        <p>Ethical Hacking </p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/3Kq1MIfTWCE" title="Full Ethical Hacking Course - Network Penetration Testing for Beginners (2019)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Free Code Camp.org</h4>
+                        <p> Network Penetration Testing for Beginners </p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -194,29 +257,28 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                <a href="https://heimdalsecurity.com/pdf/cyber_security_for_beginners_ebook.pdf" target="_blank" class="card-link-cover"></a>    
-                  
-                <h4>Cyber security for beginners Ebook.</h4>
-                  
-                    <p>heimdalsecurity</p>
-                </div>
-                
-                <div class="content-card">
-                  <a href="http://repo.darmajaya.ac.id/4350/1/Practical%20Malware%20Analysis_%20The%20Hands-On%20Guide%20to%20Dissecting%20Malicious%20Software%20%28%20PDFDrive%20%29.pdf" target="_blank" class="card-link-cover"></a> 
-                    <h4>PracticaL Malware Analysis:The Hands-On	Guide to Dissecting Malicious Software  </h4>
-                    <p>Michael	Sikorski Andrew	Honig</p>
-                </div>
-                <div class="content-card">
-                  <a href="https://cyber.gov.gr/wp-content/uploads/2025/03/Cybersecurity-Handbook-English-version-compressed.pdf" target="_blank" class="card-link-cover"></a> 
-                    <h4>CYBERSECURITY HANDBOOK</h4>
-                    <p>best practises for the protection and restlience of network and information system </p>
-                </div>
-                 <div class="content-card">
-                  <a href="https://wcu.edu.az/uploads/files/Cyber%20Security%20Essentials%20(%20PDFDrive%20).pdf" target="_blank" class="card-link-cover"></a> 
-                    <h4>CYBER SECURITY ESSENTIALS</h4>
-                    <p>James Graham</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://heimdalsecurity.com/pdf/cyber_security_for_beginners_ebook.pdf" target="_blank" class="card-link-cover"></a>
+                        <h4>Cyber security for beginners Ebook.</h4>
+                        <p>heimdalsecurity</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="http://repo.darmajaya.ac.id/4350/1/Practical%20Malware%20Analysis_%20The%20Hands-On%20Guide%20to%20Dissecting%20Malicious%20Software%20%28%20PDFDrive%20%29.pdf" target="_blank" class="card-link-cover"></a>
+                        <h4>PracticaL Malware Analysis:The Hands-On Guide to Dissecting Malicious Software </h4>
+                        <p>Michael Sikorski Andrew Honig</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://cyber.gov.gr/wp-content/uploads/2025/03/Cybersecurity-Handbook-English-version-compressed.pdf" target="_blank" class="card-link-cover"></a>
+                        <h4>CYBERSECURITY HANDBOOK</h4>
+                        <p>best practises for the protection and restlience of network and information system </p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://wcu.edu.az/uploads/files/Cyber%20Security%20Essentials%20(%20PDFDrive%20).pdf" target="_blank" class="card-link-cover"></a>
+                        <h4>CYBER SECURITY ESSENTIALS</h4>
+                        <p>James Graham</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -225,10 +287,122 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Cam &mdash;RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "TCP/IP": {
+                description: "The Transmission Control Protocol/Internet Protocol is a suite of communication protocols used to interconnect network devices on the internet.",
+                link: "https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/"
+            },
+            "DNS": {
+                description: "The Domain Name System is the phonebook of the Internet.",
+                link: "https://www.cloudflare.com/learning/dns/what-is-dns/"
+            },
+            "HTTP/S": {
+                description: "Hypertext Transfer Protocol Secure is an extension of the Hypertext Transfer Protocol. It is used for secure communication over a computer network.",
+                link: "https://www.cloudflare.com/learning/ssl/what-is-https/"
+            },
+            "Linux": {
+                description: "A family of open-source Unix-like operating systems based on the Linux kernel.",
+                link: "https://www.linux.org/"
+            },
+            "Windows": {
+                description: "A group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft.",
+                link: "https://www.microsoft.com/en-us/windows"
+            },
+            "Penetration Testing": {
+                description: "An authorized simulated cyberattack on a computer system, performed to evaluate the security of the system.",
+                link: "https://www.coresecurity.com/penetration-testing"
+            },
+            "Web Application Security": {
+                description: "Focuses on protecting websites, web applications, and web services from security threats.",
+                link: "https://owasp.org/www-project-top-ten/"
+            },
+            "Incident Response": {
+                description: "The process of responding to, managing, and mitigating the effects of a security breach.",
+                link: "https://www.ibm.com/topics/incident-response"
+            },
+            "Digital Forensics": {
+                description: "The process of uncovering and interpreting electronic data.",
+                link: "https://www.eccouncil.org/what-is-digital-forensics/"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;

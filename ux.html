@@ -4,34 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UX Design Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
-       <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step UX Design Journey</h2>
         <p>A comprehensive guide to help you become a successful UX Designer from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to UX Design</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is UX Design?</h4>
+                <p>User experience (UX) design is the process of making products or services useful, easy to use, and delightful to interact with. It’s about enhancing the experience that people have while interacting with your product and making sure they find value in what you’re providing.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone who wants to learn how to create products that are easy and enjoyable to use, from aspiring designers to product managers and developers.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: Foundations</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,9 +66,9 @@
                         <h5>Step 1: User Research</h5>
                         <p>Learn how to understand your users.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Personas</span>
-                            <span class="skill-tag">User Interviews</span>
-                            <span class="skill-tag">Surveys</span>
+                            <span class="skill-tag" data-skill="Personas">Personas</span>
+                            <span class="skill-tag" data-skill="User Interviews">User Interviews</span>
+                            <span class="skill-tag" data-skill="Surveys">Surveys</span>
                         </div>
                     </div>
                 </div>
@@ -50,15 +77,16 @@
                         <h5>Step 2: User Flows</h5>
                         <p>Map out the user's journey.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">User Journey Maps</span>
-                            <span class="skill-tag">Flowcharts</span>
+                            <span class="skill-tag" data-skill="User Journey Maps">User Journey Maps</span>
+                            <span class="skill-tag" data-skill="Flowcharts">Flowcharts</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Design</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -66,8 +94,8 @@
                         <h5>Step 3: Wireframing</h5>
                         <p>Create low-fidelity mockups of your designs.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Sketching</span>
-                            <span class="skill-tag">Digital Wireframing</span>
+                            <span class="skill-tag" data-skill="Sketching">Sketching</span>
+                            <span class="skill-tag" data-skill="Digital Wireframing">Digital Wireframing</span>
                         </div>
                     </div>
                 </div>
@@ -76,15 +104,16 @@
                         <h5>Step 4: Prototyping</h5>
                         <p>Create interactive mockups of your designs.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Interactive Prototypes</span>
-                            <span class="skill-tag">High-Fidelity Mockups</span>
+                            <span class="skill-tag" data-skill="Interactive Prototypes">Interactive Prototypes</span>
+                            <span class="skill-tag" data-skill="High-Fidelity Mockups">High-Fidelity Mockups</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: Tools</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -92,15 +121,43 @@
                         <h5>Step 5: Learn a Design Tool</h5>
                         <p>Master a modern design tool.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">Sketch</span>
-                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag" data-skill="Figma">Figma</span>
+                            <span class="skill-tag" data-skill="Sketch">Sketch</span>
+                            <span class="skill-tag" data-skill="Adobe XD">Adobe XD</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
 
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Redesign the user flow of a popular app.</li>
+                    <li>Create a wireframe and prototype for a simple mobile app.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Conduct user research and design a new feature for an existing product.</li>
+                    <li>Design a website for a local business.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Design a complex application from scratch, including user research, wireframing, and prototyping.</li>
+                    <li>Conduct a usability study on an existing website and provide recommendations for improvement.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Courses Section -->
@@ -109,26 +166,28 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h4><a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Google UX Design Professional Certificate</h4>
-                    <p>Coursera</p>
-                </div>
-                <div class="content-card">
-                    <h4><a href="https://www.interaction-design.org/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Interaction Design Foundation</h4>
-                    <p>A platform with a huge library of UX design courses.</p>
-                </div>
-                <div class="content-card">
-                    <h4><a href="https://www.nngroup.com/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Nielsen Norman Group</h4>
-                    <p>World leaders in research-based user experience.</p>
-                </div>
-                <div class="content-card">
-                    <h4><a href="https://www.codecademy.com/learn/intro-to-ui-ux" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Code Cademy</h4>
-                    <p>Introduction to UI and UX Design</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/google-ux-design" target="_blank" class="card-link-cover"></a>
+                        <h4>Google UX Design Professional Certificate</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.interaction-design.org/" target="_blank" class="card-link-cover"></a>
+                        <h4>Interaction Design Foundation</h4>
+                        <p>A platform with a huge library of UX design courses.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.nngroup.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Nielsen Norman Group</h4>
+                        <p>World leaders in research-based user experience.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.codecademy.com/learn/intro-to-ui-ux" target="_blank" class="card-link-cover"></a>
+                        <h4>Code Cademy</h4>
+                        <p>Introduction to UI and UX Design</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -141,26 +200,28 @@
         <p>Essential reading for any aspiring UX designer.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.amazon.com/Elements-User-Experience-User-Centered-Design/dp/0321605512" target="_blank" class="card-link-cover"></a>
-                    <h4>The Elements of User Experience</h4>
-                    <p>A book by Jesse James Garrett.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://sensible.com/dont-make-me-think/" target="_blank" class="card-link-cover"></a>
-                    <h4>Don't Make Me Think</h4>
-                    <p>A book by Steve Krug.</p>
-                </div>
-                 <div class="content-card">
-                    <a href="https://www.interaction-design.org/literature/article/overview?srsltid=AfmBOorkNSfYNf6umqyN6tFCjT0MntJ6h4Wa4nWK8l6PAGJJkOS0Gd_g" target="_blank" class="card-link-cover"></a>
-                    <h4>UX Daily: The World's Largest Free Online Resource on UX Design</h4>
-                    <p>Interaction Design Foundation</p>
-                </div>
-                 <div class="content-card">
-                    <a href="https://www.pencilandpaper.io/articles   " target="_blank" class="card-link-cover"></a>
-                    <h4>Articles About UI UX Design</h4>
-                    <p>Pencil and Paper</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.amazon.com/Elements-User-Experience-User-Centered-Design/dp/0321605512" target="_blank" class="card-link-cover"></a>
+                        <h4>The Elements of User Experience</h4>
+                        <p>A book by Jesse James Garrett.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://sensible.com/dont-make-me-think/" target="_blank" class="card-link-cover"></a>
+                        <h4>Don't Make Me Think</h4>
+                        <p>A book by Steve Krug.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.interaction-design.org/literature/article/overview?srsltid=AfmBOorkNSfYNf6umqyN6tFCjT0MntJ6h4Wa4nWK8l6PAGJJkOS0Gd_g" target="_blank" class="card-link-cover"></a>
+                        <h4>UX Daily: The World's Largest Free Online Resource on UX Design</h4>
+                        <p>Interaction Design Foundation</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.pencilandpaper.io/articles" target="_blank" class="card-link-cover"></a>
+                        <h4>Articles About UI UX Design</h4>
+                        <p>Pencil and Paper</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -173,26 +234,28 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of UX Design.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                     <iframe width="300" height="200" src="https://www.youtube.com/embed/szm8FaHrHcY" title="Nielsen Norman Group: Leaders in UX Since 1998" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>NNgroup</h4>
-                    <p>Videos on user experience research, training, and consulting.</p>
-                </div>
-                <div class="content-card">
-                   <iframe width="300" height="200" src="https://www.youtube.com/embed/jQ1sfKIl50E" title="Figma Tutorial for Beginners (13-min crash course!)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>Figma</h4>
-                    <p>Tutorials and tips on how to use Figma.</p>
-                </div>
-                <div class="content-card">
-                    <iframe width="300" height="200" src="https://www.youtube.com/embed/2QQQtiFwXjU?list=PLTZYG7bZ1u6oHnGp4Ib3n0y-CmFQdTW6r" title="Intro to UX (User Experience) | Google UX Design Certificate" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>Google UX Design Certificate</h4>
-                    <p>Intro to UX (User Experience)</p>
-                </div>
-                <div class="content-card">
-                  <iframe width="300" height="200" src="https://www.youtube.com/embed/qDUYIQZVQDE?list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH" title="UI/UX Development Introduction | UI/UX Design Tutorials" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h4>Naresh i Technologies</h4>
-                    <p>UI/UX Development Introduction</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/szm8FaHrHcY" title="Nielsen Norman Group: Leaders in UX Since 1998" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>NNgroup</h4>
+                        <p>Videos on user experience research, training, and consulting.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/jQ1sfKIl50E" title="Figma Tutorial for Beginners (13-min crash course!)" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Figma</h4>
+                        <p>Tutorials and tips on how to use Figma.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/2QQQtiFwXjU?list=PLTZYG7bZ1u6oHnGp4Ib3n0y-CmFQdTW6r" title="Intro to UX (User Experience) | Google UX Design Certificate" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Google UX Design Certificate</h4>
+                        <p>Intro to UX (User Experience)</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/qDUYIQZVQDE?list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH" title="UI/UX Development Introduction | UI/UX Design Tutorials" frameborder="30" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Naresh i Technologies</h4>
+                        <p>UI/UX Development Introduction</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -205,27 +268,29 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654" target="_blank" class="card-link-cover"></a>
-                    <h4>The Design of Everyday Things</h4>
-                    <p>A book by Don Norman.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654" target="_blank" class="card-link-cover"></a>
+                        <h4>The Design of Everyday Things</h4>
+                        <p>A book by Don Norman.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas/dp/150112174X" target="_blank" class="card-link-cover"></a>
+                        <h4>Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</h4>
+                        <p>A book by Jake Knapp.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href=" https://www.scribd.com/document/677156025/UX-UI-Design-Process-and-Principles " target="_blank" class="card-link-cover"></a>
+                        <h4>UX-UI-Design-Process-and-Principles</h4>
+                        <p>A book by Jan Mraz</p>
+                    </div>
+                    <div class="content-card">
+                        <a href=" https://bpb-eu-w2.wpmucdn.com/sites.aub.edu.lb/dist/c/13/files/2019/06/the-basics-of-ux-design.pdf " target="_blank" class="card-link-cover"></a>
+                        <h4>The Basics of User Experience Design </h4>
+                        <p>A book by INTERACTION DESIGN FOUNDATION </p>
+                    </div>
                 </div>
-                <div class="content-card">
-                    <a href="https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas/dp/150112174X" target="_blank" class="card-link-cover"></a>
-                    <h4>Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</h4>
-                    <p>A book by Jake Knapp.</p>
-                </div>
-              <div class="content-card">
-                  <a href=" https://www.scribd.com/document/677156025/UX-UI-Design-Process-and-Principles   " target="_blank" class="card-link-cover"></a>  
-                    <h4>UX-UI-Design-Process-and-Principles</h4>
-                  <p>A book by Jan Mraz</p>
-                </div>      
-                <div class="content-card">
-                  <a href=" https://bpb-eu-w2.wpmucdn.com/sites.aub.edu.lb/dist/c/13/files/2019/06/the-basics-of-ux-design.pdf " target="_blank" class="card-link-cover"></a>  
-                    <h4>The Basics of User Experience Design   </h4>
-                  <p>A book by INTERACTION DESIGN FOUNDATION </p>
-                </div>   
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -233,10 +298,134 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Jennifer &mdash; RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "Personas": {
+                description: "Fictional characters created to represent the different user types that might use a site, brand, or product in a similar way.",
+                link: "https://www.usability.gov/how-to-and-tools/methods/personas.html"
+            },
+            "User Interviews": {
+                description: "A UX research method during which a researcher asks one user questions about a topic of interest.",
+                link: "https://www.nngroup.com/articles/user-interviews/"
+            },
+            "Surveys": {
+                description: "A research method used for collecting data from a predefined group of respondents to gain information and insights into various topics of interest.",
+                link: "https://www.nngroup.com/articles/surveys-in-ux-research/"
+            },
+            "User Journey Maps": {
+                description: "A visualization of the process that a person goes through in order to accomplish a goal.",
+                link: "https://www.nngroup.com/articles/journey-mapping-101/"
+            },
+            "Flowcharts": {
+                description: "A type of diagram that represents a workflow or process.",
+                link: "https://www.lucidchart.com/pages/what-is-a-flowchart"
+            },
+            "Sketching": {
+                description: "A rapidly executed freehand drawing that is not usually intended as a finished work.",
+                link: "https://www.nngroup.com/articles/sketching-for-ux-designers/"
+            },
+            "Digital Wireframing": {
+                description: "A low-fidelity, simplified outline of your product.",
+                link: "https://www.figma.com/wireframe/"
+            },
+            "Interactive Prototypes": {
+                description: "A high-fidelity representation of the final product.",
+                link: "https://www.invisionapp.com/inside-design/guide-to-interactive-prototypes/"
+            },
+            "High-Fidelity Mockups": {
+                description: "A computer-based interactive representation of the product in its closest resemblance to the final design in terms of details and functionality.",
+                link: "https://www.justinmind.com/blog/high-fidelity-mockups/"
+            },
+            "Figma": {
+                description: "A vector graphics editor and prototyping tool which is primarily web-based.",
+                link: "https://www.figma.com/"
+            },
+            "Sketch": {
+                description: "A vector graphics editor for macOS.",
+                link: "https://www.sketch.com/"
+            },
+            "Adobe XD": {
+                description: "A vector-based user experience design tool for web apps and mobile apps developed and published by Adobe Inc.",
+                link: "https://www.adobe.com/products/xd.html"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;

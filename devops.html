@@ -4,34 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step DevOps Journey</h2>
         <p>A comprehensive guide to help you become a successful DevOps engineer from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to DevOps</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is DevOps?</h4>
+                <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for developers, IT operations staff, and anyone interested in learning how to build and maintain modern, scalable, and reliable software systems.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: The Fundamentals</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,9 +66,9 @@
                         <h5>Step 1: Programming & Scripting</h5>
                         <p>Learn a language for automation.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python</span>
-                            <span class="skill-tag"><img src="icons/go.png" alt="Go" class="skill-icon"> Go</span>
-                            <span class="skill-tag"><img src="icons/terminal.png" alt="Bash" class="skill-icon"> Bash</span>
+                            <span class="skill-tag" data-skill="Python"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python</span>
+                            <span class="skill-tag" data-skill="Go"><img src="icons/go.png" alt="Go" class="skill-icon"> Go</span>
+                            <span class="skill-tag" data-skill="Bash"><img src="icons/terminal.png" alt="Bash" class="skill-icon"> Bash</span>
                         </div>
                     </div>
                 </div>
@@ -50,8 +77,8 @@
                         <h5>Step 2: Operating Systems & Linux</h5>
                         <p>Master the command line and OS concepts.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
-                            <span class="skill-tag">Shell Scripting</span>
+                            <span class="skill-tag" data-skill="Linux"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
+                            <span class="skill-tag" data-skill="Shell Scripting">Shell Scripting</span>
                         </div>
                     </div>
                 </div>
@@ -60,16 +87,17 @@
                         <h5>Step 3: Version Control</h5>
                         <p>Learn how to manage code.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/Git.png" alt="Git" class="skill-icon"> Git</span>
-                            <span class="skill-tag"><img src="icons/GitHub.png" alt="GitHub" class="skill-icon"> GitHub</span>
-                            <span class="skill-tag"><img src="icons/GitLab.png" alt="GitLab" class="skill-icon"> GitLab</span>
+                            <span class="skill-tag" data-skill="Git"><img src="icons/Git.png" alt="Git" class="skill-icon"> Git</span>
+                            <span class="skill-tag" data-skill="GitHub"><img src="icons/GitHub.png" alt="GitHub" class="skill-icon"> GitHub</span>
+                            <span class="skill-tag" data-skill="GitLab"><img src="icons/GitLab.png" alt="GitLab" class="skill-icon"> GitLab</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Infrastructure & Automation</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -77,8 +105,8 @@
                         <h5>Step 4: Infrastructure as Code (IaC)</h5>
                         <p>Automate your infrastructure.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/terraform.png" alt="Terraform" class="skill-icon"> Terraform</span>
-                            <span class="skill-tag"><img src="icons/ansible.png" alt="Ansible" class="skill-icon"> Ansible</span>
+                            <span class="skill-tag" data-skill="Terraform"><img src="icons/terraform.png" alt="Terraform" class="skill-icon"> Terraform</span>
+                            <span class="skill-tag" data-skill="Ansible"><img src="icons/ansible.png" alt="Ansible" class="skill-icon"> Ansible</span>
                         </div>
                     </div>
                 </div>
@@ -87,16 +115,17 @@
                         <h5>Step 5: Cloud Providers</h5>
                         <p>Choose a cloud platform to host your infrastructure.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/aws.png" alt="AWS" class="skill-icon"> AWS</span>
-                            <span class="skill-tag"><img src="icons/azure.png" alt="Azure" class="skill-icon"> Azure</span>
-                            <span class="skill-tag"><img src="icons/gcp.png" alt="GCP" class="skill-icon"> GCP</span>
+                            <span class="skill-tag" data-skill="AWS"><img src="icons/aws.png" alt="AWS" class="skill-icon"> AWS</span>
+                            <span class="skill-tag" data-skill="Azure"><img src="icons/azure.png" alt="Azure" class="skill-icon"> Azure</span>
+                            <span class="skill-tag" data-skill="GCP"><img src="icons/gcp.png" alt="GCP" class="skill-icon"> GCP</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: Application Delivery</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -104,7 +133,7 @@
                         <h5>Step 6: Containerization</h5>
                         <p>Package your applications.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/docker.png" alt="Docker" class="skill-icon"> Docker</span>
+                            <span class="skill-tag" data-skill="Docker"><img src="icons/docker.png" alt="Docker" class="skill-icon"> Docker</span>
                         </div>
                     </div>
                 </div>
@@ -113,9 +142,9 @@
                         <h5>Step 7: CI/CD</h5>
                         <p>Automate the build and deployment process.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/jenkins.png" alt="Jenkins" class="skill-icon"> Jenkins</span>
-                            <span class="skill-tag"><img src="icons/GitLab.png" alt="GitLab CI" class="skill-icon"> GitLab CI</span>
-                            <span class="skill-tag"><img src="icons/github actions.jpg" alt="GitHub Actions" class="skill-icon"> GitHub Actions</span>
+                            <span class="skill-tag" data-skill="Jenkins"><img src="icons/jenkins.png" alt="Jenkins" class="skill-icon"> Jenkins</span>
+                            <span class="skill-tag" data-skill="GitLab CI"><img src="icons/GitLab.png" alt="GitLab CI" class="skill-icon"> GitLab CI</span>
+                            <span class="skill-tag" data-skill="GitHub Actions"><img src="icons/github actions.jpg" alt="GitHub Actions" class="skill-icon"> GitHub Actions</span>
                         </div>
                     </div>
                 </div>
@@ -124,14 +153,15 @@
                         <h5>Step 8: Container Orchestration</h5>
                         <p>Manage containers at scale.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/Kube.jpg" alt="Kubernetes" class="skill-icon"> Kubernetes</span>
+                            <span class="skill-tag" data-skill="Kubernetes"><img src="icons/Kube.jpg" alt="Kubernetes" class="skill-icon"> Kubernetes</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase4">
             <h4>Phase 4: Observability & Reliability</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -139,9 +169,9 @@
                         <h5>Step 9: Monitoring & Logging</h5>
                         <p>Understand how your applications are performing.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/prometheus.png" alt="Prometheus" class="skill-icon"> Prometheus</span>
-                            <span class="skill-tag"><img src="icons/grafana.png" alt="Grafana" class="skill-icon"> Grafana</span>
-                            <span class="skill-tag"><img src="icons/eklstack.png" alt="ELK Stack" class="skill-icon"> ELK Stack</span>
+                            <span class="skill-tag" data-skill="Prometheus"><img src="icons/prometheus.png" alt="Prometheus" class="skill-icon"> Prometheus</span>
+                            <span class="skill-tag" data-skill="Grafana"><img src="icons/grafana.png" alt="Grafana" class="skill-icon"> Grafana</span>
+                            <span class="skill-tag" data-skill="ELK Stack"><img src="icons/eklstack.png" alt="ELK Stack" class="skill-icon"> ELK Stack</span>
                         </div>
                     </div>
                 </div>
@@ -150,12 +180,41 @@
                         <h5>Step 10: Security (DevSecOps)</h5>
                         <p>Integrate security into your pipeline.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">SAST</span>
-                            <span class="skill-tag">DAST</span>
-                            <span class="skill-tag">Secrets Management</span>
+                            <span class="skill-tag" data-skill="SAST">SAST</span>
+                            <span class="skill-tag" data-skill="DAST">DAST</span>
+                            <span class="skill-tag" data-skill="Secrets Management">Secrets Management</span>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Automate the deployment of a simple web application to a cloud provider.</li>
+                    <li>Set up a CI/CD pipeline for a personal project.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Containerize a multi-service application with Docker Compose.</li>
+                    <li>Create a monitoring dashboard for a web application using Prometheus and Grafana.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Deploy a highly available and scalable application on Kubernetes.</li>
+                    <li>Implement a DevSecOps pipeline with automated security scanning.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -166,26 +225,28 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://kodekloud.com/learning-path-devops-engineer/" target="_blank" class="card-link-cover"></a>
-                    <h4>KodeKloud DevOps Engineer</h4>
-                    <p>Comprehensive and hands-on courses covering a wide range of DevOps tools and technologies.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://acloud.guru/" target="_blank" class="card-link-cover"></a>
-                    <h4>A Cloud Guru</h4>
-                    <p>Platform with a focus on cloud certifications and practical, hands-on labs for various cloud providers.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991" target="_blank" class="card-link-cover"></a>
-                    <h4>Udacity - Cloud DevOps Engineer Nanodegree</h4>
-                    <p>Project-based nanodegree program covering a wide range of DevOps topics.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.linkedin.com/learning/devops-foundations" target="_blank" class="card-link-cover"></a>
-                    <h4>LinkedIn Learning - DevOps Foundations</h4>
-                    <p>Introductory course on the principles and practices of DevOps.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://kodekloud.com/learning-path-devops-engineer/" target="_blank" class="card-link-cover"></a>
+                        <h4>KodeKloud DevOps Engineer</h4>
+                        <p>Comprehensive and hands-on courses covering a wide range of DevOps tools and technologies.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://acloud.guru/" target="_blank" class="card-link-cover"></a>
+                        <h4>A Cloud Guru</h4>
+                        <p>Platform with a focus on cloud certifications and practical, hands-on labs for various cloud providers.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991" target="_blank" class="card-link-cover"></a>
+                        <h4>Udacity - Cloud DevOps Engineer Nanodegree</h4>
+                        <p>Project-based nanodegree program covering a wide range of DevOps topics.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.linkedin.com/learning/devops-foundations" target="_blank" class="card-link-cover"></a>
+                        <h4>LinkedIn Learning - DevOps Foundations</h4>
+                        <p>Introductory course on the principles and practices of DevOps.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -198,36 +259,38 @@
         <p>Essential documentation and official guides for key tools and technologies.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://git-scm.com/doc" target="_blank" class="card-link-cover"></a>
-                    <h4>Git Docs</h4>
-                    <p>The official Git documentation.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://docs.docker.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>Docker Docs</h4>
-                    <p>Official documentation for Docker.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://kubernetes.io/docs/home/" target="_blank" class="card-link-cover"></a>
-                    <h4>Kubernetes Docs</h4>
-                    <p>The official Kubernetes documentation.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.terraform.io/docs" target="_blank" class="card-link-cover"></a>
-                    <h4>Terraform Docs</h4>
-                    <p>Official guides for Terraform.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://docs.gitlab.com/ee/ci/" target="_blank" class="card-link-cover"></a>
-                    <h4>GitLab CI/CD</h4>
-                    <p>Official documentation for GitLab CI/CD.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://docs.github.com/en/actions" target="_blank" class="card-link-cover"></a>
-                    <h4>GitHub Actions</h4>
-                    <p>Official documentation for GitHub Actions.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://git-scm.com/doc" target="_blank" class="card-link-cover"></a>
+                        <h4>Git Docs</h4>
+                        <p>The official Git documentation.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://docs.docker.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Docker Docs</h4>
+                        <p>Official documentation for Docker.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://kubernetes.io/docs/home/" target="_blank" class="card-link-cover"></a>
+                        <h4>Kubernetes Docs</h4>
+                        <p>The official Kubernetes documentation.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.terraform.io/docs" target="_blank" class="card-link-cover"></a>
+                        <h4>Terraform Docs</h4>
+                        <p>Official guides for Terraform.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://docs.gitlab.com/ee/ci/" target="_blank" class="card-link-cover"></a>
+                        <h4>GitLab CI/CD</h4>
+                        <p>Official documentation for GitLab CI/CD.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://docs.github.com/en/actions" target="_blank" class="card-link-cover"></a>
+                        <h4>GitHub Actions</h4>
+                        <p>Official documentation for GitHub Actions.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -240,26 +303,28 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of DevOps.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/TechWorldwithNana" target="_blank" class="card-link-cover"></a>
-                    <h4>TechWorld with Nana</h4>
-                    <p>Great channel for beginner-friendly tutorials on Docker, Kubernetes, and other DevOps tools.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/SaiyamPathak" target="_blank" class="card-link-cover"></a>
-                    <h4>Saiyam Pathak</h4>
-                    <p>Known for deep dives and advanced topics related to Kubernetes and cloud-native technologies.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/DevOpsish" target="_blank" class="card-link-cover"></a>
-                    <h4>DevOps'ish</h4>
-                    <p>Weekly newsletter and YouTube channel covering DevOps news and trends.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.youtube.com/c/BretFisherDockerandDevOps" target="_blank" class="card-link-cover"></a>
-                    <h4>Bret Fisher Docker and DevOps</h4>
-                    <p>In-depth tutorials on Docker, Kubernetes, and Swarm.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/TechWorldwithNana" target="_blank" class="card-link-cover"></a>
+                        <h4>TechWorld with Nana</h4>
+                        <p>Great channel for beginner-friendly tutorials on Docker, Kubernetes, and other DevOps tools.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/SaiyamPathak" target="_blank" class="card-link-cover"></a>
+                        <h4>Saiyam Pathak</h4>
+                        <p>Known for deep dives and advanced topics related to Kubernetes and cloud-native technologies.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/DevOpsish" target="_blank" class="card-link-cover"></a>
+                        <h4>DevOps'ish</h4>
+                        <p>Weekly newsletter and YouTube channel covering DevOps news and trends.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.youtube.com/c/BretFisherDockerandDevOps" target="_blank" class="card-link-cover"></a>
+                        <h4>Bret Fisher Docker and DevOps</h4>
+                        <p>In-depth tutorials on Docker, Kubernetes, and Swarm.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -272,26 +337,28 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://itrevolution.com/the-phoenix-project/" target="_blank" class="card-link-cover"></a>
-                    <h4>The Phoenix Project</h4>
-                    <p>A novel that introduces DevOps principles through a fictional IT company story.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://itrevolution.com/the-devops-handbook/" target="_blank" class="card-link-cover"></a>
-                    <h4>The DevOps Handbook</h4>
-                    <p>A comprehensive guide to the principles and practices of DevOps.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://itrevolution.com/accelerate/" target="_blank" class="card-link-cover"></a>
-                    <h4>Accelerate</h4>
-                    <p>The Science of Lean Software and DevOps.</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.oreilly.com/library/view/continuous-delivery/9780321670149/" target="_blank" class="card-link-cover"></a>
-                    <h4>Continuous Delivery</h4>
-                    <p>Reliable Software Releases through Build, Test, and Deployment Automation.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://itrevolution.com/the-phoenix-project/" target="_blank" class="card-link-cover"></a>
+                        <h4>The Phoenix Project</h4>
+                        <p>A novel that introduces DevOps principles through a fictional IT company story.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://itrevolution.com/the-devops-handbook/" target="_blank" class="card-link-cover"></a>
+                        <h4>The DevOps Handbook</h4>
+                        <p>A comprehensive guide to the principles and practices of DevOps.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://itrevolution.com/accelerate/" target="_blank" class="card-link-cover"></a>
+                        <h4>Accelerate</h4>
+                        <p>The Science of Lean Software and DevOps.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/continuous-delivery/9780321670149/" target="_blank" class="card-link-cover"></a>
+                        <h4>Continuous Delivery</h4>
+                        <p>Reliable Software Releases through Build, Test, and Deployment Automation.</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -300,10 +367,182 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Kube &mdash; RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "Python": {
+                description: "A popular high-level programming language for general-purpose programming.",
+                link: "https://www.python.org/"
+            },
+            "Go": {
+                description: "A statically typed, compiled programming language designed at Google.",
+                link: "https://golang.org/"
+            },
+            "Bash": {
+                description: "A Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell.",
+                link: "https://www.gnu.org/software/bash/"
+            },
+            "Linux": {
+                description: "A family of open-source Unix-like operating systems based on the Linux kernel.",
+                link: "https://www.linux.org/"
+            },
+            "Shell Scripting": {
+                description: "Writing scripts for the shell, or command-line interpreter, to automate tasks.",
+                link: "https://www.shellscript.sh/"
+            },
+            "Git": {
+                description: "A distributed version-control system for tracking changes in source code during software development.",
+                link: "https://git-scm.com/"
+            },
+            "GitHub": {
+                description: "A provider of Internet hosting for software development and version control using Git.",
+                link: "https://github.com/"
+            },
+            "GitLab": {
+                description: "A web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features.",
+                link: "https://about.gitlab.com/"
+            },
+            "Terraform": {
+                description: "An open-source infrastructure as code software tool created by HashiCorp.",
+                link: "https://www.terraform.io/"
+            },
+            "Ansible": {
+                description: "An open-source software provisioning, configuration management, and application-deployment tool.",
+                link: "https://www.ansible.com/"
+            },
+            "AWS": {
+                description: "Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs.",
+                link: "https://aws.amazon.com/"
+            },
+            "Azure": {
+                description: "A cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+                link: "https://azure.microsoft.com/"
+            },
+            "GCP": {
+                description: "Google Cloud Platform, offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products.",
+                link: "https://cloud.google.com/"
+            },
+            "Docker": {
+                description: "A set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
+                link: "https://www.docker.com/"
+            },
+            "Jenkins": {
+                description: "An open source automation server which enables developers around the world to reliably build, test, and deploy their software.",
+                link: "https://www.jenkins.io/"
+            },
+            "GitLab CI": {
+                description: "A part of GitLab that allows you to apply all the continuous methods (Continuous Integration, Delivery, and Deployment) to your software.",
+                link: "https://docs.gitlab.com/ee/ci/"
+            },
+            "GitHub Actions": {
+                description: "A CI/CD platform that allows you to automate your build, test, and deployment pipeline.",
+                link: "https://github.com/features/actions"
+            },
+            "Kubernetes": {
+                description: "An open-source container-orchestration system for automating computer application deployment, scaling, and management.",
+                link: "https://kubernetes.io/"
+            },
+            "Prometheus": {
+                description: "An open-source systems monitoring and alerting toolkit originally built at SoundCloud.",
+                link: "https://prometheus.io/"
+            },
+            "Grafana": {
+                description: "A multi-platform open source analytics and interactive visualization web application.",
+                link: "https://grafana.com/"
+            },
+            "ELK Stack": {
+                description: "A collection of three open-source products — Elasticsearch, Logstash, and Kibana — from Elastic.",
+                link: "https://www.elastic.co/what-is/elk-stack"
+            },
+            "SAST": {
+                description: "Static Application Security Testing is a white-box method of testing. It analyzes the source code for security vulnerabilities.",
+                link: "https://owasp.org/www-community/Source_Code_Analysis_Tools"
+            },
+            "DAST": {
+                description: "Dynamic Application Security Testing is a black-box method of testing. It analyzes the application in its running state.",
+                link: "https://owasp.org/www-community/DAST"
+            },
+            "Secrets Management": {
+                description: "The tools and methods for managing digital authentication credentials (secrets), including passwords, keys, APIs, and tokens for use in applications, services, and IT environments.",
+                link: "https://www.hashicorp.com/products/vault"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;
