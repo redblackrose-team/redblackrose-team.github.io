@@ -156,26 +156,56 @@ body {
 
 .roadmap-phase {
     margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .roadmap-phase h4 {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 20px;
-    text-align: left;
-    padding-left: 20px;
-    border-left: 6px solid #007bff;
+    position: relative;
+    padding-left: 50px;
 }
+
+.roadmap-phase h4::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 90%;
+    background-color: #5DACE1;
+    border-radius: 3px;
+}
+
 
 .roadmap-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 900px;
-    margin: 0 auto;
-    border-left: 6px solid #007bff;
-    padding-left: 40px;
+    margin: 0;
+    border-left: none;
     position: relative;
+    padding-left: 50px;
+}
+
+/* DESIGN SUGGESTION: Soft, glowing timeline */
+.roadmap-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px; /* The physical line is thin */
+    background-color: #A9B4C2;
+    /* This shadow creates the soft, glowing effect */
+    box-shadow: 0 0 10px 1px #A9B4C2;
+    border-radius: 1px;
 }
 
 .roadmap-item {
@@ -190,17 +220,21 @@ body {
     color: black;
 }
 
+/* DESIGN SUGGESTION: Matching glowing markers */
 .roadmap-item::before {
     content: '';
-    width: 25px;
-    height: 25px;
-    background-color: #007bff;
+    width: 12px;
+    height: 12px;
+    background-color: #8C9BAB;
     border-radius: 50%;
     flex-shrink: 0;
-    box-shadow: 0 0 10px #007bff;
+    /* An enhanced glow for the markers */
+    box-shadow: 0 0 12px 2px rgba(140, 155, 171, 0.8);
     position: absolute;
-    left: -54.5px;
     top: 30px;
+    /* Recalculated to center on the new thin line */
+    left: -35px;
+    z-index: 1;
 }
 
 .step-header {
