@@ -83,6 +83,10 @@
     margin-bottom: 30px;
 }
 
+.section p {
+    margin-bottom: 20px;
+}
+
 .roadmap-phase {
     margin-bottom: 40px;
     max-width: 900px;
