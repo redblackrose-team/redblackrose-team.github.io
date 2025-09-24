@@ -18,7 +18,7 @@
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="home-images/rbr logo.png" alt="logo">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="index.html#contact">Contact</a>
@@ -316,7 +316,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
     <!-- Modal -->
@@ -469,6 +469,215 @@
                 }
             });
         });
+
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
     </script>
+<script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "HTML": {
+                description: "The standard markup language for documents designed to be displayed in a web browser.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            "CSS": {
+                description: "A style sheet language used for describing the presentation of a document written in a markup language like HTML.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            "Bootstrap": {
+                description: "A free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
+                link: "https://getbootstrap.com/"
+            },
+            "Tailwind": {
+                description: "A utility-first CSS framework for rapidly building custom user interfaces.",
+                link: "https://tailwindcss.com/"
+            },
+            "JavaScript": {
+                description: "A programming language that conforms to the ECMAScript specification.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            "React": {
+                description: "A free and open-source front-end JavaScript library for building user interfaces or UI components.",
+                link: "https://reactjs.org/"
+            },
+            "Angular": {
+                description: "A TypeScript-based open-source web application framework led by the Angular Team at Google.",
+                link: "https://angular.io/"
+            },
+            "Vue": {
+                description: "An open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
+                link: "https://vuejs.org/"
+            },
+            "Redux": {
+                description: "An open-source JavaScript library for managing application state.",
+                link: "https://redux.js.org/"
+            },
+            "Vuex": {
+                description: "A state management pattern + library for Vue.js applications.",
+                link: "https://vuex.vuejs.org/"
+            },
+            "NgRx": {
+                description: "A framework for building reactive applications in Angular.",
+                link: "https://ngrx.io/"
+            },
+            "Jest": {
+                description: "A delightful JavaScript Testing Framework with a focus on simplicity.",
+                link: "https://jestjs.io/"
+            },
+            "Vitest": {
+                description: "A blazing fast unit-test framework powered by Vite.",
+                link: "https://vitest.dev/"
+            },
+            "Webpack": {
+                description: "A static module bundler for modern JavaScript applications.",
+                link: "https://webpack.js.org/"
+            },
+            "Vite": {
+                description: "A build tool that aims to provide a faster and leaner development experience for modern web projects.",
+                link: "https://vitejs.dev/"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.querySelectorAll('.scroll-arrow').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.parentElement;
+                const contentGrid = container.querySelector('.content-grid');
+                const scrollAmount = 330; // Adjust this value to control the scroll distance
+
+                if (button.classList.contains('left')) {
+                    contentGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else {
+                    contentGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            });
+        });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+  <button id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Development Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <img src="home-images/rbr-logo.png" alt="logo">
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#roadmaps">Roadmaps</a>
+        </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Your Step-by-Step Mobile Development Journey</h2>
+        <p>A comprehensive guide to help you become a successful Mobile Developer from scratch.</p>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Mobile Development</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Mobile Development?</h4>
+                <p>Mobile development is the process of creating software applications that run on mobile devices, such as smartphones and tablets. It involves designing, building, and maintaining mobile apps for various platforms like iOS and Android.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone who wants to learn how to build mobile applications for iOS and Android, from beginners to experienced developers looking to transition into mobile development.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Roadmap Section -->
+    <div id="roadmap" class="section">
+        <h3>Step-by-Step Roadmap</h3>
+        <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
+
+        <div class="roadmap-phase" id="phase1">
+            <h4>Phase 1: Choose Your Platform</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 1: iOS or Android</h5>
+                        <p>Decide whether you want to develop for iOS, Android, or both.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag" data-skill="iOS">iOS</span>
+                            <span class="skill-tag" data-skill="Android">Android</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="roadmap-phase" id="phase2">
+            <h4>Phase 2: Learn the Language</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 2: Swift or Kotlin</h5>
+                        <p>Learn the primary programming language for your chosen platform.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag" data-skill="Swift">Swift (for iOS)</span>
+                            <span class="skill-tag" data-skill="Kotlin">Kotlin (for Android)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="roadmap-phase" id="phase3">
+            <h4>Phase 3: Frameworks & Tools</h4>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <div class="step-header">
+                        <h5>Step 3: Learn the Core Frameworks</h5>
+                        <p>Familiarize yourself with the essential frameworks and tools for your platform.</p>
+                        <div class="skills-grid">
+                            <span class="skill-tag" data-skill="Xcode">Xcode (for iOS)</span>
+                            <span class="skill-tag" data-skill="Android Studio">Android Studio (for Android)</span>
+                            <span class="skill-tag" data-skill="React Native">React Native</span>
+                            <span class="skill-tag" data-skill="Flutter">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Build a simple calculator app.</li>
+                    <li>Create a to-do list app.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Develop a weather app that uses a public API.</li>
+                    <li>Build a simple social media app with user profiles and posts.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Create a real-time chat application.</li>
+                    <li>Build a clone of a popular app like Instagram or Uber.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
+    </footer>
+
+    <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+    </script>
+<script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+  <button id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>

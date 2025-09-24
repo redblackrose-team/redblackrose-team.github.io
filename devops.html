@@ -18,7 +18,7 @@
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="home-images/rbr logo.png" alt="logo">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="index.html#contact">Contact</a>
@@ -366,7 +366,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
     <!-- Modal -->
@@ -420,48 +420,20 @@
         const closeModal = document.querySelector('.close');
 
         const skillData = {
+            "Linux": {
+                description: "A family of open-source Unix-like operating systems based on the Linux kernel.",
+                link: "https://www.linux.org/"
+            },
             "Python": {
-                description: "A popular high-level programming language for general-purpose programming.",
+                description: "An interpreted, high-level and general-purpose programming language.",
                 link: "https://www.python.org/"
             },
             "Go": {
                 description: "A statically typed, compiled programming language designed at Google.",
                 link: "https://golang.org/"
             },
-            "Bash": {
-                description: "A Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell.",
-                link: "https://www.gnu.org/software/bash/"
-            },
-            "Linux": {
-                description: "A family of open-source Unix-like operating systems based on the Linux kernel.",
-                link: "https://www.linux.org/"
-            },
-            "Shell Scripting": {
-                description: "Writing scripts for the shell, or command-line interpreter, to automate tasks.",
-                link: "https://www.shellscript.sh/"
-            },
-            "Git": {
-                description: "A distributed version-control system for tracking changes in source code during software development.",
-                link: "https://git-scm.com/"
-            },
-            "GitHub": {
-                description: "A provider of Internet hosting for software development and version control using Git.",
-                link: "https://github.com/"
-            },
-            "GitLab": {
-                description: "A web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features.",
-                link: "https://about.gitlab.com/"
-            },
-            "Terraform": {
-                description: "An open-source infrastructure as code software tool created by HashiCorp.",
-                link: "https://www.terraform.io/"
-            },
-            "Ansible": {
-                description: "An open-source software provisioning, configuration management, and application-deployment tool.",
-                link: "https://www.ansible.com/"
-            },
             "AWS": {
-                description: "Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs.",
+                description: "A subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.",
                 link: "https://aws.amazon.com/"
             },
             "Azure": {
@@ -469,52 +441,40 @@
                 link: "https://azure.microsoft.com/"
             },
             "GCP": {
-                description: "Google Cloud Platform, offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products.",
+                description: "A suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail, file storage, and YouTube.",
                 link: "https://cloud.google.com/"
             },
             "Docker": {
                 description: "A set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
                 link: "https://www.docker.com/"
             },
+            "Kubernetes": {
+                description: "An open-source container-orchestration system for automating computer application deployment, scaling, and management.",
+                link: "https://kubernetes.io/"
+            },
+            "Ansible": {
+                description: "An open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.",
+                link: "https://www.ansible.com/"
+            },
+            "Terraform": {
+                description: "An open-source infrastructure as code software tool created by HashiCorp.",
+                link: "https://www.terraform.io/"
+            },
             "Jenkins": {
                 description: "An open source automation server which enables developers around the world to reliably build, test, and deploy their software.",
                 link: "https://www.jenkins.io/"
             },
             "GitLab CI": {
-                description: "A part of GitLab that allows you to apply all the continuous methods (Continuous Integration, Delivery, and Deployment) to your software.",
+                description: "A part of GitLab, a web-based DevOps lifecycle tool that provides a distributed version control system for software development.",
                 link: "https://docs.gitlab.com/ee/ci/"
             },
-            "GitHub Actions": {
-                description: "A CI/CD platform that allows you to automate your build, test, and deployment pipeline.",
-                link: "https://github.com/features/actions"
-            },
-            "Kubernetes": {
-                description: "An open-source container-orchestration system for automating computer application deployment, scaling, and management.",
-                link: "https://kubernetes.io/"
-            },
             "Prometheus": {
-                description: "An open-source systems monitoring and alerting toolkit originally built at SoundCloud.",
+                description: "A free software application used for event monitoring and alerting.",
                 link: "https://prometheus.io/"
             },
             "Grafana": {
                 description: "A multi-platform open source analytics and interactive visualization web application.",
                 link: "https://grafana.com/"
-            },
-            "ELK Stack": {
-                description: "A collection of three open-source products — Elasticsearch, Logstash, and Kibana — from Elastic.",
-                link: "https://www.elastic.co/what-is/elk-stack"
-            },
-            "SAST": {
-                description: "Static Application Security Testing is a white-box method of testing. It analyzes the source code for security vulnerabilities.",
-                link: "https://owasp.org/www-community/Source_Code_Analysis_Tools"
-            },
-            "DAST": {
-                description: "Dynamic Application Security Testing is a black-box method of testing. It analyzes the application in its running state.",
-                link: "https://owasp.org/www-community/DAST"
-            },
-            "Secrets Management": {
-                description: "The tools and methods for managing digital authentication credentials (secrets), including passwords, keys, APIs, and tokens for use in applications, services, and IT environments.",
-                link: "https://www.hashicorp.com/products/vault"
             }
         };
 
@@ -555,6 +515,40 @@
                 }
             });
         });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
     </script>
+  <button id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>

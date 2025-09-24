@@ -18,7 +18,7 @@
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="home-images/rbr logo.png" alt="logo">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="index.html#contact">Contact</a>
@@ -297,7 +297,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
     <!-- Modal -->
@@ -351,53 +351,29 @@
         const closeModal = document.querySelector('.close');
 
         const skillData = {
-            "Personas": {
-                description: "Fictional characters created to represent the different user types that might use a site, brand, or product in a similar way.",
-                link: "https://www.usability.gov/how-to-and-tools/methods/personas.html"
+            "User Research": {
+                description: "The study of target users and their requirements, to add realistic contexts and insights to design processes.",
+                link: "https://en.wikipedia.org/wiki/User_research"
             },
-            "User Interviews": {
-                description: "A UX research method during which a researcher asks one user questions about a topic of interest.",
-                link: "https://www.nngroup.com/articles/user-interviews/"
+            "Information Architecture": {
+                description: "The art and science of organizing and labeling websites, intranets, online communities and software to support usability and findability.",
+                link: "https://en.wikipedia.org/wiki/Information_architecture"
             },
-            "Surveys": {
-                description: "A research method used for collecting data from a predefined group of respondents to gain information and insights into various topics of interest.",
-                link: "https://www.nngroup.com/articles/surveys-in-ux-research/"
+            "Wireframing": {
+                description: "A way to design a website service at the structural level.",
+                link: "https://en.wikipedia.org/wiki/Website_wireframe"
             },
-            "User Journey Maps": {
-                description: "A visualization of the process that a person goes through in order to accomplish a goal.",
-                link: "https://www.nngroup.com/articles/journey-mapping-101/"
+            "Prototyping": {
+                description: "An early sample, model, or release of a product built to test a concept or process.",
+                link: "https://en.wikipedia.org/wiki/Prototype"
             },
-            "Flowcharts": {
-                description: "A type of diagram that represents a workflow or process.",
-                link: "https://www.lucidchart.com/pages/what-is-a-flowchart"
+            "Visual Design": {
+                description: "The use of imagery, color, shapes, typography, and form to enhance usability and improve the user experience.",
+                link: "https://en.wikipedia.org/wiki/Visual_design_elements_and_principles"
             },
-            "Sketching": {
-                description: "A rapidly executed freehand drawing that is not usually intended as a finished work.",
-                link: "https://www.nngroup.com/articles/sketching-for-ux-designers/"
-            },
-            "Digital Wireframing": {
-                description: "A low-fidelity, simplified outline of your product.",
-                link: "https://www.figma.com/wireframe/"
-            },
-            "Interactive Prototypes": {
-                description: "A high-fidelity representation of the final product.",
-                link: "https://www.invisionapp.com/inside-design/guide-to-interactive-prototypes/"
-            },
-            "High-Fidelity Mockups": {
-                description: "A computer-based interactive representation of the product in its closest resemblance to the final design in terms of details and functionality.",
-                link: "https://www.justinmind.com/blog/high-fidelity-mockups/"
-            },
-            "Figma": {
-                description: "A vector graphics editor and prototyping tool which is primarily web-based.",
-                link: "https://www.figma.com/"
-            },
-            "Sketch": {
-                description: "A vector graphics editor for macOS.",
-                link: "https://www.sketch.com/"
-            },
-            "Adobe XD": {
-                description: "A vector-based user experience design tool for web apps and mobile apps developed and published by Adobe Inc.",
-                link: "https://www.adobe.com/products/xd.html"
+            "Usability Testing": {
+                description: "A technique used in user-centered interaction design to evaluate a product by testing it on users.",
+                link: "https://en.wikipedia.org/wiki/Usability_testing"
             }
         };
 
@@ -438,6 +414,40 @@
                 }
             });
         });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
     </script>
+  <button id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>

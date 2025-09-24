@@ -18,7 +18,7 @@
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="home-images/rbr logo.png" alt="logo">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="index.html#contact">Contact</a>
@@ -286,7 +286,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
     <!-- Modal -->
@@ -299,7 +299,7 @@
         </div>
     </div>
 
-    <script>
+        <script>
         // Progress bar
         window.onscroll = function () {
             updateProgressBar();
@@ -340,17 +340,9 @@
         const closeModal = document.querySelector('.close');
 
         const skillData = {
-            "TCP/IP": {
-                description: "The Transmission Control Protocol/Internet Protocol is a suite of communication protocols used to interconnect network devices on the internet.",
-                link: "https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/"
-            },
-            "DNS": {
-                description: "The Domain Name System is the phonebook of the Internet.",
-                link: "https://www.cloudflare.com/learning/dns/what-is-dns/"
-            },
-            "HTTP/S": {
-                description: "Hypertext Transfer Protocol Secure is an extension of the Hypertext Transfer Protocol. It is used for secure communication over a computer network.",
-                link: "https://www.cloudflare.com/learning/ssl/what-is-https/"
+            "Networking": {
+                description: "The practice of connecting computers and other devices together to share resources.",
+                link: "https://en.wikipedia.org/wiki/Computer_network"
             },
             "Linux": {
                 description: "A family of open-source Unix-like operating systems based on the Linux kernel.",
@@ -360,21 +352,25 @@
                 description: "A group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft.",
                 link: "https://www.microsoft.com/en-us/windows"
             },
+            "Python": {
+                description: "An interpreted, high-level and general-purpose programming language.",
+                link: "https://www.python.org/"
+            },
+            "Cryptography": {
+                description: "The practice and study of techniques for secure communication in the presence of third parties called adversaries.",
+                link: "https://en.wikipedia.org/wiki/Cryptography"
+            },
+            "SIEM": {
+                description: "Security information and event management is a field within the field of computer security, where software products and services combine security information management and security event management.",
+                link: "https://en.wikipedia.org/wiki/Security_information_and_event_management"
+            },
             "Penetration Testing": {
                 description: "An authorized simulated cyberattack on a computer system, performed to evaluate the security of the system.",
-                link: "https://www.coresecurity.com/penetration-testing"
-            },
-            "Web Application Security": {
-                description: "Focuses on protecting websites, web applications, and web services from security threats.",
-                link: "https://owasp.org/www-project-top-ten/"
-            },
-            "Incident Response": {
-                description: "The process of responding to, managing, and mitigating the effects of a security breach.",
-                link: "https://www.ibm.com/topics/incident-response"
+                link: "https://en.wikipedia.org/wiki/Penetration_test"
             },
             "Digital Forensics": {
-                description: "The process of uncovering and interpreting electronic data.",
-                link: "https://www.eccouncil.org/what-is-digital-forensics/"
+                description: "A branch of forensic science encompassing the recovery and investigation of material found in digital devices, often in relation to computer crime.",
+                link: "https://en.wikipedia.org/wiki/Digital_forensics"
             }
         };
 
@@ -415,6 +411,43 @@
                 }
             });
         });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+  <button id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>
     </script>
 </body>
 </html>

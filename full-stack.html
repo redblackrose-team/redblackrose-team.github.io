@@ -18,7 +18,7 @@
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="home-images/rbr logo.png" alt="logo">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="index.html#contact">Contact</a>
@@ -294,7 +294,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a></p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
     <!-- Modal -->
@@ -307,7 +307,7 @@
         </div>
     </div>
 
-    <script>
+        <script>
         // Progress bar
         window.onscroll = function () {
             updateProgressBar();
@@ -439,6 +439,40 @@
                 }
             });
         });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
     </script>
+  <button id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
 </body>
 </html>
