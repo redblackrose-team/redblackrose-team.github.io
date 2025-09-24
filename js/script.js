@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Back to top button
     let mybutton = document.getElementById("back-to-top-btn");
 
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     mybutton.addEventListener("click", function() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 });
