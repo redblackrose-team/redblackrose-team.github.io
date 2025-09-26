@@ -4,34 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Security Roadmap</title> 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step Cyber Security Journey</h2> 
         <p>A comprehensive guide to help you become a successful Cyber Security professional from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Cyber Security</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Cyber Security?</h4>
+                <p>Cyber security is the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks. It's also known as information technology security or electronic information security.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone interested in protecting computer systems and networks from cyber attacks.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: Fundamentals</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,9 +65,9 @@
                         <h5>Step 1: Networking</h5>
                         <p>Understand how networks work.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">TCP/IP</span>
-                            <span class="skill-tag">DNS</span>
-                            <span class="skill-tag">HTTP/S</span>
+                            <span class="skill-tag" data-skill="TCP/IP">TCP/IP</span>
+                            <span class="skill-tag" data-skill="DNS">DNS</span>
+                            <span class="skill-tag" data-skill="HTTP/S">HTTP/S</span>
                         </div>
                     </div>
                 </div>
@@ -50,15 +76,16 @@
                         <h5>Step 2: Operating Systems</h5>
                         <p>Learn the fundamentals of Windows and Linux.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
-                            <span class="skill-tag">Windows</span>
+                            <span class="skill-tag" data-skill="Linux"><img src="icons/linux.png" alt="Linux" class="skill-icon"> Linux</span>
+                            <span class="skill-tag" data-skill="Windows">Windows</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Offensive Security</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -66,15 +93,16 @@
                         <h5>Step 3: Ethical Hacking</h5>
                         <p>Learn how to find and exploit vulnerabilities.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Penetration Testing</span>
-                            <span class="skill-tag">Web Application Security</span>
+                            <span class="skill-tag" data-skill="Penetration Testing">Penetration Testing</span>
+                            <span class="skill-tag" data-skill="Web Application Security">Web Application Security</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: Defensive Security</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -82,14 +110,42 @@
                         <h5>Step 4: Security Operations (SOC)</h5>
                         <p>Learn how to monitor and defend systems.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Incident Response</span>
-                            <span class="skill-tag">Digital Forensics</span>
+                            <span class="skill-tag" data-skill="Incident Response">Incident Response</span>
+                            <span class="skill-tag" data-skill="Digital Forensics">Digital Forensics</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+    </div>
 
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Set up a home network and secure it with a firewall.</li>
+                    <li>Learn to use basic security tools like Nmap and Wireshark.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Perform a penetration test on a test environment like Metasploitable.</li>
+                    <li>Analyze malware samples in a safe environment.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Participate in bug bounty programs.</li>
+                    <li>Develop your own security tools.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <!-- Courses Section -->
@@ -98,28 +154,29 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h4><a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Google Cybersecurity Professional Certificate</h4>
-                    <p>Coursera</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" class="card-link-cover"></a>
+                        <h4>Google Cybersecurity Professional Certificate</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://tryhackme.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>TryHackMe</h4>
+                        <p>An online platform for learning cyber security, through gamified labs.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.hackthebox.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Hack The Box</h4>
+                        <p>A platform to test and advance your skills in penetration testing and cybersecurity.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.cybrary.it/" target="_blank" class="card-link-cover"></a>
+                        <h4>Cybrary</h4>
+                        <p>Cybersecurity Training that Tangibly Reduces Business Risk</p>
+                    </div>
                 </div>
-                <div class="content-card">
-                    <h4><a href="https://tryhackme.com/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>TryHackMe</h4>
-                    <p>An online platform for learning cyber security, through gamified labs.</p>
-                </div>
-                <div class="content-card">
-                    <h4><a href="https://www.hackthebox.com/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Hack The Box</h4>
-                    <p>A platform to test and advance your skills in penetration testing and cybersecurity.</p>
-                </div>
-<div class="content-card">
-                    <h4><a href="https://www.cybrary.it/" target="_blank" class="card-link-cover"></a></h4>
-                    <h4>Cybrary</h4>
-                    <p>Cybersecurity Training that Tangibly Reduces Business Risk</p>
-                </div>
-
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -197,7 +254,7 @@
             <div class="content-grid">
                 <div class="content-card">
                 <a href="https://heimdalsecurity.com/pdf/cyber_security_for_beginners_ebook.pdf" target="_blank" class="card-link-cover"></a>    
-                  
+                
                 <h4>Cyber security for beginners Ebook.</h4>
                   
                     <p>heimdalsecurity</p>
@@ -225,10 +282,118 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 RedBlackRose Team. All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
-    <script>
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+        <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "Networking": {
+                description: "The practice of connecting computers and other devices together to share resources.",
+                link: "https://en.wikipedia.org/wiki/Computer_network"
+            },
+            "Linux": {
+                description: "A family of open-source Unix-like operating systems based on the Linux kernel.",
+                link: "https://www.linux.org/"
+            },
+            "Windows": {
+                description: "A group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft.",
+                link: "https://www.microsoft.com/en-us/windows"
+            },
+            "Python": {
+                description: "An interpreted, high-level and general-purpose programming language.",
+                link: "https://www.python.org/"
+            },
+            "Cryptography": {
+                description: "The practice and study of techniques for secure communication in the presence of third parties called adversaries.",
+                link: "https://en.wikipedia.org/wiki/Cryptography"
+            },
+            "SIEM": {
+                description: "Security information and event management is a field within the field of computer security, where software products and services combine security information management and security event management.",
+                link: "https://en.wikipedia.org/wiki/Security_information_and_event_management"
+            },
+            "Penetration Testing": {
+                description: "An authorized simulated cyberattack on a computer system, performed to evaluate the security of the system.",
+                link: "https://en.wikipedia.org/wiki/Penetration_test"
+            },
+            "Digital Forensics": {
+                description: "A branch of forensic science encompassing the recovery and investigation of material found in digital devices, often in relation to computer crime.",
+                link: "https://en.wikipedia.org/wiki/Digital_forensics"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;
@@ -242,6 +407,45 @@
                 }
             });
         });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {
+            updateProgressBar();
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+  </body>
+</html>
     </script>
 </body>
 </html>

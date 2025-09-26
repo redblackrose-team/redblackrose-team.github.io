@@ -1,116 +1,9 @@
-/* Google font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
-/* Global variable */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-/* For Gradient Background */
-body{
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(#A0D2D2, #CEE8D3);
-}
-
-/* Nav bar */
-body {
-    font-family: "Roboto", sans-serif;
-}
-
-header {
-    top: 0;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-header .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 150px 1px 150px;
-    
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-.menu ul {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.menu ul li {
-    position: relative;
-}
-
-.menu ul li .active::after {
-    content: "";
-    width: 100%;
-    height: 3.5px;
-    background-color:#555;
-    border-radius: 10px;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-.menu ul li::after {
-    content: "";
-    width: 0%;
-    height: 3.5px;
-    background-color: #555;
-    border-radius: 10px;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: 0.5s;
-}
-
-.menu ul li:hover::after {
-    width: 100%;
-}
-
-.btn {
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 13px 25px;
-    border-radius: 10px;
-    border: none;
-    background-color: black;
-    color: white;
-    align-items: center;
-    transition: 0.5s;
-}
-
-.btn:hover{
-    background-color: #333;
-}
-
 /* Home */
 .home {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 85px 150px 0 150px;
-}
-
-.home img {
-    width: 490px;
 }
 
 .home-contents h1 {
@@ -130,6 +23,27 @@ ul li {
     color:#181E1B;
 }
 
+.btn {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 13px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    align-items: center;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #333;
+}
+
+.home-img img {
+    width: 490px;
+}
+
 /* Roadmaps */
 .roadmaps {
     padding: 80px 150px 0 150px;
@@ -143,25 +57,28 @@ ul li {
 }
 
 .roadmaps-container {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
 }
 
 .roadmaps-card {
-    width: 200px;
-    height: 150px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
     box-shadow: 3px 3px 10px #00000050;
     border-radius: 10px;
-    transform: 0.8s;
+    padding: 20px;
+    transition: 0.8s;
+}
+
+.roadmaps-card a {
+    text-decoration: none;
+    color: black;
 }
 
 .roadmaps-card img {
     width: 62px;
-    padding: 26px 0 5px 0;
+    margin-bottom: 10px;
 }
 
 .roadmaps-card h4 {
@@ -173,14 +90,11 @@ ul li {
     transform: scale(1.05);
 }
 
-/* Overviews */
+/* Explore Your Path */
 .overview {
     padding: 90px 150px 0 150px;
-    align-items: center;
-    background-color: c9e6d7;
 }
 
-.why-roadmap h1,
 .overview h1 {
     font-size: 3.8rem;
     text-align: center;
@@ -189,7 +103,7 @@ ul li {
 }
 
 .overview ul {
-    font-size: 1.1rem;
+    list-style-type: none;
 }
 
 .overview ul li {
@@ -217,27 +131,31 @@ ul li {
     padding: 80px 150px 0 150px;
 }
 
+.why-roadmap h1 {
+    font-size: 3.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color:#010000;
+}
+
 .why-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
 }
 
 .why-card {
     text-align: center;
-    margin-bottom: 22px;
 }
 
 .why-card h4 {
     background-color: rgba(0, 0, 0, 0.1);
-    max-width: 230px;
-    padding: 20px 20px;
+    padding: 20px;
     border-radius: 10px;
     border: 1px solid #729db4;
     font-size: 1.1rem;
     font-weight: 500;
-    margin: auto;
+    height: 100%;
 }
 
 /* Contact */
@@ -248,43 +166,34 @@ ul li {
 .contact-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 900;
+.social-media p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
-.contact .icon {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
+.icon a {
     font-size: 1.8rem;
-    margin-top: 20px;
-}
-
-.icon i {
-    margin-right: 3px;
-    border: 2px solid #729db4;
-    padding: 3px;
-    border-radius: 50%;
+    margin-right: 15px;
+    color: black;
     transition: 0.5s;
 }
 
-.icon i:hover {
-    background-color:  #365566;
-    color: #fff;
-    cursor: pointer;
+.icon a:hover {
+    color: #365566;
 }
 
 form {
     width: 500px;
+    display: flex;
+    align-items: center;
 }
 
-.contact input {
+.inputBox input {
     width: 100%;
     padding: 18px;
-    margin-bottom: 22px;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 3px 3px 10px #00000050;
     border-left: 1px solid #729db4;
@@ -293,108 +202,99 @@ form {
     font-size: 1.05rem;
     font-weight: 600;
     color: #fff;
+    margin-right: 10px;
 }
 
-.contact-btn {
-    margin-top: 20px;
-    text-align: right;
+/* Search Bar */
+.search-container {
+    margin-bottom: 20px;
 }
 
-/* Footer */
-.footer p {
-    background-color:#90a293;
-    color: black;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 6px;
+#search-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 /* Responsive */
-@media (max-width: 1384px) {
-    .home .disable {
-        display: none;
+@media (max-width: 1200px) {
+    .header {
+        padding: 20px 50px;
+    }
+
+    .home, .roadmaps, .overview, .why-roadmap, .contact {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
     }
 
     .home-contents p {
-        width: 400px;
-    }
-}
-
-@media (max-width: 1245px) {
-    header .nav-bar {
-        padding: 10px 145px;
-    }
-    .home .homeImg {
-        display: none;
-    }
-    .home .disable {
-        display: inline;
-    }
-
-    .home {
-        justify-content: center;
-        text-align: center;
-        padding-top: 75px;
-    }
-
-    .home-contents h1 {
-        line-height: 75px;
-    }
-
-    .roadmaps {
-        padding-top: 95px;
-    }
-
-    .roadmaps-card {
-        width: 180px;
-    }
-
-    .roadmaps-container {
-        gap: 20px;
-        justify-content: space-between;
-    }
-}
-
-@media (max-width: 1050px) {
-    form {
-        width: 300px;
-    }
-
-    .contact input {
         width: 100%;
     }
+
+    .home-img {
+        display: none;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
 }
 
-/* Navigation styles from style.css */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+@media (max-width: 768px) {
+    .home-contents h1, .overview h1, .why-roadmap h1 {
+        font-size: 2.8rem;
+    }
 }
 
-.header h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: black;
-    margin: 0;
-}
+@media (max-width: 576px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-.header nav a {
-    color: black;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+    form {
+        flex-direction: column;
+    }
 
-.header nav a:hover {
-    color: #555;
-}
-
-.main-nav {
-    margin-right: 50px;
+    .inputBox input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }

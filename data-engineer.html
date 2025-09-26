@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <img src="home-images/rbr-logo.png" alt="logo">
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#roadmaps">Roadmaps</a>
+        </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Your Step-by-Step Frontend Journey</h2>
+        <p>A comprehensive guide to help you become a successful Data Engineer from scratch.</p>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Data Engineering</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qWru-b6m03I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Data Engineering?</h4>
+                <p>Data engineering is the practice of designing, building, and maintaining the systems and infrastructure that allow for the collection, storage, processing, and analysis of large amounts of data. It is a specialized field of software engineering that focuses on creating robust and efficient data pipelines and architectures.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone who wants to learn how to build and manage data pipelines and infrastructure, from beginners to experienced software engineers.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Roadmap Section -->
+<div id="roadmap" class="section">
+    <h3>Step-by-Step Roadmap</h3>
+    <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
+
+    <div class="roadmap-phase" id="phase1">
+        <h4>Phase 1: Foundational Skills</h4>
+        <div class="roadmap-list">
+            <div class="roadmap-item">
+                <div class="step-header">
+                    <h5>Step 1: Programming Languages</h5>
+                    <p>Proficiency in specific programming languages is crucial.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-skill="Python"><img src="icons/python.jpg" alt="Python" class="skill-icon"> Python</span>
+                        <span class="skill-tag" data-skill="SQL">SQL</span>
+                        <span class="skill-tag" data-skill="Java"><img src="icons/java.jpg" alt="Java" class="skill-icon"> Java</span>
+                        <span class="skill-tag" data-skill="Scala">Scala</span>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="step-header">
+                    <h5>Step 2: Database Fundamentals</h5>
+                    <p>A solid understanding of different database types is necessary.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-skill="Relational Databases">RDBMS</span>
+                        <span class="skill-tag" data-skill="NoSQL Databases">NoSQL</span>
+                        <span class="skill-tag" data-skill="PostgreSQL"><img src="icons/postgresql.jpg" alt="PostgreSQL" class="skill-icon"> PostgreSQL</span>
+                        <span class="skill-tag" data-skill="MySQL"><img src="icons/mysql.jpg" alt="MySQL" class="skill-icon"> MySQL</span>
+                        <span class="skill-tag" data-skill="MongoDB"><img src="icons/mongodb.jpg" alt="MongoDB" class="skill-icon"> MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="roadmap-phase" id="phase2">
+        <h4>Phase 2: Data Warehousing and ETL/ELT</h4>
+        <div class="roadmap-list">
+            <div class="roadmap-item">
+                <div class="step-header">
+                    <h5>Step 3: Data Warehousing</h5>
+                    <p>Data warehouses are central to data engineering, providing a unified repository for analytics.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-skill="Snowflake">Snowflake</span>
+                        <span class="skill-tag" data-skill="BigQuery">BigQuery</span>
+                        <span class="skill-tag" data-skill="Redshift">Redshift</span>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="step-header">
+                    <h5>Step 4: ETL and ELT</h5>
+                    <p>Understanding how to Extract, Transform, and Load (ETL) or Extract, Load, and Transform (ELT) data is a critical skill.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-skill="AWS Glue">AWS Glue</span>
+                        <span class="skill-tag" data-skill="dbt">dbt</span>
+                        <span class="skill-tag" data-skill="Airflow">Airflow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="roadmap-phase" id="phase3">
+        <h4>Phase 3: Big Data Technologies and Cloud</h4>
+        <div class="roadmap-list">
+            <div class="roadmap-item">
+                <div class="step-header">
+                    <h5>Step 5: Big Data Frameworks</h5>
+                    <p>As data volumes grow, proficiency in big data technologies becomes essential.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-skill="Apache Spark">Apache Spark</span>
+                        <span class="skill-tag" data-skill="Apache Kafka">Apache Kafka</span>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="step-header">
+                    <h5>Step 6: Cloud Platforms</h5>
+                    <p>Expertise in at least one of the major cloud platforms is a must.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-skill="AWS"><img src="icons/aws.png" alt="AWS" class="skill-icon"> AWS</span>
+                        <span class="skill-tag" data-skill="Azure"><img src="icons/azure.png" alt="Azure" class="skill-icon"> Azure</span>
+                        <span class="skill-tag" data-skill="GCP"><img src="icons/gcp.png" alt="GCP" class="skill-icon"> GCP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <!-- Project Ideas Section -->
+<div id="project-ideas" class="project-ideas">
+    <h3>Project Ideas</h3>
+    <div class="project-ideas-container">
+        <div class="project-card">
+            <h4>Beginner</h4>
+            <ul>
+                <li>Build an ETL pipeline to extract data from a CSV file, transform it with Python, and load it into a SQL database.</li>
+                <li>Create a web scraper to collect data from a website and store it in a structured format.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h4>Intermediate</h4>
+            <ul>
+                <li>Build a data warehouse for sales data using a tool like AWS Redshift or Snowflake.</li>
+                <li>Orchestrate an ETL pipeline with Apache Airflow.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <h4>Advanced</h4>
+            <ul>
+                <li>Build a real-time data pipeline with Kafka and Spark.</li>
+                <li>Design and implement a complete data platform on a cloud provider like AWS, GCP, or Azure.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- Courses Section -->
+    <div id="courses" class="section">
+        <h3>Famous Courses</h3>
+        <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/ibm-data-engineer" target="_blank" class="card-link-cover"></a>
+                        <h4>IBM Data Engineering Professional Certificate</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" class="card-link-cover"></a>
+                        <h4>Google Data Analytics Professional Certificate</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.udacity.com/course/data-engineer-nanodegree--nd027" target="_blank" class="card-link-cover"></a>
+                        <h4>Data Engineer Nanodegree</h4>
+                        <p>Udacity</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.datacamp.com/tracks/data-engineer-with-python" target="_blank" class="card-link-cover"></a>
+                        <h4>Data Engineer with Python</h4>
+                        <p>DataCamp</p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
+
+    <!-- Documentation Section -->
+    <div id="docs" class="section">
+        <h3>Documentation Links</h3>
+        <p>Essential documentation and official guides for key tools and technologies.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://spark.apache.org/docs/latest/" target="_blank" class="card-link-cover"></a>
+                        <h4>Apache Spark Documentation</h4>
+                        <p>The official documentation for Apache Spark.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://kafka.apache.org/documentation/" target="_blank" class="card-link-cover"></a>
+                        <h4>Apache Kafka Documentation</h4>
+                        <p>Official documentation for Apache Kafka.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://airflow.apache.org/docs/" target="_blank" class="card-link-cover"></a>
+                        <h4>Apache Airflow Documentation</h4>
+                        <p>The official documentation for Apache Airflow.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://docs.getdbt.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>dbt Documentation</h4>
+                        <p>The official documentation for dbt.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
+
+    <!-- YouTube Section -->
+    <div id="youtube" class="section">
+        <h3>YouTube Channels</h3>
+        <p>Popular YouTube channels that provide tutorials and insights into the world of Data Engineering.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGErF" title="Seattle Data Guy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Seattle Data Guy</h4>
+                        <p>A great channel for learning about data engineering and the modern data stack.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PL75e0qA87dlG-za8eLI6t0_PbxafU-c4l" title="Andreas Kretz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Andreas Kretz</h4>
+                        <p>One of the original data engineering YouTubers.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGErF" title="Data Engineer Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>Data Engineer Academy</h4>
+                        <p>Focuses on practical, hands-on learning with real-world projects.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PL75e0qA87dlG-za8eLI6t0_PbxafU-c4l" title="TrendyTech" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <h4>TrendyTech</h4>
+                        <p>In-depth explanations of data engineering concepts and tools.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
+
+    <!-- Ebooks Section -->
+    <div id="ebooks" class="section">
+        <h3>Ebooks</h3>
+        <p>Recommended e-books and reading materials for a deeper understanding.</p>
+        <div class="scroll-container">
+            <button class="scroll-arrow left">&lt;</button>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781449373320/" target="_blank" class="card-link-cover"></a>
+                        <h4>Designing Data-Intensive Applications</h4>
+                        <p>A must-read for any data engineer.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/" target="_blank" class="card-link-cover"></a>
+                        <h4>Fundamentals of Data Engineering</h4>
+                        <p>A comprehensive overview of the data engineering lifecycle.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/" target="_blank" class="card-link-cover"></a>
+                        <h4>Spark: The Definitive Guide</h4>
+                        <p>A comprehensive guide to Apache Spark.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.oreilly.com/library/view/data-pipelines-with/9781617296695/" target="_blank" class="card-link-cover"></a>
+                        <h4>Data Pipelines with Apache Airflow</h4>
+                        <p>A guide to orchestrating data pipelines with Apache Airflow.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-arrow right">&gt;</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+    <script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "SQL": {
+                description: "A domain-specific language used in programming and designed for managing data held in a relational database management system.",
+                link: "https://en.wikipedia.org/wiki/SQL"
+            },
+            "Python": {
+                description: "An interpreted, high-level and general-purpose programming language.",
+                link: "https://www.python.org/"
+            },
+            "ETL": {
+                description: "Extract, transform, load is a three-phase data integration process.",
+                link: "https://en.wikipedia.org/wiki/Extract,_transform,_load"
+            },
+            "Data Warehousing": {
+                description: "A system used for reporting and data analysis, and is considered a core component of business intelligence.",
+                link: "https://en.wikipedia.org/wiki/Data_warehouse"
+            },
+            "Big Data": {
+                description: "A field that treats ways to analyze, systematically extract information from, or otherwise deal with data sets that are too large or complex to be dealt with by traditional data-processing application software.",
+                link: "https://en.wikipedia.org/wiki/Big_data"
+            },
+            "Cloud Computing": {
+                description: "The on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.",
+                link: "https://en.wikipedia.org/wiki/Cloud_computing"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.querySelectorAll('.scroll-arrow').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.parentElement;
+                const contentGrid = container.querySelector('.content-grid');
+                const scrollAmount = 330; // Adjust this value to control the scroll distance
+
+                if (button.classList.contains('left')) {
+                    contentGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else {
+                    contentGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            });
+        });
+
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+    </script>
+<script>
+        // Progress bar
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+
+        function updateProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "SQL": {
+                description: "A domain-specific language used in programming and designed for managing data held in a relational database management system.",
+                link: "https://en.wikipedia.org/wiki/SQL"
+            },
+            "Python": {
+                description: "An interpreted, high-level and general-purpose programming language.",
+                link: "https://www.python.org/"
+            },
+            "ETL": {
+                description: "Extract, transform, load is a three-phase data integration process.",
+                link: "https://en.wikipedia.org/wiki/Extract,_transform,_load"
+            },
+            "Data Warehousing": {
+                description: "A system used for reporting and data analysis, and is considered a core component of business intelligence.",
+                link: "https://en.wikipedia.org/wiki/Data_warehouse"
+            },
+            "Big Data": {
+                description: "A field that treats ways to analyze, systematically extract information from, or otherwise deal with data sets that are too large or complex to be dealt with by traditional data-processing application software.",
+                link: "https://en.wikipedia.org/wiki/Big_data"
+            },
+            "Cloud Computing": {
+                description: "The on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.",
+                link: "https://en.wikipedia.org/wiki/Cloud_computing"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.querySelectorAll('.scroll-arrow').forEach(button => {
+            button.addEventListener('click', () => {
+                const container = button.parentElement;
+                const contentGrid = container.querySelector('.content-grid');
+                const scrollAmount = 330; // Adjust this value to control the scroll distance
+
+                if (button.classList.contains('left')) {
+                    contentGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else {
+                    contentGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            });
+        });
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Back to top button
+        let mybutton = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {
+            updateProgressBar();
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+  </body>
+</html>

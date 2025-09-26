@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,19 +16,22 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./favicon/logo.png">
   <!-- CSS -->
+  <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/home-style.css" />
 </head>
 
 <body>
   <!-- Nav bar start -->
   <header class="header">
-        <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="/home-images/rbr-logo.png" alt="logo" style="width:60px">
         <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
-            <a href="index.html#contact">Contact</a>
-            <a href="index.html#roadmaps">Roadmaps</a>
+            <a href="#contact">Contact</a>
+            <a href="#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
   <!-- Nav bar end -->
 
@@ -39,13 +41,9 @@
       <h1>Welcome! <br> IT Roadmaps</h1>
       <p>RedBlackRose presents a clear and practical roadmap for anyone interested in building a career in Information
         Technology.
-        <span class="disable">Whether you're a beginner or looking to specialize, our guide will help you discover the
-          skills, tools,
-          and
-          paths that matter most in today's tech world.
-      </p></span>
+      </p>
       <div class="nav-btn">
-        <a href="#"><span class="btn">Get Started</span></a>
+        <a href="#roadmaps" class="btn">Get Started</a>
       </div>
     </div>
     <div class="home-img">
@@ -57,6 +55,9 @@
   <!-- Roadmaps start -->
   <section class="roadmaps" id="roadmaps">
     <h2 class="title-content">Roadmaps</h2>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search for a roadmap...">
+    </div>
     <div class="roadmaps-container">
       <div class="roadmaps-card">
         <a href="frontend.html">
@@ -96,30 +97,70 @@
       </div>
       <div class="roadmaps-card">
         <a href="game-dev.html">
-          <img src="home-images/game-development.png" alt="cyber-security">
+          <img src="home-images/game-development.png" alt="game-dev">
           <h4>Game Development</h4>
+        </a>
+      </div>
+      <div class="roadmaps-card">
+        <a href="system-engineer.html">
+          <img src="home-images/engineer.png" alt="system-engineer">
+          <h4>System Engineer</h4>
+        </a>
+      </div>
+      <div class="roadmaps-card">
+        <a href="network-engineer.html">
+          <img src="home-images/network-engineer.png" alt="network-engineer">
+          <h4>Network Engineer</h4>
+        </a>
+      </div>
+      <div class="roadmaps-card">
+        <a href="data-engineer.html">
+          <img src="home-images/data-processing.png" alt="data-engineer">
+          <h4>Data Engineer</h4>
+        </a>
+      </div>
+      <div class="roadmaps-card">
+        <a href="it-support.html">
+          <img src="home-images/technical-support.png" alt="it-support">
+          <h4>IT Support</h4>
+        </a>
+      </div>
+      <div class="roadmaps-card">
+        <a href="machine-learning.html">
+          <img src="home-images/machine-learning.png" alt="machine-learning">
+          <h4>Machine Learning</h4>
+        </a>
+      </div>
+      <div class="roadmaps-card">
+        <a href="mobile-dev.html">
+          <img src="home-images/development.png" alt="mobile-dev">
+          <h4>Mobile Development</h4>
         </a>
       </div>
     </div>
   </section>
   <!-- Roadmaps end -->
 
-<!-- Overviews start -->
+<!-- Explore Your Path start -->
   <section class="overview" id="overview">
     <h1>Explore Your Path</h1>
     <ul>
-      <li><b>Frontend Development</b> — Create beautiful, interactive websites and web apps.</li>
-      <li><b>Backend Development</b> — Build powerful servers, APIs, and databases.</li>
-      <li><b>DevOps & Cloud</b> — Automate, deploy, and scale with modern tools and platforms.</li>
-      <li><b>Mobile App Development</b> — Design and code apps for Android and iOS.</li>
-      <li><b>UI/UX Design</b> — Craft user experiences that delight and engage.</li>
-      <li><b>Software Testing & QA</b> — Ensure quality and reliability in every release.</li>
-      <li><b>Data Science & AI</b> — Analyze data, build models, and unlock insights.</li>
-      <li><b>Game Development</b> — Turn ideas into interactive entertainment.</li>
-      <li><b>Career Guidance</b> — Get tips on jobs, interviews, and building your future.</li>
+      <li><b>Frontend Development</b> — Create beautiful, interactive websites and web apps that users love. You’ll learn HTML, CSS, JavaScript, and popular frameworks like React or Vue.</li>
+      <li><b>Backend Development</b> — Build the powerful servers, APIs, and databases that power applications. You’ll dive into languages like Node.js, Python, or Java and learn to manage data effectively.</li>
+      <li><b>DevOps & Cloud</b> — Master the art of automating, deploying, and scaling applications with modern tools. You’ll work with platforms like AWS or Azure and technologies like Docker and Kubernetes.</li>
+      <li><b>Full Stack Development</b> — Become a versatile developer by mastering both frontend and backend technologies. You’ll learn to build complete web applications from start to finish.</li>
+      <li><b>UX Design</b> — Focus on creating user-friendly and intuitive interfaces. You’ll learn about user research, wireframing, prototyping, and creating seamless user experiences.</li>
+      <li><b>Cyber Security</b> — Protect systems and data from cyber threats. You’ll learn about network security, ethical hacking, and implementing security best practices.</li>
+      <li><b>Game Development</b> — Bring your game ideas to life. You’ll learn about game engines like Unity or Unreal, game design principles, and programming for interactive experiences.</li>
+      <li><b>System Engineer</b> — Design, build, and maintain an organization's IT infrastructure, including servers, networks, and storage systems.</li>
+      <li><b>Network Engineer</b> — Focus on the design, implementation, and management of an organization's computer networks.</li>
+      <li><b>Data Engineer</b> — Build and maintain the infrastructure that allows for the collection, storage, and processing of large amounts of data.</li>
+      <li><b>IT Support</b> — Provide technical assistance to users, troubleshoot hardware and software issues, and ensure the smooth operation of IT systems.</li>
+      <li><b>Machine Learning</b> — Develop algorithms and models that allow computers to learn from data and make predictions or decisions.</li>
+      <li><b>Mobile Development</b> — Create applications for mobile devices, such as smartphones and tablets, for both iOS and Android platforms.</li>
     </ul>
   </section>
-  <!-- Overviews end -->
+  <!-- Explore Your Path end -->
 
   <!-- Why roadmap start -->
   <section class="why-roadmap">
@@ -146,24 +187,17 @@
     <h2 class="title-content">Connect with us </h2>
     <div class="contact-container">
       <div class="social-media">
-        <a href="#"><img src="home-images/logo.png" alt="logo" style="width: 80px;"></a>
+        <p>Email: contact@redblackrose.com</p>
         <div class="icon">
-          <div class="icon1">
-            <i class='bx bxl-facebook'></i>
-            <i class='bx bxl-instagram-alt'></i>
-          </div>
-          <div class="icon2">
-            <i class='bx bxl-twitter'></i>
-            <i class='bx bxl-tiktok'></i>
-          </div>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-discord'></i></a>
         </div>
       </div>
       <form action="">
         <div class="inputBox">
           <input type="email" placeholder="Email">
-        </div>
-        <div class="inputBox">
-          <input type="text" placeholder="Message">
         </div>
         <div class="contact-btn">
           <a href="#"><span class="btn">Send <i class="fa-solid fa-caret-right"></i></span></a>
@@ -175,9 +209,10 @@
 
   <!-- footer start -->
   <section class="footer">
-    <p> &copy; 2025 Den &mdash; RedBlackRose Team. All rights reserved.</p>
+    <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
   </section>
   <!-- footer end -->
-</body>
+  <script src="js/script.js"></script>
+  </body>
 
 </html>

@@ -4,34 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Roadmap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- Header / Navigation -->
     <header class="header">
-        <img src="/home-images/rbr logo.png" alt="logo" style="width:60px">
+        <img src="home-images/rbr-logo.png" alt="logo">
         <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="team.html">Team</a>
             <a href="index.html#contact">Contact</a>
             <a href="index.html#roadmaps">Roadmaps</a>
         </nav>
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
         <h2>Your Step-by-Step Frontend Journey</h2>
         <p>A comprehensive guide to help you become a successful Frontend developer from scratch.</p>
-        <a href="#roadmap" class="cta-button">Start the Journey</a>
+        <a href="#introduction" class="cta-button">Start the Journey</a>
+    </div>
+
+    <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
+        <h3>Introduction to Frontend Development</h3>
+        <div class="introduction-content">
+            <div class="introduction-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yvl7YYqrMPQ?si=n2wq1EMB27ZPuyfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="introduction-text">
+                <h4>What is Frontend Development?</h4>
+                <p>Frontend development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. It's about creating a great user experience.</p>
+                <h4>Who is this for?</h4>
+                <p>This roadmap is for anyone who wants to learn how to build beautiful and interactive websites and web applications.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Roadmap Section -->
     <div id="roadmap" class="section">
         <h3>Step-by-Step Roadmap</h3>
         <p>This section outlines the key steps and skills you need to acquire in a logical order, from foundational knowledge to advanced topics.</p>
-        
-        <div class="roadmap-phase">
+
+        <div class="roadmap-phase" id="phase1">
             <h4>Phase 1: The Basics</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -39,7 +61,7 @@
                         <h5>Step 1: HTML</h5>
                         <p>Learn the structure of web pages.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/HTML.png" alt="HTML" class="skill-icon"> HTML</span>
+                            <span class="skill-tag" data-skill="HTML"><img src="icons/HTML.png" alt="HTML" class="skill-icon"> HTML</span>
                         </div>
                     </div>
                 </div>
@@ -48,9 +70,9 @@
                         <h5>Step 2: CSS</h5>
                         <p>Style your web pages.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/CSS.png" alt="CSS" class="skill-icon"> CSS</span>
-                            <span class="skill-tag"><img src="icons/Bootstrap.png" alt="Bootstrap" class="skill-icon"> Bootstrap</span>
-                            <span class="skill-tag"><img src="icons/Tailwind-CSS.png" alt="Tailwind" class="skill-icon"> Tailwind</span>
+                            <span class="skill-tag" data-skill="CSS"><img src="icons/CSS.png" alt="CSS" class="skill-icon"> CSS</span>
+                            <span class="skill-tag" data-skill="Bootstrap"><img src="icons/Bootstrap.png" alt="Bootstrap" class="skill-icon"> Bootstrap</span>
+                            <span class="skill-tag" data-skill="Tailwind"><img src="icons/Tailwind-CSS.png" alt="Tailwind" class="skill-icon"> Tailwind</span>
                         </div>
                     </div>
                 </div>
@@ -59,14 +81,15 @@
                         <h5>Step 3: JavaScript</h5>
                         <p>Add interactivity to your web pages.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/JavaScript.png" alt="JavaScript" class="skill-icon"> JavaScript</span>
+                            <span class="skill-tag" data-skill="JavaScript"><img src="icons/JavaScript.png" alt="JavaScript" class="skill-icon"> JavaScript</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase2">
             <h4>Phase 2: Frameworks</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -74,16 +97,17 @@
                         <h5>Step 4: Choose a Framework</h5>
                         <p>Learn a modern frontend framework.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/React.png" alt="React" class="skill-icon"> React</span>
-                            <span class="skill-tag"><img src="icons/Angular.png" alt="Angular" class="skill-icon"> Angular</span>
-                            <span class="skill-tag"><img src="icons/vue.png" alt="Vue" class="skill-icon"> Vue</span>
+                            <span class="skill-tag" data-skill="React"><img src="icons/React.png" alt="React" class="skill-icon"> React</span>
+                            <span class="skill-tag" data-skill="Angular"><img src="icons/Angular.png" alt="Angular" class="skill-icon"> Angular</span>
+                            <span class="skill-tag" data-skill="Vue"><img src="icons/vue.png" alt="Vue" class="skill-icon"> Vue</span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
 
-        <div class="roadmap-phase">
+        <div class="roadmap-phase" id="phase3">
             <h4>Phase 3: Advanced Topics</h4>
             <div class="roadmap-list">
                 <div class="roadmap-item">
@@ -91,9 +115,9 @@
                         <h5>Step 5: State Management</h5>
                         <p>Manage the state of your application.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag">Redux</span>
-                            <span class="skill-tag">Vuex</span>
-                            <span class="skill-tag">NgRx</span>
+                            <span class="skill-tag" data-skill="Redux"><img src="icons/redux.png" alt="Redux" class="skill-icon"> Redux</span>
+                            <span class="skill-tag" data-skill="Vuex"><img src="icons/vuex.png" alt="Vuex" class="skill-icon"> Vuex</span>
+                            <span class="skill-tag" data-skill="NgRx"><img src="icons/ngrx.png" alt="NgRx" class="skill-icon"> NgRx</span>
                         </div>
                     </div>
                 </div>
@@ -102,8 +126,8 @@
                         <h5>Step 6: Testing</h5>
                         <p>Learn how to test your code.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/jest.png" alt="Jest" class="skill-icon"> Jest</span>
-                            <span class="skill-tag"><img src="icons/Vitest.svg" alt="Vitest" class="skill-icon"> Vitest</span>
+                            <span class="skill-tag" data-skill="Jest"><img src="icons/jest.png" alt="Jest" class="skill-icon"> Jest</span>
+                            <span class="skill-tag" data-skill="Vitest"><img src="icons/Vitest.svg" alt="Vitest" class="skill-icon"> Vitest</span>
                         </div>
                     </div>
                 </div>
@@ -112,11 +136,40 @@
                         <h5>Step 7: Build Tools</h5>
                         <p>Learn about module bundlers.</p>
                         <div class="skills-grid">
-                            <span class="skill-tag"><img src="icons/Webpack.png" alt="Webpack" class="skill-icon"> Webpack</span>
-                            <span class="skill-tag"><img src="icons/Vite.png" alt="Vite" class="skill-icon"> Vite</span>
+                            <span class="skill-tag" data-skill="Webpack"><img src="icons/Webpack.png" alt="Webpack" class="skill-icon"> Webpack</span>
+                            <span class="skill-tag" data-skill="Vite"><img src="icons/Vite.png" alt="Vite" class="skill-icon"> Vite</span>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Project Ideas Section -->
+    <div id="project-ideas" class="project-ideas">
+        <h3>Project Ideas</h3>
+        <div class="project-ideas-container">
+            <div class="project-card">
+                <h4>Beginner</h4>
+                <ul>
+                    <li>Create a personal portfolio website.</li>
+                    <li>Build a simple to-do list application.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Intermediate</h4>
+                <ul>
+                    <li>Build a weather application that fetches data from an API.</li>
+                    <li>Create a simple e-commerce site with a shopping cart.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h4>Advanced</h4>
+                <ul>
+                    <li>Build a real-time chat application.</li>
+                    <li>Create a clone of a popular web application like Trello or Twitter.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -127,21 +180,28 @@
         <p>Here you can find a curated list of well-regarded courses to accelerate your learning.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card">
-                    <a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank" class="card-link-cover"></a>
-                    <h4>The Web Developer Bootcamp</h4>
-                    <p>Udemy - Colt Steele</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" class="card-link-cover"></a>
-                    <h4>freeCodeCamp - Responsive Web Design</h4>
-                    <p>freeCodeCamp.org</p>
-                </div>
-                <div class="content-card">
-                    <a href="https://www.theodinproject.com/" target="_blank" class="card-link-cover"></a>
-                    <h4>The Odin Project</h4>
-                    <p>A full-stack curriculum, but with a strong focus on frontend.</p>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://hitmyanmar.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>HIT Myanmar</h4>
+                        <p>Web Development Foundation, Special Frontend Development</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://creativecodermm.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>Creative Coder Myanmar</h4>
+                        <p>JavaScript, React, Vue, and Firebase courses</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank" class="card-link-cover"></a>
+                        <h4>The Web Developer Bootcamp</h4>
+                        <p>Udemy - Colt Steele</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer" target="_blank" class="card-link-cover"></a>
+                        <h4>Meta Front-End Developer Professional Certificate</h4>
+                        <p>Coursera</p>
+                    </div>
                 </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
@@ -154,10 +214,29 @@
         <p>Essential documentation and official guides for key tools and technologies.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card"><h4>MDN Web Docs</h4><p><a href="https://developer.mozilla.org/" target="_blank">The go-to resource for web developers.</a></p></div>
-                <div class="content-card"><h4>React Docs</h4><p><a href="https://reactjs.org/docs/getting-started.html" target="_blank">Official documentation for React.</a></p></div>
-                <div class="content-card"><h4>W3Schools</h4><p><a href="https://www.w3schools.com/" target="_blank">A great resource for beginners.</a></p></div>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://frontend-myanmar.dev/" target="_blank" class="card-link-cover"></a>
+                        <h4>Frontend Myanmar</h4>
+                        <p>A website dedicated to frontend development in Myanmar.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://eimaung.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>"Web Developer" by Ei Maung</h4>
+                        <p>An online book that covers web development from the basics to a professional level.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://developer.mozilla.org/" target="_blank" class="card-link-cover"></a>
+                        <h4>MDN Web Docs</h4>
+                        <p>The go-to resource for web developers.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://www.w3schools.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>W3Schools</h4>
+                        <p>A great resource for beginners.</p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -169,10 +248,29 @@
         <p>Popular YouTube channels that provide tutorials and insights into the world of Frontend Development.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card"><h4>freeCodeCamp.org</h4><p>A huge variety of tutorials on all things web development.</p></div>
-                <div class="content-card"><h4>The Net Ninja</h4><p>High-quality tutorials on a wide range of frontend technologies.</p></div>
-                <div class="content-card"><h4>Traversy Media</h4><p>In-depth tutorials and project builds.</p></div>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/lnF5LuNS-vc?si=BAZZOkBtorF7-_PP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <a href="https://www.youtube.com/c/CreativeCoderMyanmar" target="_blank"><h4>Creative Coder Myanmar</h4></a>
+                        <p>Tutorials on various web development topics.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/J2Fj8EQv-nQ?si=5SAPjWArQRA1p0Fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <a href="https://www.youtube.com/@dgtechmyanmar" target="_blank"><h4>Dgtech Myanmar</h4></a>
+                        <p>ReactJS tutorials for beginners.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/UB1O30fR-EE" title="Traversy Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <a href="https://www.youtube.com/@TraversyMedia" target="_blank"><h4>Traversy Media</h4></a>
+                        <p>Web development tutorials.</p>
+                    </div>
+                    <div class="content-card">
+                        <iframe width="300" height="200" src="https://www.youtube.com/embed/kUMe1FH4CHE" title="freeCodeCamp.org" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <a href="https://www.youtube.com/@freecodecamp" target="_blank"><h4>freeCodeCamp.org</h4></a>
+                        <p>Full-length courses and tutorials.</p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -184,9 +282,29 @@
         <p>Recommended e-books and reading materials for a deeper understanding.</p>
         <div class="scroll-container">
             <button class="scroll-arrow left">&lt;</button>
-            <div class="content-grid">
-                <div class="content-card"><h4>Eloquent JavaScript</h4><p>A modern introduction to programming.</p></div>
-                <div class="content-card"><h4>CSS: The Definitive Guide</h4><p>A deep dive into CSS.</p></div>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <a href="https://github.com/lwinmoepaing/html-and-css-beginner-to-super-beginner-ebook" target="_blank" class="card-link-cover"></a>
+                        <h4>HTML & CSS – Beginner to Super Beginner</h4>
+                        <p>by Lwin Moe Paing</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://eimaung.com/" target="_blank" class="card-link-cover"></a>
+                        <h4>JavaScript လို – တို – ရှင်း</h4>
+                        <p>by Ei Maung</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://eloquentjavascript.net/" target="_blank" class="card-link-cover"></a>
+                        <h4>Eloquent JavaScript</h4>
+                        <p>A modern introduction to programming.</p>
+                    </div>
+                    <div class="content-card">
+                        <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" class="card-link-cover"></a>
+                        <h4>You Don't Know JS</h4>
+                        <p>A series of books diving deep into the core mechanisms of JavaScript.</p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right">&gt;</button>
         </div>
@@ -194,10 +312,134 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy;2025 Zego&mdash; RedBlackRose Team.  All Rights Reserved.</p>
+        <p> &copy; 2025 RedBlackRose Team. All rights reserved. | <a href="#contact">Contact Us</a> | Last Updated: September 2025</p>
     </footer>
 
+    <!-- Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalSkillName"></h3>
+            <p id="modalSkillDescription"></p>
+            <a id="modalSkillLink" href="#" target="_blank">Learn More</a>
+        </div>
+    </div>
+
     <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Modal for skill tags
+        const skillTags = document.querySelectorAll('.skill-tag');
+        const modal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+        const modalSkillLink = document.getElementById('modalSkillLink');
+        const closeModal = document.querySelector('.close');
+
+        const skillData = {
+            "HTML": {
+                description: "The standard markup language for documents designed to be displayed in a web browser.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            "CSS": {
+                description: "A style sheet language used for describing the presentation of a document written in a markup language like HTML.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            "Bootstrap": {
+                description: "A free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
+                link: "https://getbootstrap.com/"
+            },
+            "Tailwind": {
+                description: "A utility-first CSS framework for rapidly building custom user interfaces.",
+                link: "https://tailwindcss.com/"
+            },
+            "JavaScript": {
+                description: "A programming language that conforms to the ECMAScript specification.",
+                link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            "React": {
+                description: "A free and open-source front-end JavaScript library for building user interfaces or UI components.",
+                link: "https://reactjs.org/"
+            },
+            "Angular": {
+                description: "A TypeScript-based open-source web application framework led by the Angular Team at Google.",
+                link: "https://angular.io/"
+            },
+            "Vue": {
+                description: "An open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
+                link: "https://vuejs.org/"
+            },
+            "Redux": {
+                description: "An open-source JavaScript library for managing application state.",
+                link: "https://redux.js.org/"
+            },
+            "Vuex": {
+                description: "A state management pattern + library for Vue.js applications.",
+                link: "https://vuex.vuejs.org/"
+            },
+            "NgRx": {
+                description: "A framework for building reactive applications in Angular.",
+                link: "https://ngrx.io/"
+            },
+            "Jest": {
+                description: "A delightful JavaScript Testing Framework with a focus on simplicity.",
+                link: "https://jestjs.io/"
+            },
+            "Vitest": {
+                description: "A blazing fast unit-test framework powered by Vite.",
+                link: "https://vitest.dev/"
+            },
+            "Webpack": {
+                description: "A static module bundler for modern JavaScript applications.",
+                link: "https://webpack.js.org/"
+            },
+            "Vite": {
+                description: "A build tool that aims to provide a faster and leaner development experience for modern web projects.",
+                link: "https://vitejs.dev/"
+            }
+        };
+
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skillName = tag.dataset.skill;
+                const skillInfo = skillData[skillName];
+
+                if (skillInfo) {
+                    modalSkillName.textContent = skillName;
+                    modalSkillDescription.textContent = skillInfo.description;
+                    modalSkillLink.href = skillInfo.link;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
         document.querySelectorAll('.scroll-arrow').forEach(button => {
             button.addEventListener('click', () => {
                 const container = button.parentElement;
@@ -211,6 +453,41 @@
                 }
             });
         });
+
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
     </script>
-</body>
+
+  </body>
 </html>
