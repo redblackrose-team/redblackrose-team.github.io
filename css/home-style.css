@@ -205,6 +205,10 @@ form {
     margin-right: 10px;
 }
 
+.contact-btn a {
+    text-decoration: none;
+}
+
 /* Search Bar */
 .search-container {
     margin-bottom: 20px;
