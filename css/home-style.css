@@ -3,12 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 85px 150px 0 150px;
+    padding: 20px 150px 0 150px;
 }
 
 .home-contents h1 {
-    font-size: 3.8rem;
-    line-height: 85px;
+    font-size: 2.8rem;
+    line-height: 60px;
     margin-bottom: 12px;
     color:black;
 }
@@ -46,7 +46,7 @@
 
 /* Roadmaps */
 .roadmaps {
-    padding: 80px 150px 0 150px;
+    padding: 20px 150px 0 150px;
 }
 
 .title-content {
