@@ -1,7 +1,9 @@
-name: CI Pipeline
+name: CI Pipeline for CICD Branch
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - cicd
 
 jobs:
   test:
