@@ -50,7 +50,7 @@ The project is organized as follows:
 ## CI/CD Pipeline
 This project uses a simple CI/CD pipeline implemented with GitHub Actions. The pipeline is defined in `.github/workflows/ci.yml` and it runs on every push and pull request to the main branch.
 
-The pipeline performs the following checks:
-- Validates the HTML files using `html-validate`.
-- Lints the CSS files using `csslint`.
-- Lints the JavaScript files using `jshint`.
+The pipeline simulates the following checks:
+- HTML validation
+- CSS linting
+- JavaScript linting
