@@ -1,0 +1,35 @@
+# This workflow is manually triggered.
+# Since this file is not on the default branch, you will not see a "Run workflow" button in the GitHub UI.
+# You can trigger this workflow using the GitHub API or the GitHub CLI.
+#
+# Using GitHub CLI:
+# gh workflow run ci.yml --ref cicd
+#
+# Using curl:
+# curl -X POST \
+#   -H "Accept: application/vnd.github.v3+json" \
+#   -H "Authorization: token YOUR_GITHUB_TOKEN" \
+#   https://api.github.com/repos/YOUR_USERNAME/YOUR_REPOSITORY/actions/workflows/ci.yml/dispatches \
+#   -d '{"ref":"cicd"}'
+
+name: CI Pipeline for CICD Branch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: HTML validation step
+        run: echo "Simulating HTML validation"
+
+      - name: CSS linting step
+        run: echo "Simulating CSS linting"
+
+      - name: JavaScript linting step
+        run: echo "Simulating JavaScript linting"
