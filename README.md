@@ -46,3 +46,11 @@ The project is organized as follows:
 1.  Clone this repository to your local machine.
 2.  Navigate to the project's root directory.
 3.  Open `index.html` in your web browser.
+
+## CI/CD Pipeline
+This project uses a simple CI/CD pipeline implemented with GitHub Actions. The pipeline is defined in `.github/workflows/ci.yml` and can be triggered manually from the Actions tab in the GitHub repository.
+
+The pipeline simulates the following checks:
+- HTML validation
+- CSS linting
+- JavaScript linting
