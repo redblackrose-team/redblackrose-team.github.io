@@ -48,7 +48,7 @@ The project is organized as follows:
 3.  Open `index.html` in your web browser.
 
 ## CI/CD Pipeline
-This project uses a simple CI/CD pipeline implemented with GitHub Actions. The pipeline is defined in `.github/workflows/ci.yml` and it runs on every push and pull request to the main branch.
+This project uses a simple CI/CD pipeline implemented with GitHub Actions. The pipeline is defined in `.github/workflows/ci.yml` and can be triggered manually from the Actions tab in the GitHub repository.
 
 The pipeline simulates the following checks:
 - HTML validation
