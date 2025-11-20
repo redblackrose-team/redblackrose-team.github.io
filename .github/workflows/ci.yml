@@ -14,7 +14,7 @@ jobs:
       - name: HTML validation step
         run: echo "Simulating HTML validation"
 
-      - name of: CSS linting step
+      - name: CSS linting step
         run: echo "Simulating CSS linting"
 
       - name: JavaScript linting step
