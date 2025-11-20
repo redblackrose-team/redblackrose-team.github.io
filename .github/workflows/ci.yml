@@ -1,0 +1,25 @@
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Validate HTML
+        run: npx html-validate **/*.html
+
+      - name: Lint CSS
+        run: npx csslint --errors=display-property-grouping,duplicate-properties **/*.css
+
+      - name: Lint JavaScript
+        run: npx jshint **/*.js
